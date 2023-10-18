@@ -1,5 +1,6 @@
 import sys
 from Enums.filetype import *
+from Algo.textalgo import *
 
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
@@ -18,6 +19,16 @@ if ((inputtype != outputtype) or ((inputtype == Filetype.UNKNOWN) or (outputtype
         exit(2)
 else:
     if(inputtype == Filetype.TXT):
+        file = open(inputpath)
+        text = file.read()
+        file.close()
+
+        final_text = changeText(text)
+
+        file = open(outputpath, "x")
+        file.write(final_text)
+
+
         print("Text-ALGO Missing.")
         #TODO: INSERT ALGO FOR TEXT HERE
 
