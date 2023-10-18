@@ -1,6 +1,7 @@
 
 
 
+#Leetspeak-Algo (replaces letters with numbers)
 def changeText(txt: str) -> str:
     txt = txt.replace("a", "4")
     txt = txt.replace("A", "4")
