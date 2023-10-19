@@ -38,10 +38,16 @@ class ElementVisibilityChecker(object):
             return False
 
 
-def wait_element_text_ready(element_xpath):
-    # Waits until a certain element appears & has text, and then returns that element
+def wait_element(element_xpath):
+    # Waits until a certain element appears, and then returns that element
     wait.until(Expected.presence_of_element_located((By.XPATH, element_xpath)))
     element = driver.find_element(By.XPATH, element_xpath)
+    return element
+
+
+def wait_element_visible_text(element_xpath):
+    # Waits until a certain element is visible & has text, and then returns that element
+    element = wait_element(element_xpath)
     wait.until(Expected.visibility_of(element))
     wait.until(ElementVisibilityChecker(element))
     while element.text == "":
@@ -55,7 +61,7 @@ def get_score_from_grammica(text_to_check) -> int:
         driver.get("https://grammica.com/ai-detector")
         textbox = driver.find_element(by=By.XPATH, value='//*[@id="text"]')
         textbox.send_keys(text_to_check)
-        score = wait_element_text_ready('//*[@id="fake-percentage"]').text
+        score = wait_element_visible_text('//*[@id="fake-percentage"]').text
         print("Grammica.com score: " + score + " from AI written text!")
     except:
         print("Grammica.com is not available!")
@@ -70,12 +76,27 @@ def get_score_from_scribbr(text_to_check) -> int:
         textbox.send_keys(text_to_check)
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="aiDetectorButton"]')
         detect_button.click()
-        score = wait_element_text_ready('//*[@id="aiDetector"]/div[2]/div/div[1]/div[3]/span[1]').text
+        score = wait_element_visible_text('//*[@id="aiDetector"]/div[2]/div/div[1]/div[3]/span[1]').text
         print("Scribbr.com score: " + score + " from AI written text!")
     except:
-        print("Scribbr.com is not available!")
+        print("Scribbr.com is not available! Text could be to short!")
     return 0
 
 
-get_score_from_scribbr(test_text)
+def get_score_from_detectingai(text_to_check) -> int:
+    # Gets score from Detecting-ai.com -> geman & english
+    try:
+        driver.get("https://detecting-ai.com/de/detect_ai/")
+        textbox = driver.find_element(by=By.XPATH, value='//*[@id="input-text"]')
+        textbox.send_keys(text_to_check)
+        detect_button = driver.find_element(by=By.XPATH, value='//*[@id="send_text"]')
+        detect_button.click()
+        score_element = wait_element('//*[@id="ai-generated"]')
+        score = score_element.get_attribute("aria-valuenow")
+        print("Detecting-ai.com score: " + score + "% from AI written text!")
+    except Exception as e:
+        print("Detecting-ai.com is not available!")
+    return 0
+
+
 driver.close()
