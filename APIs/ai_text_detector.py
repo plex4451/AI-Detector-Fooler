@@ -53,8 +53,8 @@ def get_score_from_grammica(text_to_check) -> int:
     # Gets score from Grammica.com -> only english!
     try:
         driver.get("https://grammica.com/ai-detector")
-        grammica_box = driver.find_element(by=By.XPATH, value='//*[@id="text"]')
-        grammica_box.send_keys(text_to_check)
+        textbox = driver.find_element(by=By.XPATH, value='//*[@id="text"]')
+        textbox.send_keys(text_to_check)
         score = wait_element_text_ready('//*[@id="fake-percentage"]').text
         print("Grammica.com score: " + score + " from AI written text!")
     except:
@@ -62,5 +62,20 @@ def get_score_from_grammica(text_to_check) -> int:
     return 0
 
 
-get_score_from_grammica(test_text)
+def get_score_from_scribbr(text_to_check) -> int:
+    # Gets score from Scribbr.com -> only english!
+    try:
+        driver.get("https://www.scribbr.com/ai-detector/")
+        textbox = driver.find_element(by=By.XPATH, value='//*[@role="textbox"]')
+        textbox.send_keys(text_to_check)
+        detect_button = driver.find_element(by=By.XPATH, value='//*[@id="aiDetectorButton"]')
+        detect_button.click()
+        score = wait_element_text_ready('//*[@id="aiDetector"]/div[2]/div/div[1]/div[3]/span[1]').text
+        print("Scribbr.com score: " + score + " from AI written text!")
+    except:
+        print("Scribbr.com is not available!")
+    return 0
+
+
+get_score_from_scribbr(test_text)
 driver.close()
