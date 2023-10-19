@@ -7,9 +7,7 @@ from selenium.common.exceptions import StaleElementReferenceException
 
 import time
 
-# -------------------------------DETECTORS------------------------------------------
-grammica_enabled = True
-
+# -------------------------------DEBUG------------------------------------------
 # Define test text
 test_text = "School is a place that has a significant impact on the lives of young people. It is not only an institution of learning but also a hub for social interaction and personal growth. In this essay, I would like to shed light on the importance of school as an educational institution and as a venue for social development.School is a place that has a significant impact on the lives of young people. It is not only an institution of learning but also a hub for social interaction and personal growth. In this essay, I would like to shed light on the importance of school as an educational institution and as a venue for social development."
 
@@ -38,16 +36,16 @@ class ElementVisibilityChecker(object):
             return False
 
 
-def wait_element(element_xpath):
+def __wait_element(element_xpath):
     # Waits until a certain element appears, and then returns that element
     wait.until(Expected.presence_of_element_located((By.XPATH, element_xpath)))
     element = driver.find_element(By.XPATH, element_xpath)
     return element
 
 
-def wait_element_visible_text(element_xpath):
+def __wait_element_visible_text(element_xpath):
     # Waits until a certain element is visible & has text, and then returns that element
-    element = wait_element(element_xpath)
+    element = __wait_element(element_xpath)
     wait.until(Expected.visibility_of(element))
     wait.until(ElementVisibilityChecker(element))
     while element.text == "":
@@ -55,20 +53,21 @@ def wait_element_visible_text(element_xpath):
     return element
 
 
-def get_score_from_grammica(text_to_check) -> int:
+def __get_score_from_grammica(text_to_check) -> float:
     # Gets score from Grammica.com -> only english!
     try:
         driver.get("https://grammica.com/ai-detector")
         textbox = driver.find_element(by=By.XPATH, value='//*[@id="text"]')
         textbox.send_keys(text_to_check)
-        score = wait_element_visible_text('//*[@id="fake-percentage"]').text
+        score = __wait_element_visible_text('//*[@id="fake-percentage"]').text
         print("Grammica.com score: " + score + " from AI written text!")
+        return float(score.replace('%', ''))
     except:
         print("Grammica.com is not available!")
-    return 0
+    return -1
 
 
-def get_score_from_scribbr(text_to_check) -> int:
+def __get_score_from_scribbr(text_to_check) -> float:
     # Gets score from Scribbr.com -> only english!
     try:
         driver.get("https://www.scribbr.com/ai-detector/")
@@ -76,14 +75,15 @@ def get_score_from_scribbr(text_to_check) -> int:
         textbox.send_keys(text_to_check)
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="aiDetectorButton"]')
         detect_button.click()
-        score = wait_element_visible_text('//*[@id="aiDetector"]/div[2]/div/div[1]/div[3]/span[1]').text
+        score = __wait_element_visible_text('//*[@id="aiDetector"]/div[2]/div/div[1]/div[3]/span[1]').text
         print("Scribbr.com score: " + score + " from AI written text!")
+        return float(score.replace('%', ''))
     except:
         print("Scribbr.com is not available! Text could be to short!")
-    return 0
+    return -1
 
 
-def get_score_from_detectingai(text_to_check) -> int:
+def __get_score_from_detectingai(text_to_check) -> float:
     # Gets score from Detecting-ai.com -> geman & english
     try:
         driver.get("https://detecting-ai.com/de/detect_ai/")
@@ -91,12 +91,22 @@ def get_score_from_detectingai(text_to_check) -> int:
         textbox.send_keys(text_to_check)
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="send_text"]')
         detect_button.click()
-        score_element = wait_element('//*[@id="ai-generated"]')
+        score_element = __wait_element('//*[@id="ai-generated"]')
         score = score_element.get_attribute("aria-valuenow")
         print("Detecting-ai.com score: " + score + "% from AI written text!")
-    except Exception as e:
+        return float(score)
+    except:
         print("Detecting-ai.com is not available!")
-    return 0
+    return -1
 
 
-driver.close()
+def get_scores(text_to_check):
+    scores = []
+    scores.append(__get_score_from_grammica(text_to_check))
+    scores.append(__get_score_from_scribbr(text_to_check))
+    scores.append(__get_score_from_detectingai(text_to_check))
+    driver.close()
+
+
+get_scores(test_text)
+
