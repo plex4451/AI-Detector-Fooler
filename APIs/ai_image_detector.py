@@ -51,16 +51,43 @@ def __get_score_from_illuminarty(image_path) -> float:
 
         # Get score
         score = wait_element_visible_text(driver, wait, '//*[@id="analysisCntr"]/aside/div[1]/div[2]/div/div/p').text
+        score = score.replace('AI Probability: ', '')
 
-        print("Illuminarty.ai score: " + score)
-        return float(score.replace('%', '').replace('AI Probability: ', ''))
+        print("Illuminarty.ai score: " + score + " AI created image!")
+        return float(score.replace('%', ''))
     except:
         print("Illuminarty.ai is not available!")
         return -1
 
 
-def get_scores(text_to_check):
+def __get_score_from_isitai(image_path) -> float:
+    # Gets score from Isitai.com
+    try:
+        driver.get("https://isitai.com/ai-image-detector/")
+
+        # Upload image
+        image_field = wait_element_css(wait, 'input[type="file"]')
+        image_field.send_keys(image_path)
+        wait_for_attribute(wait, image_field, 'value')
+
+        # Submit and get score
+        submit_button = driver.find_element(by=By.XPATH, value='//*[@id="submit-button"]')
+        submit_button.click()
+        score = wait_element_visible_text(driver, wait,'//*[@id="result-container"]/div[1]/div[2]/div[2]').text
+
+        print("Isitai.com score: " + score + " AI created image!")
+        return float(score.replace('%', ''))
+    except:
+        print("Isitai.com is not available!")
+        return -1
+
+
+def get_scores(image_to_check):
     scores = []
-    scores.append(__get_score_from_huggingface(text_to_check))
-    scores.append(__get_score_from_illuminarty(text_to_check))
+    scores.append(__get_score_from_huggingface(image_to_check))
+    scores.append(__get_score_from_illuminarty(image_to_check))
+    scores.append(__get_score_from_isitai(image_to_check))
+
+
+get_scores(test_image_url)
 
