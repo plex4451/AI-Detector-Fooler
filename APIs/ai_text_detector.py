@@ -1,56 +1,14 @@
 # -------------------------------IMPORTS------------------------------------------
-from selenium import webdriver
+from selenium_utils import setup_selenium, wait_element, wait_element_visible_text
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as Expected
-from selenium.common.exceptions import StaleElementReferenceException
 
-import time
+# -------------------------------SELENIUM------------------------------------------
+# Setup Selenium and get driver and wait
+driver, wait = setup_selenium()
 
 # -------------------------------DEBUG------------------------------------------
 # Define test text
 test_text = "School is a place that has a significant impact on the lives of young people. It is not only an institution of learning but also a hub for social interaction and personal growth. In this essay, I would like to shed light on the importance of school as an educational institution and as a venue for social development.School is a place that has a significant impact on the lives of young people. It is not only an institution of learning but also a hub for social interaction and personal growth. In this essay, I would like to shed light on the importance of school as an educational institution and as a venue for social development."
-
-# -------------------------------SELENIUM------------------------------------------
-selenium_options = webdriver.ChromeOptions()
-selenium_options.add_argument('--headless')
-
-# Initialize the web driver with the options
-driver = webdriver.Chrome(options=selenium_options)
-
-# Defines Selenium Misc Options
-wait = WebDriverWait(driver, 10)
-
-
-class ElementVisibilityChecker(object):
-    # This class checks if a selenium web element is visible
-    def __init__(self, locator):
-        self.locator = locator
-
-    # Callable method to check visibility
-    def __call__(self, driver):
-        try:
-            element = self.locator
-            return element.value_of_css_property("visibility") == "visible"
-        except StaleElementReferenceException:
-            return False
-
-
-def __wait_element(element_xpath):
-    # Waits until a certain element appears, and then returns that element
-    wait.until(Expected.presence_of_element_located((By.XPATH, element_xpath)))
-    element = driver.find_element(By.XPATH, element_xpath)
-    return element
-
-
-def __wait_element_visible_text(element_xpath):
-    # Waits until a certain element is visible & has text, and then returns that element
-    element = __wait_element(element_xpath)
-    wait.until(Expected.visibility_of(element))
-    wait.until(ElementVisibilityChecker(element))
-    while element.text == "":
-        time.sleep(0.5)
-    return element
 
 
 def __get_score_from_grammica(text_to_check) -> float:
@@ -59,7 +17,7 @@ def __get_score_from_grammica(text_to_check) -> float:
         driver.get("https://grammica.com/ai-detector")
         textbox = driver.find_element(by=By.XPATH, value='//*[@id="text"]')
         textbox.send_keys(text_to_check)
-        score = __wait_element_visible_text('//*[@id="fake-percentage"]').text
+        score = wait_element_visible_text(driver, wait, '//*[@id="fake-percentage"]').text
         print("Grammica.com score: " + score + " from AI written text!")
         return float(score.replace('%', ''))
     except:
@@ -75,7 +33,7 @@ def __get_score_from_scribbr(text_to_check) -> float:
         textbox.send_keys(text_to_check)
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="aiDetectorButton"]')
         detect_button.click()
-        score = __wait_element_visible_text('//*[@id="aiDetector"]/div[2]/div/div[1]/div[3]/span[1]').text
+        score = wait_element_visible_text(driver, wait, '//*[@id="aiDetector"]/div[2]/div/div[1]/div[3]/span[1]').text
         print("Scribbr.com score: " + score + " from AI written text!")
         return float(score.replace('%', ''))
     except:
@@ -91,7 +49,7 @@ def __get_score_from_detectingai(text_to_check) -> float:
         textbox.send_keys(text_to_check)
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="send_text"]')
         detect_button.click()
-        score_element = __wait_element('//*[@id="ai-generated"]')
+        score_element = wait_element(driver, wait, '//*[@id="ai-generated"]')
         score = score_element.get_attribute("aria-valuenow")
         print("Detecting-ai.com score: " + score + "% from AI written text!")
         return float(score)
@@ -109,4 +67,3 @@ def get_scores(text_to_check):
 
 
 get_scores(test_text)
-
