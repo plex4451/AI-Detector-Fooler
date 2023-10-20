@@ -39,5 +39,26 @@ def __get_score_from_huggingface(image_path) -> float:
         return -1
 
 
+def __get_score_from_illuminarty(image_path) -> float:
+    # Gets score from Illuminarty.ai
+    try:
+        driver.get("https://app.illuminarty.ai/")
+
+        # Upload image
+        image_field = wait_element_css(wait, 'input[type="file"]')
+        image_field.send_keys(image_path)
+        wait_for_attribute(wait, image_field, 'value')
+
+        # Get score
+        score = wait_element_visible_text(driver, wait, '//*[@id="analysisCntr"]/aside/div[1]/div[2]/div/div/p').text
+
+        print("Illuminarty.ai score: " + score)
+        return float(score.replace('%', '').replace('AI Probability: ', ''))
+    except:
+        print("Illuminarty.ai is not available!")
+        return -1
+
+
 __get_score_from_huggingface(test_image_url)
+__get_score_from_illuminarty(test_image_url)
 
