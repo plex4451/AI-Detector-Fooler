@@ -26,6 +26,10 @@ def wait_element_css(wait, css_path):
     return element
 
 
+def wait_for_attribute(wait, element, attribute):
+    wait.until(lambda driver: element.get_attribute(attribute).strip() != '')
+
+
 def wait_element_visible_text(driver, wait, element_xpath):
     element = wait_element(driver, wait, element_xpath)
     wait.until(Expected.visibility_of(element))
