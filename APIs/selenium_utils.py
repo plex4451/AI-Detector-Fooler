@@ -9,7 +9,7 @@ import time
 def setup_selenium():
     # Initialize the web driver with options
     selenium_options = webdriver.ChromeOptions()
-    #selenium_options.add_argument('--headless')
+    selenium_options.add_argument('--headless')
     driver = webdriver.Chrome(options=selenium_options)
     wait = WebDriverWait(driver, 10)
     return driver, wait

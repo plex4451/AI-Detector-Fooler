@@ -2,6 +2,7 @@
 from selenium_utils import setup_selenium, wait_element, wait_element_visible_text
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support import expected_conditions as Expected
 
 # -------------------------------SELENIUM------------------------------------------
 # Setup Selenium and get driver and wait
@@ -30,6 +31,12 @@ def __get_score_from_scribbr(text_to_check) -> float:
     # Gets score from Scribbr.com -> only english!
     try:
         driver.get("https://www.scribbr.com/ai-detector/")
+
+        # Accept cookies
+        cookie_button = wait.until(Expected.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")))
+        cookie_button.click()
+
+        # Input text and get score
         textbox = driver.find_element(by=By.XPATH, value='//*[@role="textbox"]')
         textbox.send_keys(text_to_check)
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="aiDetectorButton"]')
@@ -81,7 +88,6 @@ def get_scores(text_to_check):
     scores.append(__get_score_from_scribbr(text_to_check))
     scores.append(__get_score_from_detectingai(text_to_check))
     driver.close()
-    print(scores)
 
 
 get_scores(test_text)
