@@ -59,6 +59,8 @@ def __get_score_from_illuminarty(image_path) -> float:
         return -1
 
 
-__get_score_from_huggingface(test_image_url)
-__get_score_from_illuminarty(test_image_url)
+def get_scores(text_to_check):
+    scores = []
+    scores.append(__get_score_from_huggingface(text_to_check))
+    scores.append(__get_score_from_illuminarty(text_to_check))
 
