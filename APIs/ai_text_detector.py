@@ -1,6 +1,7 @@
 # -------------------------------IMPORTS------------------------------------------
 from selenium_utils import setup_selenium, wait_element, wait_element_visible_text
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 
 # -------------------------------SELENIUM------------------------------------------
 # Setup Selenium and get driver and wait
@@ -41,21 +42,37 @@ def __get_score_from_scribbr(text_to_check) -> float:
     return -1
 
 
-def __get_score_from_detectingai(text_to_check) -> float:
+def __get_score_from_detectingai(text_to_check):
     # Gets score from Detecting-ai.com -> geman & english
     try:
         driver.get("https://detecting-ai.com/de/detect_ai/")
+        # Input text and click submit button
         textbox = driver.find_element(by=By.XPATH, value='//*[@id="input-text"]')
         textbox.send_keys(text_to_check)
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="send_text"]')
         detect_button.click()
+
+        # Get score A
         score_element = wait_element(driver, wait, '//*[@id="ai-generated"]')
-        score = score_element.get_attribute("aria-valuenow")
-        print("Detecting-ai.com score: " + score + "% from AI written text!")
-        return float(score)
+        score_a = score_element.get_attribute("aria-valuenow")
+        print("Detecting-ai.com Methode-A score: " + score_a + "% from AI written text!")
+
+        # Select method B and submit
+        method_dropdown = driver.find_element(by=By.XPATH, value='//*[@id="model_option"]')
+        select = Select(method_dropdown)
+        select.select_by_value("detector_2")
+        detect_button = driver.find_element(by=By.XPATH, value='//*[@id="send_text"]')
+        detect_button.click()
+
+        # Get score B
+        score_element = wait_element(driver, wait, '//*[@id="ai-generated"]')
+        score_b = score_element.get_attribute("aria-valuenow")
+        print("Detecting-ai.com Methode-B score: " + score_b + "% from AI written text!")
+
+        return float(score_a), float(score_b)
     except:
         print("Detecting-ai.com is not available!")
-    return -1
+        return -1
 
 
 def get_scores(text_to_check):
@@ -64,6 +81,7 @@ def get_scores(text_to_check):
     scores.append(__get_score_from_scribbr(text_to_check))
     scores.append(__get_score_from_detectingai(text_to_check))
     driver.close()
+    print(scores)
 
 
 get_scores(test_text)
