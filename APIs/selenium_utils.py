@@ -21,6 +21,11 @@ def wait_element(driver, wait, element_xpath):
     return element
 
 
+def wait_element_css(wait, css_path):
+    element = wait.until(Expected.presence_of_element_located((By.CSS_SELECTOR, css_path)))
+    return element
+
+
 def wait_element_visible_text(driver, wait, element_xpath):
     element = wait_element(driver, wait, element_xpath)
     wait.until(Expected.visibility_of(element))
