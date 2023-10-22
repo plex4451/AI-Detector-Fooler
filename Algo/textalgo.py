@@ -11,4 +11,6 @@ def changeText(txt: str) -> str:
     txt = txt.replace("T", "7")
     txt = txt.replace("s", "5")
     txt = txt.replace("S", "5")
+    txt = txt.replace(" "," ")
+    print("𝅹")
     return (txt)
