@@ -10,6 +10,8 @@ def debugInfo(original_txt: str,final_txt: str):
 
 #Exchange-Char-Symbol: Replaces letters with similar symbols
 def changeLetterSymbol(txt: str) -> str:
+    txt = txt.replace("a","@")
+    return(txt)
 
 
 
