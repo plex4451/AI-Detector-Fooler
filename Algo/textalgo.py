@@ -8,10 +8,13 @@ def debugInfo(original_txt: str,final_txt: str):
     print("The Text is changed to {}%".format(percentage_change))
 
 
+#Exchange-Char-Symbol: Replaces letters with similar symbols
+def changeLetterSymbol(txt: str) -> str:
+
 
 
 # Invisible Char: Replaces Space with a invisible char
-def changeInvisiblechar(txt: str) -> str:
+def changeInvisibleChar(txt: str) -> str:
     txt = txt.replace(" ", " ")
     return (txt)
 
@@ -31,7 +34,8 @@ def changeLeetspeak(txt: str) -> str:
 
 def changeText(txt: str) -> str:
     txt = changeLeetspeak(txt)
-    txt = changeInvisiblechar(txt)
+    txt = changeInvisibleChar(txt)
+    txt = changeLetterSymbol(txt)
     return (txt)
 
 
