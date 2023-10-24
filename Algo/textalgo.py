@@ -35,9 +35,11 @@ def changeLeetspeak(txt: str) -> str:
 
 
 def changeText(txt: str) -> str:
+    original_txt = txt
     txt = changeInvisibleChar(txt)
     txt = changeLetterSymbol(txt)
     txt = changeLeetspeak(txt)
+    debugInfo(original_txt,txt)
     return (txt)
 
 
