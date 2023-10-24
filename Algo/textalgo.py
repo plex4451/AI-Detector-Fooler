@@ -1,10 +1,12 @@
 #Debug-Info-Function: Prints information about the String
 def debugInfo(original_txt: str,final_txt: str):
-x = 0
+    x = 0
     for i in range(0,len(original_txt)):
         if(original_txt[i]!=final_txt[i]):
             x += 1
-    
+    percentage_change = (x/len(original_txt))*100
+    print("The Text is changed to {}%".format(percentage_change))
+
 
 
 
