@@ -21,3 +21,11 @@ def changeText(txt: str) -> str:
     txt = changeLeetspeak(txt)
     txt = changeInvisiblechar(txt)
     return (txt)
+
+
+
+example_txt = "This is a example Text!"
+final_txt = changeText(example_txt)
+
+print(example_txt + "\n")
+print(final_txt + "\n")
