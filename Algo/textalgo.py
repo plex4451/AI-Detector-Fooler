@@ -1,3 +1,9 @@
+#Debug-Info-Function: Prints information about the String
+def debugInfo(original_txt: str,final_txt: str):
+
+
+
+
 # Invisible Char: Replaces Space with a invisible char
 def changeInvisiblechar(txt: str) -> str:
     txt = txt.replace(" ", " ")
