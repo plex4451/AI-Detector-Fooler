@@ -1,5 +1,5 @@
 # -------------------------------IMPORTS------------------------------------------
-from selenium_utils import setup_selenium, wait_element, wait_element_visible_text
+from APIs.selenium_utils import setup_selenium, wait_element, wait_element_visible_text
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as Expected

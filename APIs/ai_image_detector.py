@@ -1,5 +1,5 @@
 # -------------------------------IMPORTS------------------------------------------
-from selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
+from APIs.selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
 from selenium.webdriver.common.by import By
 
 # -------------------------------SELENIUM------------------------------------------
