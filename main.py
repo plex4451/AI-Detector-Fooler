@@ -1,10 +1,14 @@
 import sys
 from Enums.filetype import *
 from Algo.textalgo import *
+from APIs.ai_text_detector import *
+from APIs.ai_image_detector import *
+
 
 # Test-Txt: This Method test the created txt with the apis
 def testTxt(txt: str):
     [...]
+
 
 
 
