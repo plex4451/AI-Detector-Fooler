@@ -2,6 +2,16 @@ import sys
 from Enums.filetype import *
 from Algo.textalgo import *
 
+# Test-Txt: This Method test the created txt with the apis
+def testTxt(txt: str):
+    [...]
+
+
+
+
+
+
+
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
 inputtype = getfiletype(inputpath.split('.')[-1].upper())
