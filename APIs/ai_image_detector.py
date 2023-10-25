@@ -87,4 +87,5 @@ def get_scores(image_to_check):
     scores.append(__get_score_from_huggingface(image_to_check))
     scores.append(__get_score_from_illuminarty(image_to_check))
     scores.append(__get_score_from_isitai(image_to_check))
-
+    driver.close()
+    return scores

@@ -27,6 +27,7 @@ else:
 
         file = open(outputpath, "x")
         file.write(final_text)
+        file.close()
 
 
         print("Text-ALGO Missing.")

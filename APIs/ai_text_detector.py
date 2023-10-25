@@ -88,4 +88,5 @@ def get_scores(text_to_check):
     scores.append(__get_score_from_scribbr(text_to_check))
     scores.append(__get_score_from_detectingai(text_to_check))
     driver.close()
+    return scores
 
