@@ -1,3 +1,9 @@
+#Variables
+max_percentage = 100
+
+
+
+
 #Debug-Info-Function: Prints information about the String
 def debugInfo(original_txt: str,final_txt: str):
     x = 0
@@ -37,8 +43,8 @@ def changeLeetspeak(txt: str) -> str:
 def changeText(txt: str) -> str:
     original_txt = txt
     txt = changeInvisibleChar(txt)
-    txt = changeLetterSymbol(txt)
-    txt = changeLeetspeak(txt)
+    #txt = changeLetterSymbol(txt)
+    #txt = changeLeetspeak(txt)
     debugInfo(original_txt,txt)
     return (txt)
 
