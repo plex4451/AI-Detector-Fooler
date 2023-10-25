@@ -35,5 +35,4 @@ else:
     else:
         print("Image-ALGO Missing")
         #TODO: INSERT ALGO FOR IMAGE HERE
-
-
+    print("Success!")
