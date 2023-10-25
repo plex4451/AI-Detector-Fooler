@@ -16,7 +16,7 @@ def testTxt(txt: str):
 
 
 
-
+debug = True
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
 inputtype = getfiletype(inputpath.split('.')[-1].upper())
@@ -43,8 +43,8 @@ else:
         file = open(outputpath, "x")
         file.write(final_text)
         file.close()
-
-        testTxt(final_text)
+        print(final_text)
+        if(debug): testTxt(final_text)
 
         print("Text-ALGO Missing.")
         #TODO: INSERT ALGO FOR TEXT HERE
