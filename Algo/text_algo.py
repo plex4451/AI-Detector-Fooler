@@ -5,7 +5,7 @@ max_percentage = 100
 
 
 #Debug-Info-Function: Prints information about the String
-def debug_info(original_txt: str,final_txt: str):
+def debug_info_text(original_txt: str,final_txt: str):
     x = 0
     for i in range(0,len(original_txt)):
         if(original_txt[i]!=final_txt[i]):
