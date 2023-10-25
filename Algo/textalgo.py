@@ -33,7 +33,7 @@ def changeLeetspeak(txt: str) -> str:
     txt = txt.replace("S", "5")
     return txt
 
-
+#Main Methode to change txt (Deactivate certain Methods with a "#")
 def changeText(txt: str) -> str:
     original_txt = txt
     txt = changeInvisibleChar(txt)
@@ -44,8 +44,3 @@ def changeText(txt: str) -> str:
 
 
 
-example_txt = "This is a example Text!"
-final_txt = changeText(example_txt)
-
-print(example_txt + "\n")
-print(final_txt + "\n")
