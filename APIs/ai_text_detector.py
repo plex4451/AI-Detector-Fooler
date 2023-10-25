@@ -10,7 +10,7 @@ driver, wait = setup_selenium()
 
 # -------------------------------DEBUG------------------------------------------
 # Define test text
-test_text = "School is a place that has a significant impact on the lives of young people. It is not only an institution of learning but also a hub for social interaction and personal growth. In this essay, I would like to shed light on the importance of school as an educational institution and as a venue for social development.School is a place that has a significant impact on the lives of young people. It is not only an institution of learning but also a hub for social interaction and personal growth. In this essay, I would like to shed light on the importance of school as an educational institution and as a venue for social development."
+test_text = "This is a example Text!"
 
 
 def __get_score_from_grammica(text_to_check) -> float:
@@ -89,5 +89,3 @@ def get_scores(text_to_check):
     scores.append(__get_score_from_detectingai(text_to_check))
     driver.close()
 
-
-get_scores(test_text)
