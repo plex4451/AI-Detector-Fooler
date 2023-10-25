@@ -1,14 +1,15 @@
 import sys
 from Enums.filetype import *
 from Algo.textalgo import *
-from APIs.ai_text_detector import *
-from APIs.ai_image_detector import *
+from APIs.ai_text_detector import get_scores as get_scores_txt
+from APIs.ai_image_detector import get_scores as get_scores_image
 
 
 # Test-Txt: This Method test the created txt with the apis
 def testTxt(txt: str):
-    [...]
-
+    points_array = get_scores_txt(txt)
+    for i in points_array:
+        print(i)
 
 
 
@@ -43,6 +44,7 @@ else:
         file.write(final_text)
         file.close()
 
+        testTxt(final_text)
 
         print("Text-ALGO Missing.")
         #TODO: INSERT ALGO FOR TEXT HERE
