@@ -14,6 +14,11 @@ def debug_info_text(original_txt: str,final_txt: str):
     print("The Text is changed to {}%".format(percentage_change))
 
 
+
+#Exchange-Char-Same-Char: Replaces letters with identical letters
+def change_letter_simillar_letter(txt: str) -> str:
+    [...]
+
 #Exchange-Char-Symbol: Replaces letters with similar symbols
 def change_letter_symbol(txt: str) -> str:
     txt = txt.replace("a","@")
