@@ -86,7 +86,9 @@ def get_scores(text_to_check):
     scores = []
     scores.append(__get_score_from_grammica(text_to_check))
     scores.append(__get_score_from_scribbr(text_to_check))
-    scores.append(__get_score_from_detectingai(text_to_check))
+    arr_help = __get_score_from_detectingai(text_to_check)
+    scores.append(arr_help[0])
+    scores.append(arr_help[1])
     driver.close()
     return scores
 
