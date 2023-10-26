@@ -17,7 +17,8 @@ def debug_info_text(original_txt: str,final_txt: str):
 
 #Exchange-Char-Same-Char: Replaces letters with identical letters
 def change_letter_simillar_letter(txt: str) -> str:
-    [...]
+    txt = txt.replace("a","а")
+    return(txt)
 
 #Exchange-Char-Symbol: Replaces letters with similar symbols
 def change_letter_symbol(txt: str) -> str:
@@ -47,7 +48,8 @@ def change_leet_speak(txt: str) -> str:
 #Main Methode to change txt (Deactivate certain Methods with a "#")
 def change_text(txt: str) -> str:
     original_txt = txt
-    txt = change_invisible_char(txt)
+    txt = change_letter_simillar_letter(txt)
+    #txt = change_invisible_char(txt)
     #txt = change_letter_symbol(txt)
     #txt = change_leet_speak(txt)
     return (txt)
