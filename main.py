@@ -1,6 +1,6 @@
 import sys
 from Enums.filetype import *
-from Algo.textalgo import *
+from Algo.text_algo import *
 from APIs.ai_text_detector import get_scores as get_scores_txt
 from APIs.ai_image_detector import get_scores as get_scores_image
 
@@ -8,14 +8,17 @@ from APIs.ai_image_detector import get_scores as get_scores_image
 # Test-Txt: This Method test the created txt with the apis
 def testTxt(txt: str):
     points_array = get_scores_txt(txt)
+    detector_list = ["Grammica.com","Scribbr.com","Detecting-ai.com Methode-A-B"]
+    counter = 0
     for i in points_array:
-        print(i)
+        print(("{name:} score: {score:}%".format(name = detector_list[counter], score = i)))
+        counter += 1
 
 
 
 
 
-
+#debug: Enables/Disables Debug prints and Methods for Testing
 debug = True
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
@@ -38,14 +41,20 @@ else:
         text = file.read()
         file.close()
 
-        final_text = changeText(text)
+        final_text = change_text(text)
 
         file = open(outputpath, "x")
         file.write(final_text)
         file.close()
-        print(final_text)
-        if(debug): testTxt(final_text)
 
+        if(debug):
+            print("----------------------------------------------------------------------------")
+            testTxt(final_text)
+            print("----------------------------------------------------------------------------")
+            debug_info_text(text, final_text)
+            print("----------------------------------------------------------------------------")
+            print(final_text)
+            print("----------------------------------------------------------------------------")
         print("Text-ALGO Missing.")
         #TODO: INSERT ALGO FOR TEXT HERE
 
