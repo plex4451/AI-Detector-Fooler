@@ -82,6 +82,13 @@ def __get_score_from_detectingai(text_to_check):
         return -1
 
 def __get_score_from_gptzero(text_to_check) -> float:
+    try:
+        driver.get("https://gptzero.me/")
+        # Input text and click submit button
+        textbox = driver.find_element(by=By.XPATH, value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/textarea')
+        textbox.send_keys(text_to_check)
+        detect_button = driver.find_element(by=By.XPATH, value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/button')
+        detect_button.click()
 
 def get_scores(text_to_check):
     scores = []
