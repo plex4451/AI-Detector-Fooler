@@ -90,13 +90,21 @@ def __get_score_from_gptzero(text_to_check) -> float:
         detect_button = driver.find_element(by=By.XPATH, value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/button')
         detect_button.click()
 
+        # Get score
+        score = wait_element(driver, wait, '//*[@id="__next"]/div[1]/div[2]/div/div[2]/div/div[2]/div[1]/div[1]/div[2]/span[2]/b/text()[1]')
+        print("GPTzero score: " + score + "% from AI written text!")
+    except:
+        print("GPTzero.me is not available!")
+        return -1
+
 def get_scores(text_to_check):
     scores = []
     scores.append(__get_score_from_grammica(text_to_check))
-    scores.append(__get_score_from_scribbr(text_to_check))
+    #scores.append(__get_score_from_scribbr(text_to_check))
     arr_help = __get_score_from_detectingai(text_to_check)
     scores.append(arr_help[0])
     scores.append(arr_help[1])
+    #scores.append(__get_score_from_gptzero(text_to_check))
     driver.close()
     return scores
 
