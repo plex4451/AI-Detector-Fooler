@@ -3,6 +3,7 @@ from APIs.selenium_utils import setup_selenium, wait_element, wait_element_visib
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as Expected
+from time import *
 
 # -------------------------------SELENIUM------------------------------------------
 # Setup Selenium and get driver and wait
@@ -93,11 +94,12 @@ def __get_score_from_gptzero(text_to_check) -> float:
         # Get score
         score = wait_element(driver, wait, '//*[@id="__next"]/div[1]/div[2]/div/div[2]/div/div[2]/div[1]/div[1]/div[2]/span[2]/b/text()[1]')
         print("GPTzero score: " + score + "% from AI written text!")
+        return score
     except:
         print("GPTzero.me is not available!")
         return -1
 
-def __get_score_from_writer(text_to_check) -> foat:
+def __get_score_from_writer(text_to_check) -> float:
     try:
         driver.get("https://writer.com/ai-content-detector/")
         # Input text and click submit button
@@ -107,22 +109,24 @@ def __get_score_from_writer(text_to_check) -> foat:
         detect_button.click()
 
         # Get score
-        score = wait_element(driver, wait,
-                             '//*[@id="__next"]/div[1]/div[2]/div/div[2]/div/div[2]/div[1]/div[1]/div[2]/span[2]/b/text()[1]')
-        print("GPTzero score: " + score + "% from AI written text!")
+        sleep(5)
+        score = wait_element(driver, wait,'//*[@id="ai-percentage"]').text
+        print("Writer score: " + (100-score) + "% from AI written text!")
+        return 100-score
     except:
-        print("GPTzero.me is not available!")
+        print("Writer.com is not available!")
         return -1
 
 
 def get_scores(text_to_check):
     scores = []
     scores.append(__get_score_from_grammica(text_to_check))
-    #scores.append(__get_score_from_scribbr(text_to_check))
+    scores.append(__get_score_from_scribbr(text_to_check))
     arr_help = __get_score_from_detectingai(text_to_check)
     scores.append(arr_help[0])
     scores.append(arr_help[1])
     #scores.append(__get_score_from_gptzero(text_to_check))
+    scores.append(__get_score_from_writer(text_to_check))
     driver.close()
     return scores
 
