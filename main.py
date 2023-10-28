@@ -43,7 +43,7 @@ else:
 
         final_text = change_text(text)
 
-        file = open(outputpath, "x")
+        file = open(outputpath, "x", encoding='utf-8')
         file.write(final_text)
         file.close()
 
