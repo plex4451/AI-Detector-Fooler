@@ -97,13 +97,13 @@ def __get_score_from_gptzero(text_to_check) -> float:
         print("GPTzero.me is not available!")
         return -1
 
-def __get_score_from_writter(text_to_check) -> foat:
+def __get_score_from_writer(text_to_check) -> foat:
     try:
         driver.get("https://writer.com/ai-content-detector/")
         # Input text and click submit button
-        textbox = driver.find_element(by=By.XPATH,value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/textarea')
+        textbox = driver.find_element(by=By.XPATH,value='/html/body/div[3]/div[2]/div[2]/div[1]/form/div[2]/textarea')
         textbox.send_keys(text_to_check)
-        detect_button = driver.find_element(by=By.XPATH,value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/button')
+        detect_button = driver.find_element(by=By.XPATH,value='/html/body/div[3]/div[2]/div[2]/div[1]/form/button')
         detect_button.click()
 
         # Get score
