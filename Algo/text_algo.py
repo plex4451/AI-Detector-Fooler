@@ -17,9 +17,8 @@ def debug_info_text(original_txt: str,final_txt: str):
 
 #Exchange-Char-Same-Char: Replaces letters with identical letters
 def change_letter_simillar_letter(txt: str) -> str:
-    #txt = txt.replace("a","а")
+    txt = txt.replace("a","а")
     #txt =txt.replace("a","a\ufeff")
-    #TODO: Check Unicode-Conversion
     return(txt)
 
 #Exchange-Char-Symbol: Replaces letters with similar symbols
