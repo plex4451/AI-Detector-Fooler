@@ -81,6 +81,7 @@ def __get_score_from_detectingai(text_to_check):
         print("Detecting-ai.com is not available!")
         return -1
 
+def __get_score_from_gptzero(text_to_check) -> float:
 
 def get_scores(text_to_check):
     scores = []
