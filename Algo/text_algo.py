@@ -21,6 +21,8 @@ def replace_better(txt: str, letter: str, replacment: str, percantage : float) -
     for i in range(0, len(txt)):
         if (txt_list[i] == letter):
             txt_list[i] = replacment
+    txt = "".join(txt_list)
+    return txt
 
 
 
