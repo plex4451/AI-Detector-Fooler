@@ -14,6 +14,18 @@ def debug_info_text(original_txt: str,final_txt: str):
     print("The Text is changed to {}%".format(percentage_change))
 
 
+#Replace-Better: Replaces evenly the letters in the text
+def replace_better(txt: str) -> str:
+    [...]
+
+
+
+
+
+
+
+
+
 
 #Exchange-Char-Same-Char: Replaces letters with identical letters
 def change_letter_simillar_letter(txt: str) -> str:
