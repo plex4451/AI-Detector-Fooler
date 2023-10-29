@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from APIs.ai_image_detector import get_scores
 
 
 def add_noise_to_image(image, mean=0, stddev=25):
@@ -15,3 +16,13 @@ def add_noise_to_image(image, mean=0, stddev=25):
     noisy_image = noisy_image.astype(np.uint8)
     return noisy_image
 
+
+def use_alog_on_image(path):
+    image = cv2.imread(path)
+    new = add_noise_to_image(image)
+    cv2.imwrite("/Users/loukielhorn/Downloads/output.png", new)
+    print("Alog used")
+    get_scores("/Users/loukielhorn/Downloads/output.png")
+
+
+use_alog_on_image("/Users/loukielhorn/Downloads/berries.jpg")
