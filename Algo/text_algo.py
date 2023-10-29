@@ -40,33 +40,33 @@ def replace_better(txt: str, letter: str, replacment: str, percantage : float) -
 
 #Exchange-Char-Same-Char: Replaces letters with identical letters
 def change_letter_simillar_letter(txt: str) -> str:
-    txt = txt.replace("a","а")
-    #txt =txt.replace("a","a\ufeff")
+    txt = replace_better(txt,"a","а")
+    #txt =replace_better(txt,"a","a\ufeff")
     return(txt)
 
 #Exchange-Char-Symbol: Replaces letters with similar symbols
 def change_letter_symbol(txt: str) -> str:
-    txt = txt.replace("a","@")
+    txt = replace_better(txt,"a","@")
     return(txt)
 
 
 
 # Invisible Char: Replaces Space with a invisible char
 def change_invisible_char(txt: str) -> str:
-    txt = txt.replace(" ", " ")
+    txt = replace_better(txt," ", " ")
     return (txt)
 
 
 # Leetspeak-Algo (replaces letters with numbers)
 def change_leet_speak(txt: str) -> str:
-    txt = txt.replace("a", "4")
-    txt = txt.replace("A", "4")
-    txt = txt.replace("o", "0")
-    txt = txt.replace("O", "0")
-    txt = txt.replace("t", "7")
-    txt = txt.replace("T", "7")
-    txt = txt.replace("s", "5")
-    txt = txt.replace("S", "5")
+    txt = replace_better(txt,"a", "4")
+    txt = replace_better(txt,"A", "4")
+    txt = replace_better(txt,"o", "0")
+    txt = replace_better(txt,"O", "0")
+    txt = replace_better(txt,"t", "7")
+    txt = replace_better(txt,"T", "7")
+    txt = replace_better(txt,"s", "5")
+    txt = replace_better(txt,"S", "5")
     return txt
 
 #Main Methode to change txt (Deactivate certain Methods with a "#")
