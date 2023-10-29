@@ -7,8 +7,7 @@ from time import *
 
 # -------------------------------SELENIUM------------------------------------------
 # Setup Selenium and get driver and wait
-def start_selenium():
-    driver, wait = setup_selenium()
+driver, wait = setup_selenium()
 
 # -------------------------------DEBUG------------------------------------------
 # Define test text
@@ -120,7 +119,6 @@ def __get_score_from_writer(text_to_check) -> float:
 
 
 def get_scores(text_to_check):
-    start_selenium()
     scores = []
     scores.append(__get_score_from_grammica(text_to_check))
     #scores.append(__get_score_from_scribbr(text_to_check))
