@@ -1,6 +1,7 @@
 # -------------------------------IMPORTS------------------------------------------
-from selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
+from APIs.selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as Expected
 
 # -------------------------------SELENIUM------------------------------------------
 # Setup Selenium and get driver and wait
@@ -44,6 +45,10 @@ def __get_score_from_illuminarty(image_path) -> float:
     try:
         driver.get("https://app.illuminarty.ai/")
 
+        # Accept popup
+        cookie_button = wait.until(Expected.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[3]/div[2]/div/div/div[2]/button[2]")))
+        cookie_button.click()
+
         # Upload image
         image_field = wait_element_css(wait, 'input[type="file"]')
         image_field.send_keys(image_path)
@@ -84,7 +89,7 @@ def __get_score_from_isitai(image_path) -> float:
 
 def get_scores(image_to_check):
     scores = []
-    scores.append(__get_score_from_huggingface(image_to_check))
+    #scores.append(__get_score_from_huggingface(image_to_check))
     scores.append(__get_score_from_illuminarty(image_to_check))
-    scores.append(__get_score_from_isitai(image_to_check))
+    #scores.append(__get_score_from_isitai(image_to_check))
 
