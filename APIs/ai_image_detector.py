@@ -4,7 +4,8 @@ from selenium.webdriver.common.by import By
 
 # -------------------------------SELENIUM------------------------------------------
 # Setup Selenium and get driver and wait
-driver, wait = setup_selenium()
+def start_selenium():
+    driver, wait = setup_selenium()
 
 # -------------------------------DEBUG------------------------------------------
 # Define test image url
@@ -83,6 +84,7 @@ def __get_score_from_isitai(image_path) -> float:
 
 
 def get_scores(image_to_check):
+    start_selenium()
     scores = []
     scores.append(__get_score_from_huggingface(image_to_check))
     scores.append(__get_score_from_illuminarty(image_to_check))
