@@ -18,11 +18,10 @@ def add_noise_to_image(image, mean=0, stddev=25):
 
 
 def use_alog_on_image(path):
-    image = cv2.imread(path)
-    new = add_noise_to_image(image)
-    cv2.imwrite("/Users/loukielhorn/Downloads/output.png", new)
+    old_image = cv2.imread(path)
+    new_image = add_noise_to_image(old_image, 0, 15)
     print("Alog used")
-    get_scores("/Users/loukielhorn/Downloads/output.png")
+    get_scores(new_image)
 
 
-use_alog_on_image("/Users/loukielhorn/Downloads/berries.jpg")
+use_alog_on_image("/Users/loukielhorn/Downloads/duck.png")
