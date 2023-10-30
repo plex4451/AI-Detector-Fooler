@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from APIs.ai_image_detector import get_scores
+from APIs.ai_image_detector import get_ai_image_scores
 
 
 def add_noise_to_image(image, mean=0, stddev=25):
@@ -21,7 +21,7 @@ def use_alog_on_image(path):
     old_image = cv2.imread(path)
     new_image = add_noise_to_image(old_image, 0, 15)
     print("Alog used")
-    get_scores(new_image)
+    get_ai_image_scores(new_image)
 
 
 use_alog_on_image("/Users/loukielhorn/Downloads/duck.png")

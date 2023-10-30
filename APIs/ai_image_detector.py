@@ -92,7 +92,7 @@ def __get_score_from_isitai(image_path) -> float:
         return -1
 
 
-def get_scores(image):
+def get_ai_image_scores(image):
     # Convert the image to bytes and then to a base64-encoded string
     image_bytes = cv2.imencode(".png", image)[1].tobytes()
     image_base64 = base64.b64encode(image_bytes).decode()
