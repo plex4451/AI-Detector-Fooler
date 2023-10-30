@@ -1,9 +1,14 @@
-# -------------------------------IMPORTS------------------------------------------
+# -------------------------------IMPORTS----------------------------------------
 from APIs.selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as Expected
+from selenium.webdriver import Keys
 
-# -------------------------------SELENIUM------------------------------------------
+import cv2
+import base64
+import tempfile
+
+# -------------------------------SELENIUM---------------------------------------
 # Setup Selenium and get driver and wait
 driver, wait = setup_selenium()
 
@@ -78,7 +83,7 @@ def __get_score_from_isitai(image_path) -> float:
         # Submit and get score
         submit_button = driver.find_element(by=By.XPATH, value='//*[@id="submit-button"]')
         submit_button.click()
-        score = wait_element_visible_text(driver, wait,'//*[@id="result-container"]/div[1]/div[2]/div[2]').text
+        score = wait_element_visible_text(driver, wait, '//*[@id="result-container"]/div[1]/div[2]/div[2]').text
 
         print("Isitai.com score: " + score + " AI created image!")
         return float(score.replace('%', ''))
@@ -87,9 +92,16 @@ def __get_score_from_isitai(image_path) -> float:
         return -1
 
 
-def get_scores(image_to_check):
-    scores = []
-    #scores.append(__get_score_from_huggingface(image_to_check))
-    scores.append(__get_score_from_illuminarty(image_to_check))
-    #scores.append(__get_score_from_isitai(image_to_check))
+def get_scores(image):
+    # Convert the image to bytes and then to a base64-encoded string
+    image_bytes = cv2.imencode(".png", image)[1].tobytes()
+    image_base64 = base64.b64encode(image_bytes).decode()
 
+    # Create a temporary file and write the base64-encoded image to it
+    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as temp_file:
+        temp_file.write(base64.b64decode(image_base64))
+        temp_file_path = temp_file.name
+
+    scores = []
+    scores.append(__get_score_from_illuminarty(temp_file_path))
+    scores.append(__get_score_from_isitai(temp_file_path))
