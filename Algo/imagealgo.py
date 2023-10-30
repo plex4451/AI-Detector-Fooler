@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import time
 from APIs.ai_image_detector import get_ai_image_scores
 
 
@@ -18,9 +19,16 @@ def add_noise_to_image(image, mean=0, stddev=25):
 
 
 def use_alog_on_image(path):
+    start_time = time.time()
+
     old_image = cv2.imread(path)
-    new_image = add_noise_to_image(old_image, 0, 15)
-    print("Alog used")
+    new_image = add_noise_to_image(old_image, 0, 25)
+
+    # Calculate elapsed time
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print("Algo used in: ", elapsed_time)
+
     get_ai_image_scores(new_image)
 
 
