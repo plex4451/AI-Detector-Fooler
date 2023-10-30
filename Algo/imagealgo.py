@@ -19,6 +19,10 @@ def add_noise_to_image(image, mean=0, stddev=25):
     return noisy_image
 
 
+def add_blur_to_image(image, strength=35):
+    return cv2.GaussianBlur(image, (strength, strength), 0)
+
+
 def print_image_metadata(path):
     image = Image.open(path)
 
@@ -40,14 +44,21 @@ def use_alog_on_image(path):
     print_image_metadata(path)
 
     old_image = cv2.imread(path)
-    new_image = add_noise_to_image(old_image, 0, 100)
+    new_image = add_blur_to_image(old_image, 5)
+    new_image = add_noise_to_image(new_image, 0, 100)
 
     # Calculate elapsed time
     end_time = time.time()
     elapsed_time = end_time - start_time
     print("Algo used in: ", elapsed_time)
 
+    save_image(new_image)
+
     get_ai_image_scores(new_image)
+
+
+def save_image(image):
+    cv2.imwrite("/Users/loukielhorn/Downloads/output.png", image)
 
 
 use_alog_on_image("/Users/loukielhorn/Downloads/duck.png")
