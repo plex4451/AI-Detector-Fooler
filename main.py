@@ -8,7 +8,7 @@ from APIs.ai_image_detector import get_scores as get_scores_image
 # Test-Txt: This Method test the created txt with the apis
 def test_txt(txt: str):
     points_array = get_scores_txt(txt)
-    detector_list = ["Grammica.com","Scribbr.com","Detecting-ai.com Methode-A","Detecting-ai.com Methode-B","GPTzero.me","Writer.com","UKNOWN","UKNOWN","UKNOWN","UKNOWN","UKNOWN"]
+    detector_list = ["Grammica.com","Scribbr.com","Detecting-ai.com Methode-A","Detecting-ai.com Methode-B","Writer.com","UKNOWN","UKNOWN","UKNOWN","UKNOWN","UKNOWN"]
     counter = 0
     for i in points_array:
         print(("{name:} score: {score:}%".format(name = detector_list[counter], score = i)))
