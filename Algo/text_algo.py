@@ -15,8 +15,14 @@ def debug_info_text(original_txt: str,final_txt: str):
     print("The Text is changed to {}%".format(percentage_change))
 
 
-#Replace-Better: Replaces evenly the letters in the text
-def replace_better(txt: str, letter: str, replacment: str, percantage : float) -> str:
+#Replace-Better: Replaces evenly the letters in the text dependend on the max_percentage variable
+def replace_better(txt: str, letter: str, replacment: str) -> str:
+
+    letter_count = txt.count('a')
+    
+
+
+    print(letter_count)
     txt_list = list(txt)
     for i in range(0, len(txt)):
         if (txt_list[i] == letter):
