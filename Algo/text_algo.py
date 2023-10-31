@@ -38,7 +38,7 @@ def replace_better(txt: str, letter: str, replacment: str) -> str:
         if ((txt_list[i] == letter)):
             count += 1
             letter_count -= 1
-            if(letter_count == 0) or (count == goal_count):
+            if((letter_count == 0) and (count>0)) or (count == goal_count):
                 txt_list[i] = replacment
                 count = 0
     txt = "".join(txt_list)
