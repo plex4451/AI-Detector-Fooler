@@ -1,6 +1,6 @@
 #Variables
 #max_percentage: Sets the maximum of percentage the original_txt is changed
-max_percentage = 0.5
+max_percentage = 1
 
 
 
@@ -24,15 +24,26 @@ def replace_better(txt: str, letter: str, replacment: str) -> str:
         replace_count = round((max_percentage/max_possibble_percentage)*letter_count)
     else:
         replace_count = letter_count
-    print(replace_count)
-    print(letter_count)
+
+
+
+    print("{} letters to replace!".format(replace_count))
+    print("{} letters can be replaced!".format(letter_count))
     count = 0
+    goal_count = round(letter_count/replace_count)
+
+
     txt_list = list(txt)
     for i in range(0, len(txt)):
-        if ((txt_list[i] == letter) and (count < replace_count)):
-            txt_list[i] = replacment
+        if ((txt_list[i] == letter)):
             count += 1
+            letter_count -= 1
+            if(letter_count == 0) or (count == goal_count):
+                txt_list[i] = replacment
+                count = 0
     txt = "".join(txt_list)
+    print("{} letters replaced!".format(txt.count(replacment)))
+
     return txt
 
 
