@@ -44,11 +44,12 @@ def open_window():
     Scrollbar1.config(command=Listbox1.yview)
 
     # Button
-    Button1 = Button(Fenster, command=Codieren, text='Codieren')
+    Button1 = Button(Fenster, text='Codieren')
     Button1.place(x=20, y=150, width=70, height=25)
 
-    Button2 = Button(Fenster, command=Decodieren, text='Decodieren')
+    Button2 = Button(Fenster, text='Decodieren')
     Button2.place(x=20, y=180, width=80, height=25)
 
-    Button3 = Button(Fenster, command=CodierenWort, text='Codieren W')
+    Button3 = Button(Fenster, text='Codieren W')
     Button3.place(x=90, y=150, width=80, height=25)
+    Fenster.mainloop()
