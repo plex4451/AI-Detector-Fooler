@@ -37,10 +37,9 @@ if ((inputtype != outputtype) or ((inputtype == Filetype.UNKNOWN) or (outputtype
         exit(2)
 else:
     if(inputtype == Filetype.TXT):
-        file = open(inputpath)
+        file = open(inputpath,"r",encoding="utf-8")
         text = file.read()
         file.close()
-
         final_text = change_text(text)
 
         file = open(outputpath, "x", encoding='utf-8')
@@ -49,7 +48,7 @@ else:
 
         if(debug):
             print("----------------------------------------------------------------------------")
-            test_txt(final_text)
+            #test_txt(final_text)
             print("----------------------------------------------------------------------------")
             debug_info_text(text, final_text)
             print("----------------------------------------------------------------------------")
