@@ -34,8 +34,8 @@ def __get_score_from_scribbr(text_to_check) -> float:
         driver.get("https://www.scribbr.com/ai-detector/")
 
         # Accept cookies
-        cookie_button = wait.until(Expected.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")))
-        cookie_button.click()
+        #cookie_button = wait.until(Expected.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")))
+        #cookie_button.click()
 
         # Input text and get score
         textbox = driver.find_element(by=By.XPATH, value='//*[@role="textbox"]')
@@ -110,8 +110,8 @@ def __get_score_from_writer(text_to_check) -> float:
 
         # Get score
         sleep(5)
-        score = wait_element(driver, wait,'//*[@id="ai-percentage"]').text
-        print("Writer score: " + (100-score) + "% from AI written text!")
+        score = int(wait_element(driver, wait,'//*[@id="ai-percentage"]').text)
+        print("Writer score: " + str((100-score)) + "% from AI written text!")
         return 100-score
     except:
         print("Writer.com is not available!")
@@ -122,11 +122,12 @@ def get_scores(text_to_check):
     scores = []
     scores.append(__get_score_from_grammica(text_to_check))
     #scores.append(__get_score_from_scribbr(text_to_check))
+    scores.append(-1)
     arr_help = __get_score_from_detectingai(text_to_check)
     scores.append(arr_help[0])
     scores.append(arr_help[1])
-    scores.append(__get_score_from_gptzero(text_to_check))
-    scores.append(__get_score_from_writer(text_to_check))
+    #scores.append(__get_score_from_gptzero(text_to_check))
+    #scores.append(__get_score_from_writer(text_to_check))
     driver.close()
     return scores
 
