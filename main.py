@@ -1,7 +1,25 @@
 import sys
 from Enums.filetype import *
-from Algo.textalgo import *
+from Algo.text_algo import *
+from APIs.ai_text_detector import get_scores as get_scores_txt
+from APIs.ai_image_detector import get_scores as get_scores_image
 
+
+# Test-Txt: This Method test the created txt with the apis
+def test_txt(txt: str):
+    points_array = get_scores_txt(txt)
+    detector_list = ["Grammica.com","Scribbr.com","Detecting-ai.com Methode-A","Detecting-ai.com Methode-B","Writer.com","UKNOWN","UKNOWN","UKNOWN","UKNOWN","UKNOWN"]
+    counter = 0
+    for i in points_array:
+        print(("{name:} score: {score:}%".format(name = detector_list[counter], score = i)))
+        counter += 1
+
+
+
+
+
+#debug: Enables/Disables Debug prints and Methods for Testing
+debug = True
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
 inputtype = getfiletype(inputpath.split('.')[-1].upper())
@@ -19,16 +37,23 @@ if ((inputtype != outputtype) or ((inputtype == Filetype.UNKNOWN) or (outputtype
         exit(2)
 else:
     if(inputtype == Filetype.TXT):
-        file = open(inputpath)
+        file = open(inputpath,"r",encoding="utf-8")
         text = file.read()
         file.close()
+        final_text = change_text(text)
 
-        final_text = changeText(text)
-
-        file = open(outputpath, "x")
+        file = open(outputpath, "x", encoding='utf-8')
         file.write(final_text)
+        file.close()
 
-
+        if(debug):
+            print("----------------------------------------------------------------------------")
+            #test_txt(final_text)
+            print("----------------------------------------------------------------------------")
+            debug_info_text(text, final_text)
+            print("----------------------------------------------------------------------------")
+            print(final_text)
+            print("----------------------------------------------------------------------------")
         print("Text-ALGO Missing.")
         #TODO: INSERT ALGO FOR TEXT HERE
 

@@ -1,5 +1,5 @@
 # -------------------------------IMPORTS------------------------------------------
-from selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
+from APIs.selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
 from selenium.webdriver.common.by import By
 
 # -------------------------------SELENIUM------------------------------------------
@@ -87,4 +87,5 @@ def get_scores(image_to_check):
     scores.append(__get_score_from_huggingface(image_to_check))
     scores.append(__get_score_from_illuminarty(image_to_check))
     scores.append(__get_score_from_isitai(image_to_check))
-
+    driver.close()
+    return scores
