@@ -3,6 +3,7 @@ from Enums.filetype import *
 from Algo.text_algo import *
 from APIs.ai_text_detector import get_scores as get_scores_txt
 from APIs.ai_image_detector import get_scores as get_scores_image
+from GUI.gui import open_window
 
 
 # Test-Txt: This Method test the created txt with the apis
@@ -20,6 +21,7 @@ def test_txt(txt: str):
 
 #debug: Enables/Disables Debug prints and Methods for Testing
 debug = True
+open_window()
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
 inputtype = getfiletype(inputpath.split('.')[-1].upper())
