@@ -92,16 +92,7 @@ def __get_score_from_isitai(image_path) -> float:
         return -1
 
 
-def get_ai_image_scores(image):
-    # Convert the image to bytes and then to a base64-encoded string
-    image_bytes = cv2.imencode(".png", image)[1].tobytes()
-    image_base64 = base64.b64encode(image_bytes).decode()
-
-    # Create a temporary file and write the base64-encoded image to it
-    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as temp_file:
-        temp_file.write(base64.b64decode(image_base64))
-        temp_file_path = temp_file.name
-
+def get_ai_image_scores(path):
     scores = []
-    # scores.append(__get_score_from_illuminarty(temp_file_path))
-    scores.append(__get_score_from_isitai(temp_file_path))
+    scores.append(__get_score_from_illuminarty(path))
+    scores.append(__get_score_from_isitai(path))
