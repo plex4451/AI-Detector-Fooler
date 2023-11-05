@@ -6,6 +6,7 @@ from APIs.ai_image_detector import get_ai_image_scores
 
 
 def add_noise_to_image(image, mean=0, stddev=25):
+    # Adds noise to a cv2 image with the standard value 25
     # Load the image
     image = image.astype(np.float32)
 
@@ -20,10 +21,12 @@ def add_noise_to_image(image, mean=0, stddev=25):
 
 
 def add_blur_to_image(image, strength=35):
+    # Adds blur to a cv2 image with the standard value 35
     return cv2.GaussianBlur(image, (strength, strength), 0)
 
 
 def print_image_metadata(path):
+    # Prints all available metadata
     image = Image.open(path)
 
     # Get all available image metadata
@@ -45,32 +48,59 @@ def print_image_metadata(path):
         print("This image has no metadata.")
 
 
-def use_alog_on_image(path):
-    start_time = time.time()
-    print_image_metadata(path)
+def add_fake_metadata(path):
+    # This function adds fake metadata to an image path
+    image = Image.open(path)
 
-    old_image = cv2.imread(path)
-    new_image = add_blur_to_image(old_image, 5)
-    new_image = add_noise_to_image(new_image, 0, 25)
+    exif_data = {
+        "Author": "Lou Kielhorn"
+    }
+
+    image.save(path, exif=exif_data)
+
+
+def use_alog_on_image(path):
+    """
+    This function applies modifications (such as blur and noise) to an image, adds fake metadata,
+    and evaluates both the original and the modified images. The function calculates
+    and prints the time taken for the image modification operations.
+
+    Args:
+        path (str): The path to the input image.
+
+    Returns:
+        None.
+
+    Usage:
+        use_alog_on_image('./path_to_your_image.jpg')
+    """
+    start_time = time.time()
+    # print_image_metadata(path)
+
+    modified_image = cv2.imread(path)
+    modified_image = add_blur_to_image(modified_image, 5)
+    modified_image = add_noise_to_image(modified_image, 0, 25)
+
+    modified_image_path = save_image(modified_image)
+    add_fake_metadata(modified_image_path)
 
     # Calculate elapsed time
     end_time = time.time()
     elapsed_time = end_time - start_time
     print("Algo used in: ", elapsed_time)
 
-    save_image(new_image)
-
     print()
     print("Original image scores:")
-    get_ai_image_scores(old_image)
+    get_ai_image_scores(path)
     print()
     print("New image scores:")
-    get_ai_image_scores(new_image)
+    get_ai_image_scores(modified_image_path)
 
 
 def save_image(image):
-    cv2.imwrite("/Users/loukielhorn/Downloads/output.png", image)
+    path = "/Users/loukielhorn/Downloads/output.png"
+    cv2.imwrite(path, image)
+    return path
 
 
-print_image_metadata("/Users/loukielhorn/Downloads/airplane.jpg")
 use_alog_on_image("/Users/loukielhorn/Downloads/breakfast.jpg")
