@@ -98,7 +98,7 @@ def use_alog_on_image(path):
 
 
 def save_image(image):
-    path = "/Users/loukielhorn/Downloads/output.png"
+    path = "/Users/loukielhorn/Downloads/output.jpg"
     cv2.imwrite(path, image)
     return path
 
