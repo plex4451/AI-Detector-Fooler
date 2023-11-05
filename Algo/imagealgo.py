@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import time
+import piexif
 from PIL import Image, ExifTags
 from APIs.ai_image_detector import get_ai_image_scores
 
@@ -40,7 +41,7 @@ def print_image_metadata(path):
                     for tag, value in exif_data.items():
                         tag_name = ExifTags.TAGS.get(tag, tag)
                         if tag_name == 'UserComment':
-                            value = value.decode("utf-16")
+                            value = value.decode("utf-8")
                         print(f"{tag_name}: {value}")
             else:
                 print(f"{key}: {value}")
@@ -52,11 +53,13 @@ def add_fake_metadata(path):
     # This function adds fake metadata to an image path
     image = Image.open(path)
 
-    exif_data = {
-        "Author": "Lou Kielhorn"
-    }
+    exif_ifd = {piexif.ExifIFD.UserComment: 'Author: Lou Kielhorn'.encode()}
 
-    image.save(path, exif=exif_data)
+    exif_dict = {"0th": {}, "Exif": exif_ifd, "1st": {},
+                 "thumbnail": None, "GPS": {}}
+
+    exif_dat = piexif.dump(exif_dict)
+    image.save(path, exif=exif_dat)
 
 
 def use_alog_on_image(path):
@@ -83,6 +86,7 @@ def use_alog_on_image(path):
 
     modified_image_path = save_image(modified_image)
     add_fake_metadata(modified_image_path)
+    print_image_metadata(modified_image_path)
 
     # Calculate elapsed time
     end_time = time.time()
