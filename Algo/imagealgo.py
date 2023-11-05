@@ -32,6 +32,8 @@ def print_image_metadata(path):
         if exif_data is not None:
             for tag, value in exif_data.items():
                 tag_name = ExifTags.TAGS.get(tag, tag)
+                if tag_name == 'UserComment':
+                    value = value.decode("utf-16")
                 print(f"{tag_name}: {value}")
         else:
             print("This image has no metadata.")
@@ -45,7 +47,7 @@ def use_alog_on_image(path):
 
     old_image = cv2.imread(path)
     new_image = add_blur_to_image(old_image, 5)
-    new_image = add_noise_to_image(new_image, 0, 100)
+    new_image = add_noise_to_image(new_image, 0, 25)
 
     # Calculate elapsed time
     end_time = time.time()
@@ -53,7 +55,6 @@ def use_alog_on_image(path):
     print("Algo used in: ", elapsed_time)
 
     save_image(new_image)
-
     get_ai_image_scores(new_image)
 
 
@@ -61,4 +62,4 @@ def save_image(image):
     cv2.imwrite("/Users/loukielhorn/Downloads/output.png", image)
 
 
-use_alog_on_image("/Users/loukielhorn/Downloads/duck.png")
+use_alog_on_image("/Users/loukielhorn/Downloads/breakfast.jpg")
