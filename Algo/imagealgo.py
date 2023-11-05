@@ -26,6 +26,14 @@ def add_blur_to_image(image, strength=35):
     return cv2.GaussianBlur(image, (strength, strength), 0)
 
 
+def make_dark_pixels_brighter(image, brightness_increase=10, threshold=20):
+    # This method creates a black image mask an adds a brightness value to the mask and image
+    # This should emulate a camera which makes an image in the dark
+    dark_pixel_mask = np.all(image < threshold, axis=2)
+    image[dark_pixel_mask] = np.minimum(255, image[dark_pixel_mask] + brightness_increase)
+    return image
+
+
 def print_image_metadata(path):
     # Prints all available metadata
     image = Image.open(path)
@@ -81,6 +89,7 @@ def use_alog_on_image(path):
     # print_image_metadata(path)
 
     modified_image = cv2.imread(path)
+    modified_image = make_dark_pixels_brighter(modified_image, 5, 10)
     modified_image = add_blur_to_image(modified_image, 5)
     modified_image = add_noise_to_image(modified_image, 0, 25)
 
@@ -107,4 +116,4 @@ def save_image(image):
     return path
 
 
-use_alog_on_image("/Users/loukielhorn/Downloads/breakfast.jpg")
+use_alog_on_image("/Users/loukielhorn/Downloads/berries.jpg")
