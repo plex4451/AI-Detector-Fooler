@@ -103,5 +103,5 @@ def get_ai_image_scores(image):
         temp_file_path = temp_file.name
 
     scores = []
-    scores.append(__get_score_from_illuminarty(temp_file_path))
+    # scores.append(__get_score_from_illuminarty(temp_file_path))
     scores.append(__get_score_from_isitai(temp_file_path))

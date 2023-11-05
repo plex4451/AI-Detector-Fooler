@@ -26,19 +26,23 @@ def add_blur_to_image(image, strength=35):
 def print_image_metadata(path):
     image = Image.open(path)
 
-    # Check if image has exif data (metadata)
-    if hasattr(image, '_getexif'):
-        exif_data = image._getexif()
-        if exif_data is not None:
-            for tag, value in exif_data.items():
-                tag_name = ExifTags.TAGS.get(tag, tag)
-                if tag_name == 'UserComment':
-                    value = value.decode("utf-16")
-                print(f"{tag_name}: {value}")
-        else:
-            print("This image has no metadata.")
+    # Get all available image metadata
+    metadata = image.info
+
+    if metadata:
+        for key, value in metadata.items():
+            if key == "exif":
+                exif_data = image._getexif()
+                if exif_data is not None:
+                    for tag, value in exif_data.items():
+                        tag_name = ExifTags.TAGS.get(tag, tag)
+                        if tag_name == 'UserComment':
+                            value = value.decode("utf-16")
+                        print(f"{tag_name}: {value}")
+            else:
+                print(f"{key}: {value}")
     else:
-        print("This image format doesn't support metadata.")
+        print("This image has no metadata.")
 
 
 def use_alog_on_image(path):
@@ -55,6 +59,12 @@ def use_alog_on_image(path):
     print("Algo used in: ", elapsed_time)
 
     save_image(new_image)
+
+    print()
+    print("Original image scores:")
+    get_ai_image_scores(old_image)
+    print()
+    print("New image scores:")
     get_ai_image_scores(new_image)
 
 
@@ -62,4 +72,5 @@ def save_image(image):
     cv2.imwrite("/Users/loukielhorn/Downloads/output.png", image)
 
 
+print_image_metadata("/Users/loukielhorn/Downloads/airplane.jpg")
 use_alog_on_image("/Users/loukielhorn/Downloads/breakfast.jpg")
