@@ -4,6 +4,14 @@ from tkinter import *
 
 #Initialise
 def open_window():
+    """
+    Dictionary:
+    AIT = AI-Text
+    AIFT = AI Fool Text
+    AII = AI-Image
+    AIFI = AI Fool Image
+    """
+
     # Window
     Window = Tk()
     Window.geometry('900x900')
@@ -11,7 +19,6 @@ def open_window():
     Window.resizable(False, False)
 
     # Label
-    #AIT = AI-Text / AIFT = AI Fool Text / AII = AI-Image // AIFI = AI Fool Image
     LabelAIT = Label(Window, text='Insert AI generated text here:')
     LabelAIFT = Label(Window, text='Result of the AI generated text:')
     LabelAII = Label(Window, text='Upload a AI generated Image here:')
@@ -29,6 +36,13 @@ def open_window():
     Entry1.place(x=20, y=55, width=60, height=25)
     Entry2.place(x=20, y=110, width=60, height=25)
     Entry3.place(x=90, y=110, width=60, height=25)
+
+    #Textbox
+    TextboxAIT = Text(Window)
+    TextboxAIFT = Text(Window)
+
+    TextboxAIT.place(x=400,y=400,width=300,height=300)
+    TextboxAIFT.place(x=400,y=400,width=300,height=300)
 
     # Listbox
     Listbox1 = Listbox(Window)
