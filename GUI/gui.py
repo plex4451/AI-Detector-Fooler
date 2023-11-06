@@ -11,17 +11,16 @@ def open_window():
     Window.resizable(False, False)
 
     # Label
-    LabelW = Label(Window, text='Wort:')
-    LabelWV = Label(Window, text='Wort Verschlüsselt:')
-    LabelWVD = Label(Window, text='N/A')
-    LabelK = Label(Window, text='Key:')
-    LabelKW = Label(Window, text='Word Key:')
+    #AIT = AI-Text / AIFT = AI Fool Text / AII = AI-Image // AIFI = AI Fool Image
+    LabelAIT = Label(Window, text='Insert AI generated text here:')
+    LabelAIFT = Label(Window, text='Result of the AI generated text:')
+    LabelAII = Label(Window, text='Upload a AI generated Image here:')
+    LabelAIFI = Label(Window, text='Result of the AI generated Image:')
 
-    LabelW.place(x=10, y=20, width=60, height=50)
-    LabelWV.place(x=10, y=200, width=150, height=50)
-    LabelWVD.place(x=10, y=240, width=150, height=25)
-    LabelK.place(x=10, y=70, width=60, height=50)
-    LabelKW.place(x=85, y=70, width=80, height=50)
+    LabelAIT.place(x=10, y=20, width=60, height=50)
+    LabelAIFT.place(x=10, y=200, width=150, height=50)
+    LabelAII.place(x=10, y= 300, width=150, height=50)
+    LabelAIFI.place(x=10, y=400, width=150,height=50)
 
     # Entry
     Entry1 = Entry(Window)
