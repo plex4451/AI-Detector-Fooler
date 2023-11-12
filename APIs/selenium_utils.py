@@ -11,7 +11,7 @@ def setup_selenium():
     selenium_options = webdriver.ChromeOptions()
     selenium_options.add_argument('--headless')
     driver = webdriver.Chrome(options=selenium_options)
-    wait = WebDriverWait(driver, 15)
+    wait = WebDriverWait(driver, 3)
     return driver, wait
 
 

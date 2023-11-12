@@ -1,4 +1,6 @@
 # -------------------------------IMPORTS----------------------------------------
+import time
+
 from APIs.selenium_utils import setup_selenium, wait_for_attribute, wait_element_visible_text, wait_element_css
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as Expected
@@ -51,8 +53,12 @@ def __get_score_from_illuminarty(image_path) -> float:
         driver.get("https://app.illuminarty.ai/")
 
         # Accept popup
-        cookie_button = wait.until(Expected.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[3]/div[2]/div/div/div[2]/button[2]")))
-        cookie_button.click()
+        try:
+            cookie_button = wait.until(Expected.element_to_be_clickable(
+                (By.XPATH, "/html/body/div/div/div/div[3]/div[2]/div/div/div[2]/button[2]")))
+            cookie_button.click()
+        except:
+            print("Illuminarty.ai no cookie popup found!")
 
         # Upload image
         image_field = wait_element_css(wait, 'input[type="file"]')
@@ -92,7 +98,32 @@ def __get_score_from_isitai(image_path) -> float:
         return -1
 
 
+def __get_score_from_hivemoderation(image_path) -> float:
+    # Gets score from hivemoderation.com
+    try:
+        driver.get("https://hivemoderation.com/ai-generated-content-detection")
+        time.sleep(3)
+        image_detection = wait.until(Expected.element_to_be_clickable((By.CSS_SELECTOR, 'div.jss142[data-attr="2"]')))
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", image_detection)
+        time.sleep(3)
+        image_detection.click()
+
+        # Upload image
+        image_field = wait_element_css(wait, 'input[type="file"][accept="image/png,image/jpeg,image/jpg,image/webp"]')
+        image_field.send_keys(image_path)
+
+        time.sleep(2.5)
+        score = wait_element_visible_text(driver, wait, "//span[contains(text(), '%') and not(contains(text(), '>'))]").text
+
+        print("Hivemoderation.com score: " + score + " AI created image!")
+        return float(score.replace('%', ''))
+    except:
+        print("Hivemoderation.com is not available!")
+        return -1
+
+
 def get_ai_image_scores(path):
     scores = []
+    scores.append(__get_score_from_hivemoderation(path))
     scores.append(__get_score_from_illuminarty(path))
     scores.append(__get_score_from_isitai(path))
