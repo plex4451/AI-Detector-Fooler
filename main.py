@@ -26,7 +26,8 @@ def test_txt(txt: str):
 
 #debug: Enables/Disables Debug prints and Methods for Testing
 debug = True
-open_window()
+gui_thread = threading.Thread(target = open_window_thread())
+gui_thread.start()
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
 inputtype = getfiletype(inputpath.split('.')[-1].upper())
