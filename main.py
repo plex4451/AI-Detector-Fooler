@@ -7,6 +7,10 @@ from APIs.ai_image_detector import get_scores as get_scores_image
 from GUI.gui import open_window
 
 
+#open_window_thread: This Method opens the GUI (exist for sepret threading)
+def open_window_thread():
+    pass
+
 # Test-Txt: This Method test the created txt with the apis
 def test_txt(txt: str):
     points_array = get_scores_txt(txt)
@@ -22,6 +26,7 @@ def test_txt(txt: str):
 
 #debug: Enables/Disables Debug prints and Methods for Testing
 debug = True
+
 open_window()
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
