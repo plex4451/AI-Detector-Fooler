@@ -9,7 +9,7 @@ from GUI.gui import open_window
 
 #open_window_thread: This Method opens the GUI (exist for sepret threading)
 def open_window_thread():
-    pass
+    open_window()
 
 # Test-Txt: This Method test the created txt with the apis
 def test_txt(txt: str):
@@ -26,7 +26,6 @@ def test_txt(txt: str):
 
 #debug: Enables/Disables Debug prints and Methods for Testing
 debug = True
-
 open_window()
 inputpath = sys.argv[1]
 outputpath = sys.argv[2]
