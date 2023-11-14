@@ -19,17 +19,19 @@ def open_window():
     Window.resizable(False, False)
 
     # Label
-    LabelAIT = Label(Window, text='Insert AI generated text here:')
+    LabelAIT = Label(Window, text='Insert a AI generated text here:')
     LabelAIFT = Label(Window, text='Result of the AI generated text:')
     LabelAII = Label(Window, text='Upload a AI generated Image here:')
     LabelAIFI = Label(Window, text='Result of the AI generated Image:')
 
+    #TODO : PLACE
     LabelAIT.place(x=10, y=20, width=60, height=50)
     LabelAIFT.place(x=10, y=200, width=150, height=50)
     LabelAII.place(x=10, y= 300, width=150, height=50)
     LabelAIFI.place(x=10, y=400, width=150,height=50)
 
     # Entry
+    #TODO: MAYBE IMPLEMENT
     Entry1 = Entry(Window)
     Entry2 = Entry(Window)
     Entry3 = Entry(Window)
@@ -40,23 +42,28 @@ def open_window():
     #Textbox
     TextboxAIT = Text(Window)
     TextboxAIFT = Text(Window)
-
+    
+    #TODO: PLACE
     TextboxAIT.place(x=400,y=400,width=300,height=300)
     TextboxAIFT.place(x=400,y=400,width=300,height=300)
 
     # Listbox
+    #TODO: MAYBE IMPLEMENT
     Listbox1 = Listbox(Window)
     Listbox1.place(x=170, y=50, width=100, height=200)
 
     # Scrollbar
+    #TODO: MAYBE IMPLEMENT
     Scrollbar1 = Scrollbar(Window)
     Scrollbar1.place(x=270, y=50, width=15, height=200)
 
     # Config
+    #TODO: MAYBE IMPLEMENT
     Listbox1.config(yscrollcommand=Scrollbar1.set)
     Scrollbar1.config(command=Listbox1.yview)
 
     # Button
+    #TODO: MAYBE IMPLEMENT
     Button1 = Button(Window, text='Codieren')
     Button1.place(x=20, y=150, width=70, height=25)
 
@@ -65,4 +72,6 @@ def open_window():
 
     Button3 = Button(Window, text='Codieren W')
     Button3.place(x=90, y=150, width=80, height=25)
+
+    #Window Mainloop
     Window.mainloop()
