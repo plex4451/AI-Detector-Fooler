@@ -4,7 +4,11 @@ from Algo.text_algo import *
 
 
 def convert_ai_text():
-    pass
+    txt = TextboxAIT.get("1.0", "end-1c")
+    txt = change_text(txt)
+    TextboxAIFT.delete("1.0","end")
+    TextboxAIFT.insert("end", txt)
+    print(txt)
 
 
 def convert_ai_image():
@@ -15,6 +19,7 @@ def upload_ai_image():
 
 #Initialise
 def open_window():
+    global LabelAIT,LabelAIFT,LabelAII,LabelAIFI,TextboxAIT, TextboxAIFT
     """
     Dictionary:
     AIT = AI-Text
@@ -55,8 +60,8 @@ def open_window():
     TextboxAIFT = Text(Window)
 
     #TODO: PLACE
-    TextboxAIT.place(x=400,y=400,width=300,height=300)
-    TextboxAIFT.place(x=400,y=400,width=300,height=300)
+    TextboxAIT.place(x=200,y=400,width=300,height=300)
+    TextboxAIFT.place(x=600,y=400,width=300,height=300)
 
     # Listbox
     #TODO: MAYBE IMPLEMENT
@@ -74,6 +79,7 @@ def open_window():
     Scrollbar1.config(command=Listbox1.yview)
 
     # Buttons
+    # TODO: PLACE BUTTONS
     Button_AIT_Convert = Button(Window, text='Change-Text', command=convert_ai_text)
     Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
 
