@@ -1,6 +1,16 @@
 #Library
 from tkinter import *
+from Algo.text_algo import *
 
+
+def convert_ai_text():
+    pass
+
+def convert_ai_image():
+    pass
+
+def upload_ai_image():
+    pass
 
 #Initialise
 def open_window():
@@ -62,16 +72,16 @@ def open_window():
     Listbox1.config(yscrollcommand=Scrollbar1.set)
     Scrollbar1.config(command=Listbox1.yview)
 
-    # Button
-    #TODO: MAYBE IMPLEMENT
-    Button1 = Button(Window, text='Codieren')
-    Button1.place(x=20, y=150, width=70, height=25)
+    # Buttons
+    Button_AIT_Convert = Button(Window, text='Change-Text', command="convert_ai_text")
+    Button_AIT_Convert.place(x=20, y=150, width=70, height=25)
 
-    Button2 = Button(Window, text='Decodieren')
-    Button2.place(x=20, y=180, width=80, height=25)
+    Button_AII_Frame = Button(Window, text='Upload-Image', command="upload_ai_image")
+    Button_AII_Frame.place(x=20, y=180, width=80, height=25)
 
-    Button3 = Button(Window, text='Codieren W')
-    Button3.place(x=90, y=150, width=80, height=25)
+
+    Button_AII_Convert = Button(Window, text='Upload-Image', command= "convert_ai_image")
+    Button_AII_Convert.place(x=20, y=180, width=80, height=25)
 
     #Window Mainloop
     Window.mainloop()
