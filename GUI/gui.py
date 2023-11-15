@@ -8,7 +8,6 @@ def convert_ai_text():
     txt = change_text(txt)
     TextboxAIFT.delete("1.0","end")
     TextboxAIFT.insert("end", txt)
-    print(txt)
 
 
 def convert_ai_image():
