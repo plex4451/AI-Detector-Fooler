@@ -19,6 +19,8 @@ def debug_info_text(original_txt: str,final_txt: str):
 def replace_better(txt: str, letter: str, replacment: str) -> str:
 
     letter_count = txt.count(letter)
+    if(letter_count == 0):
+        return(txt)
     max_possibble_percentage = (letter_count/len(txt))*100
     if(max_possibble_percentage>max_percentage):
         replace_count = round((max_percentage/max_possibble_percentage)*letter_count)
@@ -30,7 +32,7 @@ def replace_better(txt: str, letter: str, replacment: str) -> str:
     print("{} letters to replace!".format(replace_count))
     print("{} letters can be replaced!".format(letter_count))
     count = 0
-    goal_count = round(letter_count/replace_count)
+    goal_count = round(letter_count/replace_count+1)
 
 
     txt_list = list(txt)
