@@ -86,12 +86,12 @@ def use_alog_on_image(path):
         use_alog_on_image('./path_to_your_image.jpg')
     """
     start_time = time.time()
-    # print_image_metadata(path)
+    print_image_metadata(path)
 
     modified_image = cv2.imread(path)
     modified_image = make_dark_pixels_brighter(modified_image, 5, 10)
-    modified_image = add_blur_to_image(modified_image, 5)
-    modified_image = add_noise_to_image(modified_image, 0, 25)
+    modified_image = add_blur_to_image(modified_image, 3)
+    modified_image = add_noise_to_image(modified_image, 0, 15)
 
     modified_image_path = save_image(modified_image)
     add_fake_metadata(modified_image_path)
