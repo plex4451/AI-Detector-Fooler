@@ -1,6 +1,7 @@
 #Variables
 #max_percentage: Sets the maximum of percentage the original_txt is changed
-max_percentage = 100
+#TODO: MAX_PERCENTAGE DOESN'T WORK
+max_percentage = 200
 
 
 
