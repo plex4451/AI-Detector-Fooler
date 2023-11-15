@@ -6,6 +6,7 @@ from Algo.text_algo import *
 def convert_ai_text():
     pass
 
+
 def convert_ai_image():
     pass
 
@@ -52,7 +53,7 @@ def open_window():
     #Textbox
     TextboxAIT = Text(Window)
     TextboxAIFT = Text(Window)
-    
+
     #TODO: PLACE
     TextboxAIT.place(x=400,y=400,width=300,height=300)
     TextboxAIFT.place(x=400,y=400,width=300,height=300)
@@ -73,15 +74,16 @@ def open_window():
     Scrollbar1.config(command=Listbox1.yview)
 
     # Buttons
-    Button_AIT_Convert = Button(Window, text='Change-Text', command="convert_ai_text")
-    Button_AIT_Convert.place(x=20, y=150, width=70, height=25)
+    Button_AIT_Convert = Button(Window, text='Change-Text', command=convert_ai_text)
+    Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
 
-    Button_AII_Frame = Button(Window, text='Upload-Image', command="upload_ai_image")
-    Button_AII_Frame.place(x=20, y=180, width=80, height=25)
+    Button_AII_Frame = Button(Window, text='Upload-Image', command=upload_ai_image)
+    Button_AII_Frame.place(x=400, y=200, width=80, height=25)
 
 
-    Button_AII_Convert = Button(Window, text='Upload-Image', command= "convert_ai_image")
-    Button_AII_Convert.place(x=20, y=180, width=80, height=25)
+    Button_AII_Convert = Button(Window, text='Change-Image', command= convert_ai_image)
+    Button_AII_Convert.place(x=600, y=200, width=80, height=25)
+
 
     #Window Mainloop
     Window.mainloop()
