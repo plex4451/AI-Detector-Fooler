@@ -137,8 +137,8 @@ def open_window():
     Button_AIT_Upload = Button(Window, text='Upload-Text', command=upload_ai_text)
 
     Button_AIT_Convert.pack()
-    Button_AII_Download.pack()
-    Button_AII_Upload.pack()
+    Button_AIT_Download.pack()
+    Button_AIT_Upload.pack()
 
     Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
     Button_AIT_Download.place(x=600, y=200, width=80, height=25)
