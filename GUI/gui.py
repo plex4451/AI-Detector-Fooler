@@ -43,8 +43,9 @@ def select_image_objects():
 def select_menu_objects():
     pass
 
+#exit_object Method, exits the GUI with a exit code of 0
 def exit_object():
-    pass
+    exit(0)
 
 
 
