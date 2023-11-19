@@ -40,8 +40,30 @@ def select_image_objects():
     pass
 
 
+#Hides every non menu object and showes every Menu object
 def select_menu_objects():
-    pass
+    # Hiding Buttons
+    Button_AIT_Convert.pack_forget()
+    Button_AIT_Download.pack_forget()
+    Button_AIT_Upload.pack_forget()
+    Button_AII_Upload.pack_forget()
+    Button_AII_Download.pack_forget()
+    Button_AII_Convert.pack_forget()
+    Button_Image_Select.pack_forget()
+    Button_Text_Select.pack_forget()
+    Button_Back_Menu.pack_forget()
+    Button_Exit_Menu.pack_forget()
+
+    # Hiding Labels
+    LabelAIT.pack_forget()
+    LabelAIFT.pack_forget()
+    LabelAII.pack_forget()
+    LabelAIFI.pack_forget()
+
+    # Hiding Textboxes
+    TextboxAIT.pack_forget()
+    TextboxAIFT.pack_forget()
+
 
 #exit_object Method, exits the GUI with a exit code of 0
 def exit_object():
@@ -57,9 +79,7 @@ def open_window():
     global Button_AII_Upload, Button_AII_Download, Button_AII_Convert
     global Button_Image_Select, Button_Text_Select, Button_Back_Menu, Button_Exit_Menu
     global LabelAIT, LabelAIFT, LabelAII, LabelAIFI
-    global Entry1, Entry2, Entry3
     global TextboxAIT, TextboxAIFT
-    global Listbox1, Scrollbar1
 
     """
     Dictionary:
@@ -76,48 +96,37 @@ def open_window():
     Window.resizable(False, False)
 
     # Label
+    #TODO : PLACE
     LabelAIT = Label(Window, text='Insert a AI generated text here:')
     LabelAIFT = Label(Window, text='Result of the AI generated text:')
     LabelAII = Label(Window, text='Upload a AI generated Image here:')
     LabelAIFI = Label(Window, text='Result of the AI generated Image:')
 
-    #TODO : PLACE
+    LabelAIT.pack()
+    LabelAIFT.pack()
+    LabelAII.pack()
+    LabelAIFI.pack()
+
     LabelAIT.place(x=10, y=20, width=60, height=50)
     LabelAIFT.place(x=10, y=200, width=150, height=50)
     LabelAII.place(x=10, y= 300, width=150, height=50)
     LabelAIFI.place(x=10, y=400, width=150,height=50)
 
-    # Entry
-    #TODO: MAYBE IMPLEMENT
-    Entry1 = Entry(Window)
-    Entry2 = Entry(Window)
-    Entry3 = Entry(Window)
-    Entry1.place(x=20, y=55, width=60, height=25)
-    Entry2.place(x=20, y=110, width=60, height=25)
-    Entry3.place(x=90, y=110, width=60, height=25)
+    #Entry
+    #NONE
 
     #Textbox
+    # TODO: PLACE
     TextboxAIT = Text(Window)
     TextboxAIFT = Text(Window)
 
-    #TODO: PLACE
+    TextboxAIT.pack()
+    TextboxAIFT.pack()
+
     TextboxAIT.place(x=200,y=400,width=300,height=300)
     TextboxAIFT.place(x=600,y=400,width=300,height=300)
 
-    # Listbox
-    #TODO: MAYBE IMPLEMENT
-    Listbox1 = Listbox(Window)
-    Listbox1.place(x=170, y=50, width=100, height=200)
 
-    # Scrollbar
-    #TODO: MAYBE IMPLEMENT
-    Scrollbar1 = Scrollbar(Window)
-    Scrollbar1.place(x=270, y=50, width=15, height=200)
-
-    # Config
-    #TODO: MAYBE IMPLEMENT
-    Listbox1.config(yscrollcommand=Scrollbar1.set)
-    Scrollbar1.config(command=Listbox1.yview)
 
     # Buttons
     # TODO: PLACE BUTTONS
@@ -126,6 +135,10 @@ def open_window():
     Button_AIT_Convert = Button(Window, text='Change-Text', command=convert_ai_text)
     Button_AIT_Download = Button(Window, text='Download-Text', command=download_ai_text)
     Button_AIT_Upload = Button(Window, text='Upload-Text', command=upload_ai_text)
+
+    Button_AIT_Convert.pack()
+    Button_AII_Download.pack()
+    Button_AII_Upload.pack()
 
     Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
     Button_AIT_Download.place(x=600, y=200, width=80, height=25)
@@ -136,6 +149,10 @@ def open_window():
     Button_AII_Upload = Button(Window, text='Upload-Image', command=upload_ai_image)
     Button_AII_Download = Button(Window, text='Download-Image', command=download_ai_image)
     Button_AII_Convert = Button(Window, text='Change-Image', command=convert_ai_image)
+
+    Button_AII_Upload.pack()
+    Button_AII_Download.pack()
+    Button_AII_Convert.pack()
 
     Button_AII_Upload.place(x=400, y=200, width=80, height=25)
     Button_AII_Convert.place(x=600, y=200, width=80, height=25)
@@ -148,12 +165,20 @@ def open_window():
     Button_Back_Menu = Button(Window, text='Back to Menu', command=select_menu_objects)
     Button_Exit_Menu = Button(Window, text='Exit', command=exit_object)
 
+    Button_Image_Select.pack()
+    Button_Text_Select.pack()
+    Button_Back_Menu.pack()
+    Button_Exit_Menu.pack()
+
     Button_Image_Select.place(x=600, y=200, width=80, height=25)
     Button_Text_Select.place(x=600,y=200, width=80, height=25)
-    Button_Back_Menu.place(x=600, y=200, width=80, height=25)
+    Button_Back_Menu.place(x=450, y=500, width=80, height=25)
     Button_Exit_Menu.place(x=600, y=200, width=80, height=25)
 
 
 
+
     #Window Mainloop
+
     Window.mainloop()
+    select_menu_objects()
