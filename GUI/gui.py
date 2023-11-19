@@ -3,18 +3,50 @@ from tkinter import *
 from Algo.text_algo import *
 
 
+
+
+#AI-Text-Methods
 def convert_ai_text():
     txt = TextboxAIT.get("1.0", "end-1c")
     txt = change_text(txt)
     TextboxAIFT.delete("1.0","end")
     TextboxAIFT.insert("end", txt)
 
+def upload_ai_text():
+    pass
 
+
+def download_ai_text():
+    pass
+
+
+#AI-Image-Methods
 def convert_ai_image():
     pass
 
 def upload_ai_image():
     pass
+
+def download_ai_image():
+    pass
+
+
+#Objects-Selector-Methods
+def select_text_objects():
+    pass
+
+
+def select_image_objects():
+    pass
+
+
+def select_menu_objects():
+    pass
+
+def exit_object():
+    pass
+
+
 
 #Initialise
 def open_window():
@@ -79,15 +111,37 @@ def open_window():
 
     # Buttons
     # TODO: PLACE BUTTONS
+
+    #Text-Menu-Buttons
     Button_AIT_Convert = Button(Window, text='Change-Text', command=convert_ai_text)
+    Button_AIT_Download = Button(Window, text='Download-Text', command=download_ai_text)
+    Button_AIT_Upload = Button(Window, text='Upload-Text', command=upload_ai_text)
+
     Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
+    Button_AIT_Download.place(x=600, y=200, width=80, height=25)
+    Button_AIT_Upload.place(x=600, y=200, width=80, height=25)
 
-    Button_AII_Frame = Button(Window, text='Upload-Image', command=upload_ai_image)
-    Button_AII_Frame.place(x=400, y=200, width=80, height=25)
 
+    #Image-Menu-Buttons
+    Button_AII_Upload = Button(Window, text='Upload-Image', command=upload_ai_image)
+    Button_AII_Download = Button(Window, text='Download-Image', command=download_ai_image)
+    Button_AII_Convert = Button(Window, text='Change-Image', command=convert_ai_image)
 
-    Button_AII_Convert = Button(Window, text='Change-Image', command= convert_ai_image)
+    Button_AII_Upload.place(x=400, y=200, width=80, height=25)
     Button_AII_Convert.place(x=600, y=200, width=80, height=25)
+    Button_AII_Download.place(x=600, y=200, width=80, height=25)
+
+
+    #Main-Menu-Buttons
+    Button_Image_Select = Button(Window, text='Image Converter', command=select_image_objects)
+    Button_Text_Select = Button(Window, text='Text Converter', command=select_text_objects)
+    Button_Back_Menu = Button(Window, text='Back to Menu', command=select_menu_objects)
+    Button_Exit_Menu = Button(Window, text='Exit', command=exit_object)
+
+    Button_Image_Select.place(x=600, y=200, width=80, height=25)
+    Button_Text_Select.place(x=600,y=200, width=80, height=25)
+    Button_Back_Menu.place(x=600, y=200, width=80, height=25)
+    Button_Exit_Menu.place(x=600, y=200, width=80, height=25)
 
 
     #Window Mainloop
