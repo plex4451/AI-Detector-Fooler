@@ -49,10 +49,11 @@ def select_menu_objects():
     Button_AII_Upload.pack_forget()
     Button_AII_Download.pack_forget()
     Button_AII_Convert.pack_forget()
-    Button_Image_Select.pack_forget()
-    Button_Text_Select.pack_forget()
+
+    #Button_Image_Select.pack_forget()
+    #Button_Text_Select.pack_forget()
     Button_Back_Menu.pack_forget()
-    Button_Exit_Menu.pack_forget()
+    #Button_Exit_Menu.pack_forget()
 
     # Hiding Labels
     LabelAIT.pack_forget()
@@ -91,9 +92,9 @@ def open_window():
 
     # Window
     Window = Tk()
-    Window.geometry('900x900')
+    Window.geometry('1200x900')
     Window.title('AI-NOOBS-UNLEASHED: AI FOOLER')
-    Window.resizable(False, False)
+    Window.resizable(True, True)
 
     # Label
     #TODO : PLACE
@@ -107,10 +108,10 @@ def open_window():
     LabelAII.pack()
     LabelAIFI.pack()
 
-    LabelAIT.place(x=10, y=20, width=60, height=50)
-    LabelAIFT.place(x=10, y=200, width=150, height=50)
-    LabelAII.place(x=10, y= 300, width=150, height=50)
-    LabelAIFI.place(x=10, y=400, width=150,height=50)
+    #LabelAIT.place(x=10, y=20, width=60, height=50)
+    #LabelAIFT.place(x=10, y=200, width=150, height=50)
+    #LabelAII.place(x=10, y= 300, width=150, height=50)
+    #LabelAIFI.place(x=10, y=400, width=150,height=50)
 
     #Entry
     #NONE
@@ -123,8 +124,8 @@ def open_window():
     TextboxAIT.pack()
     TextboxAIFT.pack()
 
-    TextboxAIT.place(x=200,y=400,width=300,height=300)
-    TextboxAIFT.place(x=600,y=400,width=300,height=300)
+    #TextboxAIT.place(x=200,y=400,width=300,height=300)
+    #TextboxAIFT.place(x=600,y=400,width=300,height=300)
 
 
 
@@ -140,9 +141,9 @@ def open_window():
     Button_AIT_Download.pack()
     Button_AIT_Upload.pack()
 
-    Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
-    Button_AIT_Download.place(x=600, y=200, width=80, height=25)
-    Button_AIT_Upload.place(x=600, y=200, width=80, height=25)
+    #Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
+    #Button_AIT_Download.place(x=600, y=200, width=80, height=25)
+    #Button_AIT_Upload.place(x=600, y=200, width=80, height=25)
 
 
     #Image-Menu-Buttons
@@ -154,9 +155,9 @@ def open_window():
     Button_AII_Download.pack()
     Button_AII_Convert.pack()
 
-    Button_AII_Upload.place(x=400, y=200, width=80, height=25)
-    Button_AII_Convert.place(x=600, y=200, width=80, height=25)
-    Button_AII_Download.place(x=600, y=200, width=80, height=25)
+    #Button_AII_Upload.place(x=400, y=200, width=80, height=25)
+    #Button_AII_Convert.place(x=600, y=200, width=80, height=25)
+    #Button_AII_Download.place(x=600, y=200, width=80, height=25)
 
 
     #Main-Menu-Buttons
@@ -170,15 +171,15 @@ def open_window():
     Button_Back_Menu.pack()
     Button_Exit_Menu.pack()
 
-    Button_Image_Select.place(x=600, y=200, width=80, height=25)
-    Button_Text_Select.place(x=600,y=200, width=80, height=25)
-    Button_Back_Menu.place(x=450, y=500, width=80, height=25)
-    Button_Exit_Menu.place(x=600, y=200, width=80, height=25)
+    #Button_Image_Select.place(x=600, y=200, width=80, height=25)
+    #Button_Text_Select.place(x=600,y=200, width=80, height=25)
+    #Button_Back_Menu.place(x=450, y=500, width=80, height=25)
+    #Button_Exit_Menu.place(x=600, y=200, width=80, height=25)
 
 
 
 
     #Window Mainloop
 
-    Window.mainloop()
     select_menu_objects()
+    Window.mainloop()
