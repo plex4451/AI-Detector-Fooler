@@ -51,7 +51,16 @@ def exit_object():
 
 #Initialise
 def open_window():
-    global LabelAIT,LabelAIFT,LabelAII,LabelAIFI,TextboxAIT, TextboxAIFT
+    #Gobal-Variables-Objects
+    global Window
+    global Button_AIT_Convert, Button_AIT_Download, Button_AIT_Upload
+    global Button_AII_Upload, Button_AII_Download, Button_AII_Convert
+    global Button_Image_Select, Button_Text_Select, Button_Back_Menu, Button_Exit_Menu
+    global LabelAIT, LabelAIFT, LabelAII, LabelAIFI
+    global Entry1, Entry2, Entry3
+    global TextboxAIT, TextboxAIFT
+    global Listbox1, Scrollbar1
+
     """
     Dictionary:
     AIT = AI-Text
@@ -143,6 +152,7 @@ def open_window():
     Button_Text_Select.place(x=600,y=200, width=80, height=25)
     Button_Back_Menu.place(x=600, y=200, width=80, height=25)
     Button_Exit_Menu.place(x=600, y=200, width=80, height=25)
+
 
 
     #Window Mainloop
