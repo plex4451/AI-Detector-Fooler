@@ -58,8 +58,8 @@ def select_image_objects():
 
     LabelAII.pack_forget()
     LabelAIFI.pack_forget()
-    #IMAGE HERE
-    #IMAGE FINAL HERE
+    Canvas_AII.pack()
+    Canvas_AIT.pack()
 
     Button_Image_Select.pack_forget()
     Button_Text_Select.pack_forget()
@@ -93,6 +93,9 @@ def select_menu_objects():
     TextboxAIT.pack_forget()
     TextboxAIFT.pack_forget()
 
+    Canvas_AII.pack_forget()
+    Canvas_AIT.pack_forget()
+
 
 #exit_object Method, exits the GUI with a exit code of 0
 def exit_object():
@@ -109,6 +112,7 @@ def open_window():
     global Button_Image_Select, Button_Text_Select, Button_Back_Menu, Button_Exit_Menu
     global LabelAIT, LabelAIFT, LabelAII, LabelAIFI
     global TextboxAIT, TextboxAIFT
+    global Canvas_AII,Canvas_AIT
 
     """
     Dictionary:
@@ -154,6 +158,15 @@ def open_window():
 
     #TextboxAIT.place(x=200,y=400,width=300,height=300)
     #TextboxAIFT.place(x=600,y=400,width=300,height=300)
+
+    #Canvas
+    # TODO: PLACE CANAVAS
+    Canvas_AII = Canvas(Window)
+    Canvas_AIT = Canvas(Window)
+
+    Canvas_AII.pack()
+    Canvas_AIT.pack()
+
 
 
 
