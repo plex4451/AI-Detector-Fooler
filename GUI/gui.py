@@ -49,8 +49,21 @@ def select_text_objects():
     Button_AIT_Upload.pack()
 
 
+#Hides every non Image object and showes every Image object
 def select_image_objects():
-    pass
+    Button_AII_Upload.pack()
+    Button_AII_Download.pack()
+    Button_AII_Convert.pack()
+    Button_Back_Menu.pack()
+
+    LabelAII.pack_forget()
+    LabelAIFI.pack_forget()
+    #IMAGE HERE
+    #IMAGE FINAL HERE
+
+    Button_Image_Select.pack_forget()
+    Button_Text_Select.pack_forget()
+    Button_Exit_Menu.pack_forget()
 
 
 #Hides every non menu object and showes every Menu object
