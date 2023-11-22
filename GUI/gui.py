@@ -32,8 +32,21 @@ def download_ai_image():
 
 
 #Objects-Selector-Methods
+#Hides every non Text object and showes every Text object
 def select_text_objects():
-    pass
+    Button_Image_Select.pack_forget()
+    Button_Text_Select.pack_forget()
+    Button_Exit_Menu.pack_forget()
+
+    LabelAIT.pack()
+    LabelAIFT.pack()
+    TextboxAIT.pack()
+    TextboxAIFT.pack()
+
+    Button_Back_Menu.pack()
+    Button_AIT_Convert.pack()
+    Button_AIT_Download.pack()
+    Button_AIT_Upload.pack()
 
 
 def select_image_objects():
@@ -50,10 +63,12 @@ def select_menu_objects():
     Button_AII_Download.pack_forget()
     Button_AII_Convert.pack_forget()
 
-    #Button_Image_Select.pack_forget()
-    #Button_Text_Select.pack_forget()
+
     Button_Back_Menu.pack_forget()
-    #Button_Exit_Menu.pack_forget()
+
+    Button_Image_Select.pack()
+    Button_Text_Select.pack()
+    Button_Exit_Menu.pack()
 
     # Hiding Labels
     LabelAIT.pack_forget()
