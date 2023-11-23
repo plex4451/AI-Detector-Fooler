@@ -1,7 +1,7 @@
 #Library
 from tkinter import *
 from Algo.text_algo import *
-
+from tkinter import filedialog
 
 
 
@@ -13,8 +13,12 @@ def convert_ai_text():
     TextboxAIFT.insert("end", txt)
 
 def upload_ai_text():
-    pass
-
+    file_path = filedialog.askopenfilename(filetypes=(("Text files", "*.txt"),))
+    file = open(file_path,"r",encoding="utf-8")
+    text = file.read()
+    file.close()
+    TextboxAIT.delete("1.0", "end")
+    TextboxAIT.insert("end", text)
 
 def download_ai_text():
     pass
@@ -56,8 +60,8 @@ def select_image_objects():
     Button_AII_Convert.pack()
     Button_Back_Menu.pack()
 
-    LabelAII.pack_forget()
-    LabelAIFI.pack_forget()
+    LabelAII.pack()
+    LabelAIFI.pack()
     Canvas_AII.pack()
     Canvas_AIT.pack()
 
