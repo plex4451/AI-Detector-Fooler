@@ -21,7 +21,11 @@ def upload_ai_text():
     TextboxAIT.insert("end", text)
 
 def download_ai_text():
-    pass
+    file_path = filedialog.asksaveasfilename(defaultextension=".txt",   filetypes=[("Text files", "*.txt"),])
+    if file_path:
+        file = open(file_path,'w', encoding="utf-8")
+        file.write(TextboxAIFT.get("1.0","end"))
+        file.close()
 
 
 #AI-Image-Methods
