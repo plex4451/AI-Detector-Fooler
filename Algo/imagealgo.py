@@ -78,6 +78,21 @@ def make_dark_pixels_brighter(image, brightness_increase=10, threshold=20):
     return image
 
 
+def add_white_brush_with_alpha(image):
+    # Create a white brush with alpha
+    brush_color = (255, 255, 255)
+    alpha = 0.05
+
+    # Create a transparent white brush
+    brush = np.zeros_like(image, dtype=np.uint8)
+    brush[:] = brush_color
+    brush = (alpha * brush).astype(np.uint8)
+
+    # Add the brush to the entire image
+    image = cv2.addWeighted(image, 1 - alpha, brush, alpha, 0)
+    return image
+
+
 def light_sharpening(image, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold=0):
     """Return a sharpened version of the image, using an unsharp mask."""
     blurred = cv2.GaussianBlur(image, kernel_size, sigma)
