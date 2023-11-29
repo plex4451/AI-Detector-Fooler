@@ -197,39 +197,37 @@ def use_alog_on_image(path):
     This function applies modifications (such as blur and noise) to an image, adds fake metadata,
     and evaluates both the original and the modified images. The function calculates
     and prints the time taken for the image modification operations.
-
-    Args:
-        path (str): The path to the input image.
-
-    Returns:
-        None.
-
-    Usage:
-        use_alog_on_image('./path_to_your_image.jpg')
     """
     start_time = time.time()
-    print_image_metadata(path)
+    # print_image_metadata(path)
 
     modified_image = cv2.imread(path)
-    modified_image = make_dark_pixels_brighter(modified_image, 5, 10)
-    modified_image = add_blur_to_image(modified_image, 3)
-    modified_image = add_noise_to_image(modified_image, 0, 15)
+
+    modified_image = make_dark_pixels_brighter(modified_image, 5, 100)
+    modified_image = add_gray_noise_to_image(modified_image,  10, 25)
+    modified_image = add_noise_to_image(modified_image, 10, 20)
+    modified_image = add_white_brush_with_alpha(modified_image)
+    modified_image = light_sharpening(modified_image)
+    modified_image = add_copyright_text(modified_image)
+    # modified_image = add_blur_to_image(modified_image, 5)
 
     modified_image_path = save_image(modified_image)
+
     add_fake_metadata(modified_image_path)
-    print_image_metadata(modified_image_path)
+    # print_image_metadata(modified_image_path)
 
     # Calculate elapsed time
     end_time = time.time()
     elapsed_time = end_time - start_time
     print("Algo used in: ", elapsed_time)
 
-    print()
-    print("Original image scores:")
-    get_ai_image_scores(path)
-    print()
-    print("New image scores:")
+    image_name = os.path.basename(path)
+
+    # print("Original image scores:")
+    # get_ai_image_scores(path)
+    print("New image scores from " + image_name + ":")
     get_ai_image_scores(modified_image_path)
+    print()
 
 
 def use_algo_on_folder(folder_path):
@@ -251,3 +249,4 @@ def save_image(image):
     return path
 
 
+use_alog_on_image("/Users/loukielhorn/Library/Mobile Documents/com~apple~CloudDocs/Studium/3. Semester/Programmier-Challenge/Ai-Generated-Images/old_car.jpg")
