@@ -119,6 +119,43 @@ def extreme_sharpening(image):
     return sharpened_image
 
 
+def add_copyright_text(background_img):
+    overlay_img = cv2.imread("../resources/Copyright.png", cv2.IMREAD_UNCHANGED)
+
+    scale_percent = max(background_img.shape[0] / overlay_img.shape[0], background_img.shape[1] / overlay_img.shape[1]) + 50
+    width = int(overlay_img.shape[1] * scale_percent / 100)
+    height = int(overlay_img.shape[0] * scale_percent / 100)
+    dim = (width, height)
+    overlay_img = cv2.resize(overlay_img, dim, interpolation=cv2.INTER_AREA)
+
+    # Extract the alpha channel from the overlay image
+    alpha_channel = overlay_img[:, :, 3]
+
+    # Invert the alpha channel to create a mask
+    mask = cv2.bitwise_not(alpha_channel)
+
+    # Define the position to paste the overlay image
+    y_offset = 10
+    x_offset = 10
+
+    # Region of interest (ROI) in the background image
+    roi = background_img[y_offset:y_offset + overlay_img.shape[0], x_offset:x_offset + overlay_img.shape[1]]
+
+    # Use the mask to create the inverse of the overlay
+    background_roi = cv2.bitwise_and(roi, roi, mask=mask)
+
+    # Use the alpha channel to extract the overlay
+    overlay_roi = cv2.bitwise_and(overlay_img[:, :, 0:3], overlay_img[:, :, 0:3], mask=alpha_channel)
+
+    # Add the background ROI and overlay ROI to get the final result
+    result = cv2.add(background_roi, overlay_roi)
+
+    # Update the background image with the result
+    background_img[y_offset:y_offset + overlay_img.shape[0], x_offset:x_offset + overlay_img.shape[1]] = result
+
+    return background_img
+
+
 def print_image_metadata(path):
     # Prints all available metadata
     image = Image.open(path)
