@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import time
 import piexif
 import os
 from PIL import Image, ExifTags
@@ -192,42 +191,21 @@ def add_fake_metadata(path):
     image.save(path, exif=exif_dat)
 
 
-def use_alog_on_image(path):
+def use_alog_on_image(image):
     """
     This function applies modifications (such as blur and noise) to an image, adds fake metadata,
     and evaluates both the original and the modified images. The function calculates
     and prints the time taken for the image modification operations.
     """
-    start_time = time.time()
     # print_image_metadata(path)
-
-    modified_image = cv2.imread(path)
-
-    modified_image = make_dark_pixels_brighter(modified_image, 5, 100)
+    modified_image = make_dark_pixels_brighter(image, 5, 100)
     modified_image = add_gray_noise_to_image(modified_image,  10, 25)
     modified_image = add_noise_to_image(modified_image, 10, 20)
     modified_image = add_white_brush_with_alpha(modified_image)
     modified_image = light_sharpening(modified_image)
     modified_image = add_copyright_text(modified_image)
     # modified_image = add_blur_to_image(modified_image, 5)
-
-    modified_image_path = save_image(modified_image)
-
-    add_fake_metadata(modified_image_path)
-    # print_image_metadata(modified_image_path)
-
-    # Calculate elapsed time
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    print("Algo used in: ", elapsed_time)
-
-    image_name = os.path.basename(path)
-
-    # print("Original image scores:")
-    # get_ai_image_scores(path)
-    print("New image scores from " + image_name + ":")
-    get_ai_image_scores(modified_image_path)
-    print()
+    return modified_image
 
 
 def use_algo_on_folder(folder_path):
@@ -248,5 +226,14 @@ def save_image(image):
     cv2.imwrite(path, image)
     return path
 
+def test_main():
+    path = "/Users/loukielhorn/Library/Mobile Documents/com~apple~CloudDocs/Studium/3. Semester/Programmier-Challenge/Ai-Generated-Images/old_car.jpg"
+    image = cv2.imread(path)
+    modified_image = use_alog_on_image(image)
+    image_name = os.path.basename(path)
+    print("New image scores from " + image_name + ":")
+    get_ai_image_scores(save_image(modified_image))
 
-use_alog_on_image("/Users/loukielhorn/Library/Mobile Documents/com~apple~CloudDocs/Studium/3. Semester/Programmier-Challenge/Ai-Generated-Images/old_car.jpg")
+
+if __name__ == '__main__':
+    test_main()
