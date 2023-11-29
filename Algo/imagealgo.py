@@ -22,6 +22,49 @@ def add_noise_to_image(image, mean=0, stddev=25):
     return noisy_image
 
 
+def add_gray_noise_to_image(image, mean=0, stddev=25):
+    # Adds gray noise to a cv2 image with the specified mean and stddev
+    # Load the image
+    image = image.astype(np.float32)
+
+    # Generate gray noise with the same shape as the image
+    gray_noise = np.random.randint(low=mean - stddev, high=mean + stddev + 1, size=image.shape).astype(np.float32)
+
+    # Add the gray noise to the image
+    noisy_image = cv2.add(image, gray_noise)
+
+    # Clip values to the valid range
+    noisy_image = np.clip(noisy_image, 0, 255)
+
+    # Convert back to uint8
+    noisy_image = noisy_image.astype(np.uint8)
+    return noisy_image
+
+
+def add_median_color_noise_to_image(image, stddev=25, scale=0.5):
+    # Adds noise to a cv2 image with the color of the median color of the image and the specified stddev
+
+    # Calculate the median color of the image
+    median_color = np.median(image, axis=(0, 1))
+
+    # Generate noise with the same shape as the image
+    noise = np.random.normal(loc=0, scale=stddev, size=image.shape).astype(np.float32)
+
+    # Add the median color to the noise to maintain the color consistency and scale it
+    colored_noise = scale * (noise + median_color)
+
+    # Add the colored noise to the image
+    noisy_image = image + colored_noise
+
+    # Clip values to the valid range
+    noisy_image = np.clip(noisy_image, 0, 255)
+
+    # Convert back to uint8
+    noisy_image = noisy_image.astype(np.uint8)
+
+    return noisy_image
+
+
 def add_blur_to_image(image, strength=35):
     # Adds blur to a cv2 image with the standard value 35
     return cv2.GaussianBlur(image, (strength, strength), 0)
