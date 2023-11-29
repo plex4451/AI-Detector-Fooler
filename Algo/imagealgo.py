@@ -35,6 +35,19 @@ def make_dark_pixels_brighter(image, brightness_increase=10, threshold=20):
     return image
 
 
+def apply_sharpening(image):
+    # Warning use with caution extreme sharping!
+    # Create a sharpening kernel
+    kernel = np.array([[-1, -1, -1],
+                       [-1,  9, -1],
+                       [-1, -1, -1]])
+
+    # Apply the kernel to the image using filter2D
+    sharpened_image = cv2.filter2D(image, -1, kernel)
+
+    return sharpened_image
+
+
 def print_image_metadata(path):
     # Prints all available metadata
     image = Image.open(path)
