@@ -46,68 +46,22 @@ def download_ai_image():
 #Objects-Selector-Methods
 #Hides every non Text object and showes every Text object
 def select_text_objects():
-    Button_Image_Select.pack_forget()
-    Button_Text_Select.pack_forget()
-    Button_Exit_Menu.pack_forget()
-
-    LabelAIT.pack()
-    LabelAIFT.pack()
-    TextboxAIT.pack(side="left",fill="none")
-    TextboxAIFT.pack(side="right",fill="none")
-
-    Button_Back_Menu.pack()
-    Button_AIT_Convert.pack()
-    Button_AIT_Download.pack()
-    Button_AIT_Upload.pack()
+    Frame_Text.pack()
+    Frame_Main_Menu.pack_forget()
 
 
 #Hides every non Image object and showes every Image object
 def select_image_objects():
-    Button_AII_Upload.pack()
-    Button_AII_Download.pack()
-    Button_AII_Convert.pack()
-    Button_Back_Menu.pack()
-
-    LabelAII.pack()
-    LabelAIFI.pack()
-    Label_AII_Image.pack()
-    Label_AIFI_Image.pack()
-
-    Button_Image_Select.pack_forget()
-    Button_Text_Select.pack_forget()
-    Button_Exit_Menu.pack_forget()
+    Frame_Image.pack()
+    Frame_Main_Menu.pack_forget()
 
 
 #Hides every non menu object and showes every Menu object
 def select_menu_objects():
     # Hiding Buttons
-    Button_AIT_Convert.pack_forget()
-    Button_AIT_Download.pack_forget()
-    Button_AIT_Upload.pack_forget()
-    Button_AII_Upload.pack_forget()
-    Button_AII_Download.pack_forget()
-    Button_AII_Convert.pack_forget()
-
-
-    Button_Back_Menu.pack_forget()
-
-    Button_Image_Select.pack(anchor="center")
-    Button_Text_Select.pack(anchor="center")
-    Button_Exit_Menu.pack(anchor="center")
-
-    # Hiding Labels
-    LabelAIT.pack_forget()
-    LabelAIFT.pack_forget()
-    LabelAII.pack_forget()
-    LabelAIFI.pack_forget()
-
-    # Hiding Textboxes
-    TextboxAIT.pack_forget()
-    TextboxAIFT.pack_forget()
-
-    Label_AII_Image.pack_forget()
-    Label_AIFI_Image.pack_forget()
-
+    Frame_Image.pack_forget()
+    Frame_Text.pack_forget()
+    Frame_Main_Menu.pack()
 
 #exit_object Method, exits the GUI with a exit code of 0
 def exit_object():
@@ -119,12 +73,13 @@ def exit_object():
 def open_window():
     #Gobal-Variables-Objects
     global Window
-    global Button_AIT_Convert, Button_AIT_Download, Button_AIT_Upload
-    global Button_AII_Upload, Button_AII_Download, Button_AII_Convert
-    global Button_Image_Select, Button_Text_Select, Button_Back_Menu, Button_Exit_Menu
+    global Button_AIT_Convert, Button_AIT_Download, Button_AIT_Upload, Button_Back_Text_Menu
+    global Button_AII_Upload, Button_AII_Download, Button_AII_Convert, Button_Back_Image_Menu
+    global Button_Image_Select, Button_Text_Select, Button_Exit_Menu
     global LabelAIT, LabelAIFT, LabelAII, LabelAIFI
     global TextboxAIT, TextboxAIFT
     global Label_AII_Image,Label_AIFI_Image
+    global Frame_Text,Frame_Image,Frame_Main_Menu
 
     """
     Dictionary:
@@ -153,10 +108,11 @@ def open_window():
 
     # Label
     #TODO : PLACE
-    LabelAIT = Label(Window, text='Insert a AI generated text here:')
-    LabelAIFT = Label(Window, text='Result of the AI generated text:')
-    LabelAII = Label(Window, text='Upload a AI generated Image here:')
-    LabelAIFI = Label(Window, text='Result of the AI generated Image:')
+    LabelAIT = Label(Frame_Text, text='Insert a AI generated text here:')
+    LabelAIFT = Label(Frame_Text, text='Result of the AI generated text:')
+
+    LabelAII = Label(Frame_Image, text='Upload a AI generated Image here:')
+    LabelAIFI = Label(Frame_Image, text='Result of the AI generated Image:')
 
     LabelAIT.pack()
     LabelAIFT.pack()
@@ -173,8 +129,8 @@ def open_window():
 
     #Textbox
     # TODO: PLACE
-    TextboxAIT = Text(Window)
-    TextboxAIFT = Text(Window)
+    TextboxAIT = Text(Frame_Text)
+    TextboxAIFT = Text(Frame_Text)
 
     TextboxAIT.pack()
     TextboxAIFT.pack()
@@ -183,9 +139,9 @@ def open_window():
     #TextboxAIFT.place(x=600,y=400,width=300,height=300)
 
     #Label
-    # TODO: PLACE CANAVAS
-    Label_AII_Image = Label(Window)
-    Label_AIFI_Image = Label(Window)
+    # TODO: PLACE LABELS
+    Label_AII_Image = Label(Frame_Image)
+    Label_AIFI_Image = Label(Frame_Image)
 
     Label_AII_Image.pack()
     Label_AIFI_Image.pack()
@@ -197,13 +153,15 @@ def open_window():
     # TODO: PLACE BUTTONS
 
     #Text-Menu-Buttons
-    Button_AIT_Convert = Button(Window, text='Change-Text', command=convert_ai_text)
-    Button_AIT_Download = Button(Window, text='Download-Text', command=download_ai_text)
-    Button_AIT_Upload = Button(Window, text='Upload-Text', command=upload_ai_text)
+    Button_AIT_Convert = Button(Frame_Text, text='Change-Text', command=convert_ai_text)
+    Button_AIT_Download = Button(Frame_Text, text='Download-Text', command=download_ai_text)
+    Button_AIT_Upload = Button(Frame_Text, text='Upload-Text', command=upload_ai_text)
+    Button_Back_Text_Menu = Button(Frame_Text, text='Back to Menu', command=select_menu_objects)
 
     Button_AIT_Convert.pack()
     Button_AIT_Download.pack()
     Button_AIT_Upload.pack()
+    Button_Back_Text_Menu.pack()
 
     #Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
     #Button_AIT_Download.place(x=600, y=200, width=80, height=25)
@@ -211,13 +169,16 @@ def open_window():
 
 
     #Image-Menu-Buttons
-    Button_AII_Upload = Button(Window, text='Upload-Image', command=upload_ai_image)
-    Button_AII_Download = Button(Window, text='Download-Image', command=download_ai_image)
-    Button_AII_Convert = Button(Window, text='Change-Image', command=convert_ai_image)
+    Button_AII_Upload = Button(Frame_Image, text='Upload-Image', command=upload_ai_image)
+    Button_AII_Download = Button(Frame_Image, text='Download-Image', command=download_ai_image)
+    Button_AII_Convert = Button(Frame_Image, text='Change-Image', command=convert_ai_image)
+    Button_Back_Image_Menu = Button(Frame_Image, text='Back to Menu', command=select_menu_objects)
+
 
     Button_AII_Upload.pack()
     Button_AII_Download.pack()
     Button_AII_Convert.pack()
+    Button_Back_Image_Menu.pack()
 
     #Button_AII_Upload.place(x=400, y=200, width=80, height=25)
     #Button_AII_Convert.place(x=600, y=200, width=80, height=25)
@@ -225,14 +186,12 @@ def open_window():
 
 
     #Main-Menu-Buttons
-    Button_Image_Select = Button(Window, text='Image Converter', command=select_image_objects)
-    Button_Text_Select = Button(Window, text='Text Converter', command=select_text_objects)
-    Button_Back_Menu = Button(Window, text='Back to Menu', command=select_menu_objects)
-    Button_Exit_Menu = Button(Window, text='Exit', command=exit_object)
+    Button_Image_Select = Button(Frame_Main_Menu, text='Image Converter', command=select_image_objects)
+    Button_Text_Select = Button(Frame_Main_Menu, text='Text Converter', command=select_text_objects)
+    Button_Exit_Menu = Button(Frame_Main_Menu, text='Exit', command=exit_object)
 
     Button_Image_Select.pack()
     Button_Text_Select.pack()
-    Button_Back_Menu.pack()
     Button_Exit_Menu.pack()
 
     #Button_Image_Select.place(x=600, y=200, width=80, height=25)
