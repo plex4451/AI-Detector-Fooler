@@ -39,6 +39,10 @@ def download_ai_image():
     pass
 
 
+
+
+
+
 #Objects-Selector-Methods
 #Hides every non Text object and showes every Text object
 def select_text_objects():
@@ -48,8 +52,8 @@ def select_text_objects():
 
     LabelAIT.pack()
     LabelAIFT.pack()
-    TextboxAIT.pack()
-    TextboxAIFT.pack()
+    TextboxAIT.pack(side="left",fill="none")
+    TextboxAIFT.pack(side="right",fill="none")
 
     Button_Back_Menu.pack()
     Button_AIT_Convert.pack()
@@ -87,9 +91,9 @@ def select_menu_objects():
 
     Button_Back_Menu.pack_forget()
 
-    Button_Image_Select.pack()
-    Button_Text_Select.pack()
-    Button_Exit_Menu.pack()
+    Button_Image_Select.pack(anchor="center")
+    Button_Text_Select.pack(anchor="center")
+    Button_Exit_Menu.pack(anchor="center")
 
     # Hiding Labels
     LabelAIT.pack_forget()
@@ -136,6 +140,13 @@ def open_window():
     Window.title('AI-NOOBS-UNLEASHED: AI FOOLER')
     Window.resizable(True, True)
 
+
+    #Frame
+    Frame_Text = Frame(Window,width=Window.winfo_width(), height=Window.winfo_height())
+    Frame_Image = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+    Frame_Main_Menu = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+
+
     # Label
     #TODO : PLACE
     LabelAIT = Label(Window, text='Insert a AI generated text here:')
@@ -161,8 +172,8 @@ def open_window():
     TextboxAIT = Text(Window)
     TextboxAIFT = Text(Window)
 
-    TextboxAIT.pack(side="left")
-    TextboxAIFT.pack(side="right")
+    TextboxAIT.pack()
+    TextboxAIFT.pack()
 
     #TextboxAIT.place(x=200,y=400,width=300,height=300)
     #TextboxAIFT.place(x=600,y=400,width=300,height=300)
@@ -172,8 +183,8 @@ def open_window():
     Label_AII_Image = Label(Window)
     Label_AIFI_Image = Label(Window)
 
-    Label_AII_Image.pack(side="left")
-    Label_AIFI_Image.pack(side="left")
+    Label_AII_Image.pack()
+    Label_AIFI_Image.pack()
 
 
 
