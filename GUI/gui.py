@@ -67,7 +67,7 @@ def select_image_objects():
     LabelAII.pack()
     LabelAIFI.pack()
     Label_AII_Image.pack()
-    Label_AIT_Image.pack()
+    Label_AIFI_Image.pack()
 
     Button_Image_Select.pack_forget()
     Button_Text_Select.pack_forget()
@@ -102,7 +102,7 @@ def select_menu_objects():
     TextboxAIFT.pack_forget()
 
     Label_AII_Image.pack_forget()
-    Label_AIT_Image.pack_forget()
+    Label_AIFI_Image.pack_forget()
 
 
 #exit_object Method, exits the GUI with a exit code of 0
@@ -120,7 +120,7 @@ def open_window():
     global Button_Image_Select, Button_Text_Select, Button_Back_Menu, Button_Exit_Menu
     global LabelAIT, LabelAIFT, LabelAII, LabelAIFI
     global TextboxAIT, TextboxAIFT
-    global Label_AII_Image,Label_AIT_Image
+    global Label_AII_Image,Label_AIFI_Image
 
     """
     Dictionary:
@@ -161,8 +161,8 @@ def open_window():
     TextboxAIT = Text(Window)
     TextboxAIFT = Text(Window)
 
-    TextboxAIT.pack()
-    TextboxAIFT.pack()
+    TextboxAIT.pack(side="left")
+    TextboxAIFT.pack(side="right")
 
     #TextboxAIT.place(x=200,y=400,width=300,height=300)
     #TextboxAIFT.place(x=600,y=400,width=300,height=300)
@@ -170,10 +170,10 @@ def open_window():
     #Label
     # TODO: PLACE CANAVAS
     Label_AII_Image = Label(Window)
-    Label_AIT_Image = Label(Window)
+    Label_AIFI_Image = Label(Window)
 
-    Label_AII_Image.pack()
-    Label_AIT_Image.pack()
+    Label_AII_Image.pack(side="left")
+    Label_AIFI_Image.pack(side="left")
 
 
 
