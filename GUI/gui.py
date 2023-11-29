@@ -96,110 +96,91 @@ def open_window():
     Window.resizable(True, True)
 
 
-    #Frame
-    Frame_Text = Frame(Window,width=Window.winfo_width(), height=Window.winfo_height())
-    Frame_Image = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
-    Frame_Main_Menu = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+    # Frame-Text
+    Frame_Text = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
 
-    Frame_Text.pack()
-    Frame_Image.pack()
-    Frame_Main_Menu.pack()
-
-
-    # Label
-    #TODO : PLACE
+    #Label
     LabelAIT = Label(Frame_Text, text='Insert a AI generated text here:')
     LabelAIFT = Label(Frame_Text, text='Result of the AI generated text:')
 
-    LabelAII = Label(Frame_Image, text='Upload a AI generated Image here:')
-    LabelAIFI = Label(Frame_Image, text='Result of the AI generated Image:')
-
-    LabelAIT.pack()
-    LabelAIFT.pack()
-    LabelAII.pack()
-    LabelAIFI.pack()
-
-    #LabelAIT.place(x=10, y=20, width=60, height=50)
-    #LabelAIFT.place(x=10, y=200, width=150, height=50)
-    #LabelAII.place(x=10, y= 300, width=150, height=50)
-    #LabelAIFI.place(x=10, y=400, width=150,height=50)
-
-    #Entry
-    #NONE
-
-    #Textbox
-    # TODO: PLACE
+    #Textboxes
     TextboxAIT = Text(Frame_Text)
     TextboxAIFT = Text(Frame_Text)
 
-    TextboxAIT.pack()
-    TextboxAIFT.pack()
-
-    #TextboxAIT.place(x=200,y=400,width=300,height=300)
-    #TextboxAIFT.place(x=600,y=400,width=300,height=300)
-
-    #Label
-    # TODO: PLACE LABELS
-    Label_AII_Image = Label(Frame_Image)
-    Label_AIFI_Image = Label(Frame_Image)
-
-    Label_AII_Image.pack()
-    Label_AIFI_Image.pack()
-
-
-
-
-    # Buttons
-    # TODO: PLACE BUTTONS
-
-    #Text-Menu-Buttons
+    #TButtons
     Button_AIT_Convert = Button(Frame_Text, text='Change-Text', command=convert_ai_text)
     Button_AIT_Download = Button(Frame_Text, text='Download-Text', command=download_ai_text)
     Button_AIT_Upload = Button(Frame_Text, text='Upload-Text', command=upload_ai_text)
     Button_Back_Text_Menu = Button(Frame_Text, text='Back to Menu', command=select_menu_objects)
 
+
+
+    #Packing the Objects
+    #TODO: PACK
+    Frame_Text.pack()
+    LabelAIT.pack()
+    LabelAIFT.pack()
+    TextboxAIT.pack(side="left")
+    TextboxAIFT.pack(side="right")
     Button_AIT_Convert.pack()
     Button_AIT_Download.pack()
     Button_AIT_Upload.pack()
     Button_Back_Text_Menu.pack()
 
-    #Button_AIT_Convert.place(x=500, y=200, width=70, height=25)
-    #Button_AIT_Download.place(x=600, y=200, width=80, height=25)
-    #Button_AIT_Upload.place(x=600, y=200, width=80, height=25)
 
 
-    #Image-Menu-Buttons
+
+
+    # Frame-Image
+    Frame_Image = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+
+    #Label
+    LabelAII = Label(Frame_Image, text='Upload a AI generated Image here:')
+    LabelAIFI = Label(Frame_Image, text='Result of the AI generated Image:')
+
+    #Label-Image
+    Label_AII_Image = Label(Frame_Image)
+    Label_AIFI_Image = Label(Frame_Image)
+
+    #Buttons
     Button_AII_Upload = Button(Frame_Image, text='Upload-Image', command=upload_ai_image)
     Button_AII_Download = Button(Frame_Image, text='Download-Image', command=download_ai_image)
     Button_AII_Convert = Button(Frame_Image, text='Change-Image', command=convert_ai_image)
     Button_Back_Image_Menu = Button(Frame_Image, text='Back to Menu', command=select_menu_objects)
 
 
+
+    # Packing the Objects
+    # TODO: PACK
+    Frame_Image.pack()
+    LabelAII.pack()
+    LabelAIFI.pack()
+    Label_AII_Image.pack()
+    Label_AIFI_Image.pack()
     Button_AII_Upload.pack()
     Button_AII_Download.pack()
     Button_AII_Convert.pack()
     Button_Back_Image_Menu.pack()
 
-    #Button_AII_Upload.place(x=400, y=200, width=80, height=25)
-    #Button_AII_Convert.place(x=600, y=200, width=80, height=25)
-    #Button_AII_Download.place(x=600, y=200, width=80, height=25)
 
 
-    #Main-Menu-Buttons
+
+
+
+    #Frame-Main-Menu
+    Frame_Main_Menu = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+
+    #Buttons
     Button_Image_Select = Button(Frame_Main_Menu, text='Image Converter', command=select_image_objects)
     Button_Text_Select = Button(Frame_Main_Menu, text='Text Converter', command=select_text_objects)
     Button_Exit_Menu = Button(Frame_Main_Menu, text='Exit', command=exit_object)
 
+    # Packing the Objects
+    # TODO: PACK
+    Frame_Main_Menu.pack()
     Button_Image_Select.pack()
     Button_Text_Select.pack()
     Button_Exit_Menu.pack()
-
-    #Button_Image_Select.place(x=600, y=200, width=80, height=25)
-    #Button_Text_Select.place(x=600,y=200, width=80, height=25)
-    #Button_Back_Menu.place(x=450, y=500, width=80, height=25)
-    #Button_Exit_Menu.place(x=600, y=200, width=80, height=25)
-
-
 
 
     #Window Mainloop
