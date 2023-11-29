@@ -146,6 +146,10 @@ def open_window():
     Frame_Image = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
     Frame_Main_Menu = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
 
+    Frame_Text.pack()
+    Frame_Image.pack()
+    Frame_Main_Menu.pack()
+
 
     # Label
     #TODO : PLACE
