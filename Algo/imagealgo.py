@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import time
 import piexif
+import os
 from PIL import Image, ExifTags
 from APIs.ai_image_detector import get_ai_image_scores
 
@@ -110,10 +111,22 @@ def use_alog_on_image(path):
     get_ai_image_scores(modified_image_path)
 
 
+def use_algo_on_folder(folder_path):
+    # List all files in the folder
+    all_files = os.listdir(folder_path)
+
+    # Filter out only the image files (jpg, png)
+    image_files = [file for file in all_files if file.lower().endswith(('.png', '.jpg', '.jpeg'))]
+
+    # Create full paths for each image file
+    image_paths = [os.path.join(folder_path, file) for file in image_files]
+    for image_path in image_paths:
+        use_alog_on_image(image_path)
+
+
 def save_image(image):
     path = "/Users/loukielhorn/Downloads/output.jpg"
     cv2.imwrite(path, image)
     return path
 
 
-use_alog_on_image("/Users/loukielhorn/Downloads/berries.jpg")
