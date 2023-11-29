@@ -88,7 +88,7 @@ def add_fake_metadata(path):
     # This function adds fake metadata to an image path
     image = Image.open(path)
 
-    exif_ifd = {piexif.ExifIFD.UserComment: 'Author: Lou Kielhorn'.encode()}
+    exif_ifd = {piexif.ExifIFD.UserComment: 'Author: Max Mustermann'.encode()}
 
     exif_dict = {"0th": {}, "Exif": exif_ifd, "1st": {},
                  "thumbnail": None, "GPS": {}}
