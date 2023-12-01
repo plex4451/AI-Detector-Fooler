@@ -82,6 +82,7 @@ def main_method():
 
 # debug: Enables/Disables Debug prints and Methods for Testing
 debug = True
+# ERROR Handleing with missing arguments
 try:
     inputpath = sys.argv[1]
     outputpath = sys.argv[2]
