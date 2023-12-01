@@ -63,8 +63,12 @@ def main_method():
 
 # debug: Enables/Disables Debug prints and Methods for Testing
 debug = True
-inputpath = sys.argv[1]
-outputpath = sys.argv[2]
+try:
+    inputpath = sys.argv[1]
+    outputpath = sys.argv[2]
+except:
+    print("ERROR 003: No given Arguments! The program needs two arguments -> <inputpath> <outputpath>")
+    exit(3)
 inputtype = getfiletype(inputpath.split('.')[-1].upper())
 outputtype = getfiletype(outputpath.split('.')[-1].upper())
 print("----------------------------------------------------------------------------")
