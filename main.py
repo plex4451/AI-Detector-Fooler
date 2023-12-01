@@ -54,9 +54,12 @@ def main_method():
                 print("----------------------------------------------------------------------------")
             print("Text-ALGO Complete")
         else:
-            print("Image-ALGO Missing")
+            image = cv2.imread(inputpath) 
             #TODO: INSERT ALGO FOR IMAGE HERE
-
+            finale_image = image
+            #INSERT ALGO FOR IMAGE HERE END 
+            cv2.imwrite(outputpath, final_image)
+            print("Image-ALGO Missing")
 
 
 # MAIN-METHOD
