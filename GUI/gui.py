@@ -1,8 +1,9 @@
 #Library
 from tkinter import *
 from Algo.text_algo import *
+from Algo.imagealgo import * 
 from tkinter import filedialog
-
+from PIL import Image,ImageTk
 
 
 #AI-Text-Methods
@@ -33,7 +34,14 @@ def convert_ai_image():
     pass
 
 def upload_ai_image():
-    pass
+    file_path = filedialog.askopenfilename(filetypes=(("PNG files", "*.png"),("JPG files","*.jpg")))
+    if file_path::
+        image = Image.open(path)
+        tk_image = ImageTk.PhotoImage(image)
+        Label_AII_Image.config(image=tk_image)
+        Label_AII_Image.image = tk_image
+    
+
 
 def download_ai_image():
     pass
