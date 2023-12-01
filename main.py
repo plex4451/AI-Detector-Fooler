@@ -5,6 +5,8 @@ from Algo.text_algo import *
 from APIs.ai_text_detector import get_scores as get_scores_txt
 from APIs.ai_image_detector import *
 from GUI.gui import open_window
+import time
+import cv2
 
 
 #open_window_thread: This Method opens the GUI (exist for sepret threading)
@@ -34,6 +36,7 @@ def main_method():
             exit(2)
     else:
         if(inputtype == Filetype.TXT):
+            start_time = time.time()
             file = open(inputpath,"r",encoding="utf-8")
             text = file.read()
             file.close()
@@ -42,6 +45,12 @@ def main_method():
             file = open(outputpath, "x", encoding='utf-8')
             file.write(final_text)
             file.close()
+            end_time = time.time()
+            elapsed_time = end_time - start_time    
+            
+            print("----------------------------------------------------------------------------")
+            print("Text Algo used in: ", elapsed_time)
+            print("----------------------------------------------------------------------------")
 
             if(debug):
                 print("----------------------------------------------------------------------------")
@@ -53,14 +62,21 @@ def main_method():
                 print(final_text)
                 print("----------------------------------------------------------------------------")
             print("Text-ALGO Complete")
-        else:
+        
+        else: 
+            start_time = time.time()
             image = cv2.imread(inputpath) 
             #TODO: INSERT ALGO FOR IMAGE HERE
             finale_image = image
             #INSERT ALGO FOR IMAGE HERE END 
             cv2.imwrite(outputpath, final_image)
-            print("Image-ALGO Missing")
+            end_time = time.time()
+            elapsed_time = end_time - start_time    
 
+            print("----------------------------------------------------------------------------")
+            print("Image Algo used in: ", elapsed_time)
+            print("----------------------------------------------------------------------------")
+            print("Image-Algo missing!")
 
 # MAIN-METHOD
 
