@@ -36,8 +36,8 @@ def convert_ai_image():
 
 def upload_ai_image():
     file_path = filedialog.askopenfilename(filetypes=(("PNG files", "*.png"),("JPGimple files","*.jpg")))
-    if file_path::
-        image = Image.open(path)
+    if file_path:
+        image = Image.open(file_path)
         tk_image = ImageTk.PhotoImage(image)
         Label_AII_Image.config(image=tk_image)
         Label_AII_Image.image = tk_image
@@ -45,12 +45,12 @@ def upload_ai_image():
 
 
 def download_ai_image():
-    image = LabelAIFI.image
+    image = Label_AIFI_Image.image
     if image:
         file_path = filedialog.asksaveasfilename(defaultextension=".png",   filetypes=([("PNG files", "*.png"),("JPG files","*.jpg")]))
-            if file_path:
-                image.write(file_path, format=file_path.split('.')[-1].lower())
-    
+        if file_path:
+            image.write(file_path, format=file_path.split('.')[-1].lower())
+
 
 
 
@@ -72,7 +72,6 @@ def select_image_objects():
 
 #Hides every non menu object and showes every Menu object
 def select_menu_objects():
-    # Hiding Buttons
     Frame_Image.pack_forget()
     Frame_Text.pack_forget()
     Frame_Main_Menu.pack()
@@ -132,14 +131,14 @@ def open_window():
     #Packing the Objects
     #TODO: PACK
     Frame_Text.pack()
-    LabelAIT.pack()
-    LabelAIFT.pack()
-    TextboxAIT.pack(side="left")
-    TextboxAIFT.pack(side="right")
-    Button_AIT_Convert.pack()
-    Button_AIT_Download.pack()
-    Button_AIT_Upload.pack()
-    Button_Back_Text_Menu.pack()
+    LabelAIT.pack(anchor="w")
+    LabelAIFT.pack(anchor="e")
+    TextboxAIT.pack(anchor="w")
+    TextboxAIFT.pack(anchor="e")
+    Button_AIT_Convert.pack(anchor="center")
+    Button_AIT_Download.pack(anchor="e")
+    Button_AIT_Upload.pack(anchor="w")
+    Button_Back_Text_Menu.pack(anchor="center")
 
 
 

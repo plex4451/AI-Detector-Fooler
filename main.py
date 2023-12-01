@@ -67,7 +67,7 @@ def main_method():
             start_time = time.time()
             image = cv2.imread(inputpath) 
             #TODO: INSERT ALGO FOR IMAGE HERE
-            finale_image = image
+            final_image = image
             #INSERT ALGO FOR IMAGE HERE END 
             cv2.imwrite(outputpath, final_image)
             end_time = time.time()
