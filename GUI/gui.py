@@ -34,7 +34,7 @@ def convert_ai_image():
     pass
 
 def upload_ai_image():
-    file_path = filedialog.askopenfilename(filetypes=(("PNG files", "*.png"),("JPG files","*.jpg")))
+    file_path = filedialog.askopenfilename(filetypes=(("PNG files", "*.png"),("JPGimple files","*.jpg")))
     if file_path::
         image = Image.open(path)
         tk_image = ImageTk.PhotoImage(image)
@@ -44,7 +44,12 @@ def upload_ai_image():
 
 
 def download_ai_image():
-    pass
+    image = LabelAIFI.image
+    if image:
+        file_path = filedialog.asksaveasfilename(defaultextension=".png",   filetypes=([("PNG files", "*.png"),("JPG files","*.jpg")]))
+            if file_path:
+                image.write(file_path, format=file_path.split('.')[-1].lower())
+    
 
 
 
