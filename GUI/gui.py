@@ -104,13 +104,12 @@ def open_window():
 
     # Window
     Window = Tk()
-    Window.geometry('1200x900')
+    Window.geometry(str(Window.winfo_screenwidth())+"x"+str(Window.winfo_screenheight()))
     Window.title('AI-NOOBS-UNLEASHED: AI FOOLER')
     Window.resizable(True, True)
 
-
     # Frame-Text
-    Frame_Text = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+    Frame_Text = Frame(Window, width=str(Window.winfo_screenwidth()), height=str(Window.winfo_screenheight()))
 
     #Label
     LabelAIT = Label(Frame_Text, text='Insert a AI generated text here:')
@@ -131,29 +130,30 @@ def open_window():
     #Packing the Objects
     #TODO: PACK
     Frame_Text.pack()
-    LabelAIT.pack(anchor="w")
-    LabelAIFT.pack(anchor="e")
-    TextboxAIT.pack(anchor="w")
-    TextboxAIFT.pack(anchor="e")
-    Button_AIT_Convert.pack(anchor="center")
-    Button_AIT_Download.pack(anchor="e")
-    Button_AIT_Upload.pack(anchor="w")
-    Button_Back_Text_Menu.pack(anchor="center")
+    LabelAIT.place(x=str(40),y=str(20),width=str(800),height=str(20))
+    LabelAIFT.place(x=str(1080),y=str(20),width=str(800),height=str(20))
+    TextboxAIT.place(x=str(40),y=str(40),width=str(800),height=str(700))
+    TextboxAIFT.place(x=str(1080),y=str(40),width=str(800),height=str(700))
+    Button_AIT_Upload.place(x=str(340), y=str(800), width=str(200), height=str(50))
+    Button_AIT_Download.place(x=str(1380), y=str(800), width=str(200), height=str(50))
+    Button_AIT_Convert.place(x=str(860), y=str(390), width=str(200), height=str(50))
+    Button_Back_Text_Menu.place(x=str(860),y=str(800),width=str(200),height=str(50))
 
 
 
 
 
     # Frame-Image
-    Frame_Image = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+    Frame_Image = Frame(Window,  width=str(Window.winfo_screenwidth()), height=str(Window.winfo_screenheight()))
 
     #Label
     LabelAII = Label(Frame_Image, text='Upload a AI generated Image here:')
     LabelAIFI = Label(Frame_Image, text='Result of the AI generated Image:')
 
     #Label-Image
-    Label_AII_Image = Label(Frame_Image)
-    Label_AIFI_Image = Label(Frame_Image)
+    tk_image = ImageTk.PhotoImage(Image.open("GUI/Assets/no_image.png"))
+    Label_AII_Image = Label(Frame_Image, image=tk_image)
+    Label_AIFI_Image = Label(Frame_Image, image=tk_image)
 
     #Buttons
     Button_AII_Upload = Button(Frame_Image, text='Upload-Image', command=upload_ai_image)
@@ -166,14 +166,14 @@ def open_window():
     # Packing the Objects
     # TODO: PACK
     Frame_Image.pack()
-    LabelAII.pack()
-    LabelAIFI.pack()
-    Label_AII_Image.pack()
-    Label_AIFI_Image.pack()
-    Button_AII_Upload.pack()
-    Button_AII_Download.pack()
-    Button_AII_Convert.pack()
-    Button_Back_Image_Menu.pack()
+    LabelAII.place(x=str(40),y=str(20),width=str(800),height=str(20))
+    LabelAIFI.place(x=str(1080),y=str(20),width=str(800),height=str(20))
+    Label_AII_Image.place(x=str(40),y=str(40),width=str(800),height=str(700))
+    Label_AIFI_Image.place(x=str(1080),y=str(40),width=str(800),height=str(700))
+    Button_AII_Upload.place(x=str(340), y=str(800), width=str(200), height=str(50))
+    Button_AII_Download.place(x=str(1380), y=str(800), width=str(200), height=str(50))
+    Button_AII_Convert.place(x=str(860), y=str(390), width=str(200), height=str(50))
+    Button_Back_Image_Menu.place(x=str(860),y=str(800),width=str(200),height=str(50))
 
 
 
@@ -181,7 +181,7 @@ def open_window():
 
 
     #Frame-Main-Menu
-    Frame_Main_Menu = Frame(Window, width=Window.winfo_width(), height=Window.winfo_height())
+    Frame_Main_Menu = Frame(Window,  width=str(Window.winfo_screenwidth()), height=str(Window.winfo_screenheight()))
 
     #Buttons
     Button_Image_Select = Button(Frame_Main_Menu, text='Image Converter', command=select_image_objects)
