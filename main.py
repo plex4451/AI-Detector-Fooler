@@ -1,6 +1,7 @@
 import sys
 import threading
 from Enums.filetype import *
+from Algo.imagealgo import *
 from Algo.text_algo import *
 from APIs.ai_text_detector import get_scores as get_scores_txt
 from APIs.ai_image_detector import *
@@ -61,13 +62,13 @@ def main_method():
                 print("----------------------------------------------------------------------------")
                 print(final_text)
                 print("----------------------------------------------------------------------------")
-            print("Text-ALGO Complete")
+            print("Text-ALGO Completed")
         
         else: 
             start_time = time.time()
             image = cv2.imread(inputpath) 
             #TODO: INSERT ALGO FOR IMAGE HERE
-            final_image = image
+            final_image = use_alog_on_image(image)
             #INSERT ALGO FOR IMAGE HERE END 
             cv2.imwrite(outputpath, final_image)
             end_time = time.time()
@@ -76,7 +77,7 @@ def main_method():
             print("----------------------------------------------------------------------------")
             print("Image Algo used in: ", elapsed_time)
             print("----------------------------------------------------------------------------")
-            print("Image-Algo missing!")
+            print("Image-Algo Completed!")
 
 # MAIN-METHOD
 
