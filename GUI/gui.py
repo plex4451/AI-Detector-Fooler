@@ -4,8 +4,13 @@ from Algo.text_algo import *
 from Algo.imagealgo import * 
 from tkinter import filedialog
 from PIL import Image,ImageTk
+import cv2
 
-
+#TODO: REWRITE LABELS
+#Variables
+#TODO: MAYBE REMOVE THEM LATER
+image_AI = cv2.imread("GUI/Assets/no_image.png")
+image_AIF = cv2.imread("GUI/Assets/no_image.png")
 
 #AI-Text-Methods
 def convert_ai_text():
@@ -32,24 +37,32 @@ def download_ai_text():
 
 #AI-Image-Methods
 def convert_ai_image():
-    pass
+    global image_AIF
+    image = use_alog_on_image(image_AI)
+    image_AIF = image
+    image_AI_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    image = Image.fromarray(image_AI_rgb)
+    tk_image = ImageTk.PhotoImage(image)
+    Label_AIFI_Image.config(image=tk_image)
+    Label_AIFI_Image.image = tk_image
+
 
 def upload_ai_image():
+    global image_AI
     file_path = filedialog.askopenfilename(filetypes=(("PNG files", "*.png"),("JPGimple files","*.jpg")))
     if file_path:
         image = Image.open(file_path)
         tk_image = ImageTk.PhotoImage(image)
         Label_AII_Image.config(image=tk_image)
         Label_AII_Image.image = tk_image
+        image_AI = cv2.imread(file_path)
     
 
 
 def download_ai_image():
-    image = Label_AIFI_Image.image
-    if image:
-        file_path = filedialog.asksaveasfilename(defaultextension=".png",   filetypes=([("PNG files", "*.png"),("JPG files","*.jpg")]))
-        if file_path:
-            image.write(file_path, format=file_path.split('.')[-1].lower())
+    image = image_AIF
+    file_path = filedialog.asksaveasfilename(defaultextension=".png",   filetypes=([("PNG files", "*.png"),("JPG files","*.jpg")]))
+    cv2.imwrite(file_path, image)
 
 
 
