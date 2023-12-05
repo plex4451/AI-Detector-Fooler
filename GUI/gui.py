@@ -196,6 +196,9 @@ def open_window():
     #Frame-Main-Menu
     Frame_Main_Menu = Frame(Window,  width=str(Window.winfo_screenwidth()), height=str(Window.winfo_screenheight()))
 
+    #Label
+    Label_Info_Menu = Label(Frame_Main_Menu,text='AI FOOLER!',font=("Arial", 20))
+
     #Buttons
     Button_Image_Select = Button(Frame_Main_Menu, text='Image Converter', command=select_image_objects)
     Button_Text_Select = Button(Frame_Main_Menu, text='Text Converter', command=select_text_objects)
@@ -204,9 +207,10 @@ def open_window():
     # Packing the Objects
     # TODO: PACK
     Frame_Main_Menu.pack()
-    Button_Image_Select.pack()
-    Button_Text_Select.pack()
-    Button_Exit_Menu.pack()
+    Button_Text_Select.place(x=str(860), y=str(400), width=str(200), height=str(50))
+    Button_Image_Select.place(x=str(860), y=str(500), width=str(200), height=str(50))
+    Button_Exit_Menu.place(x=str(860), y=str(600), width=str(200), height=str(50))
+    Label_Info_Menu.place(x=str(860), y=str(200), width=str(200), height=str(50))
 
 
     #Window Mainloop
