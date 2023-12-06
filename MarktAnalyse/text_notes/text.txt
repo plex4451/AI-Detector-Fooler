@@ -1,1 +1,113 @@
-Commit new File
+Bewertung von Text generierenden KI:
+
+Kriterien:
+- Geschwindigkeit der Generierung
+- Benutzerfreundlichkeit
+- Qualität des Textes (Lesbarkeit):
+    - zu viele Fachbegriffe?
+    - zu kompliziert formuliert?
+    - zu viele Wiederholungen?
+    - grammatikalisch korrekt?
+    - Rechtschreibfehler vorhanden?
+- Fähigkeiten in bestimmten Fachbereichen:
+    - Mathe
+    - Texte zusammenfassen
+    - Übersetzen (Deutsch - Englisch)
+    - Kreativität
+- Einhalten von Bedingungen
+
+KI´s:
+- Chat GPT (https://chat.openai.com/)
+- InferKit (Demo) (https://app.inferkit.com/demo)
+- writecream (https://www.writecream.com/) → ChatGenie
+- Writesonic (https://writesonic.com/chat) → ChatSonic
+- PopAi (https://www.popai.pro/)
+
+mathematische Fähigkeiten:
+
+Umfang Kreis mit r = 2,5 cm
+ChatGPT:
+- nennt Formel
+- Rechenweg
+- Nennung PI
+
+Writecream (ChatGenie):
+- nennt Formel
+- Rechenweg
+- Nennung PI
+
+Writesonic (Chatsonic):
+- nennt Formel
+- Rechenweg
+- Nennung PI
+
+PopAi:
+- nennt Formel
+- Rechenweg
+
+
+3x + 7 = 16
+ChatGPT:
+- Rechenweg + Erklärung
+- Nummerierung der Schritte falsch
+
+Writecream (ChatGenie):
+- Rechenweg + Erklärung
+
+Writesonic (Chatsonic):
+- Antwort auf Englisch
+- drei Lösungen → eine richtig
+- Lösung aus Internet
+
+PopAi:
+- Rechenweg + Erklärung
+
+
+(2/3) + (1/4)
+ChatGPT:
+- Rechenweg + Erklärung
+
+Writecream (ChatGenie):
+- Rechenweg + Erklärung
+
+Writesonic (Chatsonic):
+- Rechenweg + Erklärung
+- Erklärung kleinster gemeinsamer Teiler
+
+PopAi:
+- Rechenweg + Erklärung
+- zeigt Erweiterung der Brüche
+
+
+Primzahlen (1 - 50):
+ChatGPT:
+- kurze Erklärung Primzahlen
+- Auflistung Primzahlen
+
+Writecream (ChatGenie):
+- Auflistung Primzahlen
+
+Writesonic (Chatsonic):
+- Auflistung Primzahlen
+
+PopAi:
+- Auflistung Primzahlen
+
+
+f(x) = x^2 Integral von 0 - 2
+ChatGPT:
+- Rechenweg + Erklärung
+- Bezeichnet Stammfunktion als Integral
+
+Writecream (ChatGenie):
+- Rechenweg + Erklärung
+
+Writesonic (Chatsonic):
+- Rechenweg + Erklärung
+- Erklärung Integral
+- Erklärung Berechnung Stammfunktion
+
+PopAi:
+- Rechenweg + Erklärung
+- nutzt Fachbegriffe: bestimmtes/ unbestimmtes Integral, Integrationsgrenzen
+- bedenkt C
