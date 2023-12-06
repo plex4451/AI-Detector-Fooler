@@ -86,7 +86,7 @@ try:
     inputpath = sys.argv[1]
     outputpath = sys.argv[2]
 except:
-    print("ERROR 003: No given Arguments! The program needs two arguments -> <inputpath> <outputpath>")
+    print("ERROR 003: No given Arguments! The program needs two arguments -> main.py <inputpath> <outputpath>")
     exit(3)
 inputtype = getfiletype(inputpath.split('.')[-1].upper())
 outputtype = getfiletype(outputpath.split('.')[-1].upper())
