@@ -66,10 +66,8 @@ def main_method():
         
         else: 
             start_time = time.time()
-            image = cv2.imread(inputpath) 
-            #TODO: INSERT ALGO FOR IMAGE HERE
+            image = cv2.imread(inputpath)
             final_image = use_alog_on_image(image)
-            #INSERT ALGO FOR IMAGE HERE END 
             cv2.imwrite(outputpath, final_image)
             end_time = time.time()
             elapsed_time = end_time - start_time    
