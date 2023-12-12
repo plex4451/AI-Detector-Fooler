@@ -111,3 +111,166 @@ PopAi:
 - Rechenweg + Erklärung
 - nutzt Fachbegriffe: bestimmtes/ unbestimmtes Integral, Integrationsgrenzen
 - bedenkt C
+
+
+Fähigkeit Text zusammenfassen:
+
+Zeitungsartikel:
+„Es ist nicht einfach, eine biologische Waffe zu bauen. Das dürfte einer der Gründe sein, warum Giftgas oder Krankheitserreger bisher
+selten von Terroristen eingesetzt werden. Aber was, wenn sie an die nötige Zutaten kämen – und künstliche Intelligenz ihnen eine genaue
+Anleitung liefert? Und wenn eine KI das kann, könnte sie vielleicht sogar selbst entscheiden, derartige Waffen einzusetzen?
+
+Solche Sorgen, dass KI gefährlich für die Menschheit wird, durch Biowaffen, Cyberangriffe oder weil sie außer Kontrolle gerät und die Macht
+an sich reißt, äußern manche KI-Forscher schon länger. Damit finden sie nun auch Gehör in der Politik – und zwar bei den wichtigsten
+Regierungsmitgliedern der Welt. US-Präsident Joe Biden hat am Montag eine executive order unterzeichnet, die KI regulieren soll.
+Und am Mittwoch und Donnerstag haben sich Regierungsvertreterinnen, Unternehmenschefs und Forscher in London versammelt, um über
+die Gefahren künstlicher Intelligenz zu diskutieren. Mit dabei waren unter anderem die US-Vizepräsidentin Kamala Harris und der
+deutsche Wirtschaftsminister Robert Habeck.
+
+Einer der prominentesten Gäste des Gipfels dürfte Elon Musk, seit Kurzem selbst KI-Unternehmer,
+gewesen sein und er war gleichzeitig derjenige, der die wohl drastischsten Warnungen mitbrachte. „KI ist eine der existenziellen Bedrohungen,
+denen wir gegenüberstehen“, sagte er am Mittwoch in London. „Und sie ist potenziell die drängendste.“
+
+Das ist die extreme Variante einer Sichtweise auf die KI, die sich in der verhältnismäßig kurzen Zeit, seit ChatGPT den aktuellen Hype
+im vergangenen Jahr ausgelöst hat, überraschend schnell durchgesetzt hat. In dieser Wahrnehmung ist KI nicht nur ein Werkzeug,
+mit dem Menschen Gefährliches anstellen könnten, sondern es geht Gefahr von ihr selbst aus. Deshalb müsse nicht nur reguliert werden,
+wie KI eingesetzt wird, sondern vor allem, wie sie ist. So sehen es jedenfalls viele, die sich der Denkrichtung der KI-Sicherheit
+verschrieben haben, auf Englisch AI safety.
+
+Diese Ansicht ist durchaus umstritten. KI-Forscherinnen wie die Computerlinguistin Emily Bender vertreten im Gegenteil die Position,
+dass die Gefahren, die durch KI entstehen, weniger von der Technik selbst ausgehen, sondern von den Menschen und Unternehmen, die sie
+einsetzen.
+
+→ Zeit , 02.November 2023
+
+Aufgabe: Erstelle eine präzise Zusammenfassung des gegebenen Textes, welche die wichtigsten Punkte hervorhebt.
+
+wichtigste Punkte:
+1. Sorge, dass KI Anleitungen für biologische Waffen liefert
+    -> bzw. selbst entscheidet diese einzusetzen
+2. executive order von Joe Biden zur Regulierung von KI unterzeichnet
+3. Versammlung von Gipfel, um Gefahren künstlicher Intelligenz zu diskutieren
+4. Elon Musk ist der Ansicht, dass KI eine "existenzielle Bedrohung" ist
+5. Denkrichtung "KI-Sicherheit", denken KI nicht nur Werkzeug, sondern selber Gefahr
+6. Forscher denken Gefahr nur von Nutzern ausgehend
+
+ChatGPT:
+1. Durchlauf:
+Der Artikel behandelt die wachsenden Bedenken hinsichtlich künstlicher Intelligenz (KI) und deren potenzieller Gefahr für die Menschheit.
+Es wird diskutiert, wie KI in der Lage sein könnte, Anleitungen zur Herstellung von biologischen Waffen bereitzustellen und sogar autonom
+solche Waffen einzusetzen. Prominente Akteure, darunter US-Präsident Joe Biden und Elon Musk, äußern Besorgnis über die
+existenzielle Bedrohung, die von KI ausgehen könnte. Dies hat zu politischen Maßnahmen geführt, um KI zu regulieren und die Sicherheit
+zu gewährleisten. Es wird auch auf die Debatte darüber hingewiesen, ob die Gefahren von KI primär von der Technologie selbst oder von den
+Menschen und Organisationen, die sie einsetzen, ausgehen. Die Ansichten zu diesem Thema sind kontrovers und reichen von der Forderung
+nach strenger Regulierung bis hin zur Betonung der menschlichen Verantwortung im Umgang mit KI.
+
+-> Punkt 1 und 4 vorhanden. executive order nicht erwähnt. Gipfel nicht erwähnt. Denkrichtung "KI-Sicherheit" nicht benannt, Forschermeinung fehlt.
+
+2. Durchlauf:
+Der Text diskutiert die wachsenden Bedenken hinsichtlich der Gefahren künstlicher Intelligenz (KI). Insbesondere wird die Sorge geäußert,
+dass KI potenziell gefährlich sein könnte, wenn sie in die falschen Hände gerät und beispielsweise für die Entwicklung von Biowaffen
+oder Cyberangriffen verwendet wird. US-Präsident Joe Biden hat eine executive order zur Regulierung von KI unterzeichnet, und auf einem
+Gipfel in London haben Regierungsvertreter, Unternehmenschefs und Forscher, darunter Elon Musk, über die Risiken von KI diskutiert.
+Musk betont, dass KI eine existenzielle Bedrohung darstellt. Die Diskussion um KI-Sicherheit bezieht sich nicht nur darauf,
+wie KI eingesetzt wird, sondern auch darauf, wie sie an sich ist. Es gibt jedoch unterschiedliche Meinungen, da einige argumentieren,
+dass die Gefahren eher von den Menschen und Unternehmen ausgehen, die KI einsetzen.
+
+-> Punkt 1, 2, 3, 4 vorhanden. "KI-Sicherheit" nicht genannt. Forschermeinung fehlt. Sorge, dass KI Waffen selber einsetzt, fehlt.
+
+3. Durchlauf:
+In dem gegebenen Text geht es um die wachsenden Bedenken von KI-Forschern und Politikern bezüglich der potenziellen Gefahren
+künstlicher Intelligenz. Ein besonderes Augenmerk liegt dabei auf der Möglichkeit, dass KI genutzt werden könnte, um biologische Waffen
+zu entwickeln und einzusetzen. Die Schwierigkeiten, solche Waffen herzustellen, könnten durch präzise Anleitungen von KI überwunden werden.
+Diese Bedenken haben dazu geführt, dass US-Präsident Joe Biden eine executive order unterzeichnet hat, um KI zu regulieren.
+In London haben hochrangige Regierungsvertreter, Unternehmensführer und Forscher über die Gefahren von künstlicher Intelligenz diskutiert,
+wobei prominente Teilnehmer wie Elon Musk drastische Warnungen ausgesprochen haben. Musk betrachtet KI als eine existenzielle Bedrohung,
+die möglicherweise die drängendste ist. Der Gipfel betont die Notwendigkeit, nicht nur die Anwendung von KI zu regulieren, sondern auch
+ihre grundlegende Natur zu kontrollieren. Es wird darauf hingewiesen, dass dies in der KI-Sicherheitsrichtung, auch als AI safety bekannt,
+besonders wichtig ist. Die Ansicht, dass die Gefahren von KI weniger von der Technologie selbst ausgehen, sondern von den Menschen und
+Unternehmen, die sie nutzen, wird jedoch als umstritten dargestellt.
+
+-> Punkt 1, 2, 3, 4, 5. Forschermeinung fehlt. Sorge, dass KI Waffen selber einsetzt, fehlt.
+
+
+PopAi:
+1. Durchlauf:
+In dem gegebenen Text wird diskutiert, wie künstliche Intelligenz (KI) potenziell gefährlich sein kann. Es wird erwähnt, dass Terroristen
+mit Hilfe von KI-Anleitungen möglicherweise biologische Waffen herstellen könnten, was zu Bedenken führt. Die Sorgen bezüglich der
+Gefahren von KI werden auch von einigen KI-Forschern geteilt, die befürchten, dass sie außer Kontrolle geraten oder von Menschen missbraucht
+werden könnte. US-Präsident Joe Biden hat eine executive order unterzeichnet, um KI zu regulieren, und Regierungsvertreter,
+Unternehmensführer und Forscher haben sich in London versammelt, um über die Gefahren von KI zu diskutieren. Elon Musk war einer der
+prominenten Gäste und äußerte drastische Warnungen bezüglich der existenziellen Bedrohung, die von KI ausgehe. Es wird darauf hingewiesen,
+dass die Wahrnehmung von KI als potenziell gefährlich umstritten ist, da einige Forscher argumentieren, dass die Gefahr eher von den
+Menschen und Unternehmen ausgeht, die KI einsetzen.
+
+-> Punkt 1, 2, 3, 4, 5. Sorge, dass KI Waffen selber einsetzt, fehlt. "KI-Sicherheit" nicht erwähnt.
+
+2. Durchlauf:
+Der Text thematisiert Bedenken in Bezug auf die potenzielle Gefahr von künstlicher Intelligenz (KI). Es wird darauf hingewiesen,
+dass der Bau biologischer Waffen durch KI-Anleitungen erleichtert werden könnte. Die Sorge besteht darin, dass KI außer Kontrolle gerät
+und eigenständig Entscheidungen trifft, die die Menschheit gefährden könnten. Diese Bedenken werden von einigen KI-Forschern geäußert und
+finden nun auch in der Politik Gehör, wie die Unterzeichnung einer executive order durch US-Präsident Joe Biden zur Regulierung von KI zeigt.
+Ein Gipfel in London diskutiert ebenfalls über die Gefahren von KI, und prominente Gäste wie Elon Musk äußern drastische Warnungen.
+Es wird darauf hingewiesen, dass die Auffassung, dass die Gefahr von KI selbst ausgeht, umstritten ist, da einige argumentieren,
+dass die Gefahr eher von den Menschen und Unternehmen ausgeht, die KI einsetzen.
+
+-> Punkt 1, 2, 3, 4. Forschermeinung nicht explizit als solche deklariert. "KI-Sicherheit" fehlt.
+
+3. Durchlauf:
+In einer Executive Order versucht der US-Präsident Joe Biden, künstliche Intelligenz (KI) zu regulieren, aufgrund von Bedenken
+hinsichtlich ihrer potenziellen Gefahren. Diese Bedenken umfassen die Möglichkeit, dass KI zur Herstellung von Biowaffen oder
+Cyberangriffen verwendet wird, sowie die Angst, dass KI unkontrollierbar wird und die Macht ergreift. Die Gefahren von KI wurden bei
+einem kürzlichen Gipfel in London diskutiert, an dem Regierungsvertreter, Geschäftsleute und Forscher teilnahmen. Elon Musk, ein
+prominenter KI-Unternehmer, gab starke Warnungen vor der existenziellen Bedrohung durch KI ab. Es gibt jedoch eine Debatte unter KI-Experten,
+bei der einige argumentieren, dass die Gefahren von KI mehr von ihrer Verwendung durch Menschen und Unternehmen herrühren als von der
+Technologie selbst.
+
+-> Punkt 1, 2, 3, 4, 6. "KI-Sicherheit" nicht erwähnt.
+
+
+Writesonic -> Chatsonic:
+1. Durchlauf:
+Die Gefahren von Künstlicher Intelligenz (KI) werden zunehmend ernst genommen, insbesondere in Bezug auf Biowaffen und Cyberangriffe.
+US-Präsident Joe Biden hat eine executive order unterzeichnet, um die Regulierung von KI voranzutreiben. Ein Gipfel in London,
+an dem 28 Länder teilnahmen, darunter Deutschland, die USA und China, bekräftigte Bedenken hinsichtlich der potenziellen Schäden, die von
+leistungsstarken KI-Modellen ausgehen könnten. Elon Musk war einer der prominenten Gäste des Gipfels und warnte vor KIs als existenzielle
+Bedrohung. Es besteht auch eine Debatte über die Sicherheit von KI, wobei einige argumentieren, dass die Gefahr eher von den Menschen und
+Unternehmen ausgeht, die KI einsetzen, als von der Technologie selbst.[1][2]
+
+References
+1) https://www.zeit.de/digital/2023-11/ki-gipfel-london-elon-musk-super-ki-absicherung
+2) https://www.msn.com/de-de/finanzen/top-stories/ki-gipfel-vielleicht-ein-bisschen-viel-science-fiction/ar-AA1jhZnY
+3) https://de.wikipedia.org/wiki/Biologische_Waffe
+
+-> Punkt 2, 3, 4. Informationen, die nicht im Artikel standen vorhanden. "KI-Sicherheit" nicht genannt. Forschermeinung nicht explizit benannt.
+
+2. Durchlauf:
+Der Text diskutiert die Besorgnis über die potenziellen Risiken der künstlichen Intelligenz (KI), insbesondere im Hinblick auf die Gefahr
+von Biowaffen, Cyberangriffen und einer möglichen außer Kontrolle geratenen KI, die die Macht an sich reißt. Diese Bedenken finden sowohl
+in der Politik als auch bei prominenten Persönlichkeiten wie Elon Musk Gehör. US-Präsident Joe Biden hat eine executive order zur
+Regulierung von KI unterzeichnet, und in London haben Regierungsvertreter, Unternehmenschefs und Forscher die Gefahren von KI diskutiert.
+Die Diskussion um KI-Sicherheit und Ethik ist umstritten, wobei einige betonen, dass die Gefahren von der Nutzung der Technologie durch
+Menschen und Unternehmen ausgehen, während andere die potenzielle Bedrohung, die von der KI selbst ausgeht, hervorheben. [1][2][3]
+
+References
+1) https://www.ifo.de/DocDL/sd-2023-08-kuenstliche-intelligenz.pdf
+2) https://www.ifo.de/DocDL/sd-2023-08-ki-chancen-risiken.pdf
+3) https://www.sciencemediacenter.de/alle-angebote/rapid-reaction/details/news/risiken-aktueller-ki-forschung/
+
+-> Punkt 1, 2, 3. "KI-Sicherheit" nicht als Denkrichtung erkannt. Forschermeinung fehlt. Elon Musks Warnung nicht genannt.
+
+3. Durchlauf
+Der Geneva Protocol, unterzeichnet 1925, verbietet den Einsatz von chemischen und biologischen Waffen im Krieg, erlaubt jedoch ihre
+Entwicklung, Produktion, Besitz und den Einsatz zur Vergeltung. Trotz des Protokolls wurden chemische Waffen im 20. und 21. Jahrhundert
+in Konflikten eingesetzt. Die Vereinten Nationen arbeiten seit den 1960er Jahren an einem Nachfolgevertrag, um das Verbot chemischer und
+biologischer Waffen zu stärken. Die Sorge besteht, dass Künstliche Intelligenz (KI) Terroristen genaue Anleitungen zur Herstellung von
+Biowaffen liefern könnte. Einige KI-Forscher und Regierungsvertreter warnen vor den Gefahren von KI, einschließlich Biowaffen und außer
+Kontrolle geratener KI. Elon Musk bezeichnet KI als existenzielle Bedrohung. Die Meinungen zur Gefährlichkeit von KI sind jedoch umstritten,
+da einige Experten argumentieren, dass die Gefahren von den Menschen und Unternehmen ausgehen, die KI einsetzen.[1][2][3]
+
+References
+1) https://www.zeit.de/digital/2023-11/ki-gipfel-london-elon-musk-super-ki-absicherung
+2) https://www.msn.com/de-de/finanzen/top-stories/ki-gipfel-vielleicht-ein-bisschen-viel-science-fiction/ar-AA1jhZnY
+3) https://www.bpb.de/kurz-knapp/hintergrund-aktuell/208302/genfer-protokoll-zum-verbot-chemischer-und-biologischer-waffen/
+
+-> Punkt 1, 4, 6. executive order fehlt. Gipfel fehlt. "KI-Sicherheit" fehlt. Viel irrelevanter Inhalt, der nicht Teil des Artikels war.
