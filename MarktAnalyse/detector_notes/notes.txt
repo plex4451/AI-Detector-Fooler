@@ -11,8 +11,20 @@ subtil sind und wir unser erstes Hauptziel damit relativ gut umsetzten können.
 Dabei versuchen wir auch das zweite Hauptziel zu erreichen indem wir Veränderungen so minimal
 wie möglich zu halten.
 
+Dabei werden wir folgende Konzepte ausprobieren und am Ende auswerten:
 
-Leet-Speak -> Buchstaben werden druch Zahlen ersetzt
+1.: Leet-Speak -> Buchstaben werden druch Zahlen ersetzt:
+Bei Leet-Speak wird in einem Text bestimmte Buchstaben durch Zahlen ersetzt die sich relativ ähneln.
+Ein Beispiel dazu ist das O und die Null (O -> 0), dabei bleibt der Text für einen Menschen
+relativ gut lesbar und Wörter in welchen Zahlen eingesetzt wurden, werden als Rechtschreibfehler
+gewährtet, welches den Detektor überlisten würde. Dabei verstoßen wir aber gegen unser zweites
+Hauptziel, da so eine Änderung relativ offensichtlich ist.
+
+Bsp.:
+Original:
+Überarbeitet:
+
+
 
 Buchstabn durch ähnliche Symbole ändern 
 
