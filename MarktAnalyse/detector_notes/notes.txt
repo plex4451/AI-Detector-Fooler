@@ -16,7 +16,7 @@ Dabei werden wir folgende Konzepte ausprobieren und am Ende auswerten:
 1.: Leet-Speak -> Buchstaben werden druch Zahlen ersetzt:
 Bei Leet-Speak wird in einem Text bestimmte Buchstaben durch Zahlen ersetzt die sich relativ ähneln.
 Ein Beispiel dazu ist das O und die Null (O -> 0), dabei bleibt der Text für einen Menschen
-relativ gut lesbar und Wörter in welchen Zahlen eingesetzt wurden, werden als Rechtschreibfehler
+relativ gut lesbar und Wörter, in welchen Zahlen eingesetzt wurden, werden als Rechtschreibfehler
 gewährtet, welches den Detektor überlisten würde. Dabei verstoßen wir aber gegen unser zweites
 Hauptziel, da so eine Änderung relativ offensichtlich ist.
 
@@ -26,7 +26,18 @@ Original:
 
 
 
-Buchstabn durch ähnliche Symbole ändern 
+2.:Buchstabn durch ähnliche Symbole ändern:
+Hierbei wird das Prinzip wie bei Leet-Speak verwendet, jedoch ersetzten wir die Buchstaben nicht durch
+Zahlen, sondern wir nehmen passende Symbole. Ein Beispiel dazu ist das a und das @, dabei bleibt auch
+hier der Text relativ gut lesbar, lesbarer als bei Leet-Speak, jedoch würde eine solche Veränderung
+relativ schnell wieder auffallen, wodurch wir wieder gegen unser zweites Hauptziel verstoßen würden.
+Jedoch würden die Wörter, in welchen die a's durch @'s ausgetauscht wurden, als Rechtschreibfehler erkannt
+und Sonderzeichen wirken sich ebenfalls stärker als Zahlen aus (Sonderzeichen sind seltener), wodurch eine
+Überlistung einer KI relativ denkbar wäre.
+
+Bsp.:
+Original.:
+Überarbeitet.:
 
 Einsatz von Homoglyphen
 
