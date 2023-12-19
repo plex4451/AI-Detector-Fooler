@@ -13,6 +13,8 @@ wie möglich zu halten.
 
 Dabei werden wir folgende Konzepte ausprobieren und am Ende auswerten:
 
+Haupteil:
+
 1.: Leet-Speak -> Buchstaben werden druch Zahlen ersetzt:
 Bei Leet-Speak wird in einem Text bestimmte Buchstaben durch Zahlen ersetzt die sich relativ ähneln.
 Ein Beispiel dazu ist das O und die Null (O -> 0), dabei bleibt der Text für einen Menschen
@@ -43,3 +45,4 @@ Einsatz von Homoglyphen
 
 Leerzeichen durch "unsichtbare Zeichen" ersetzen
 
+Schluss:
