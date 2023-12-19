@@ -1,5 +1,15 @@
+Einleitung:
+Unser Programm soll zwei Hauptziele verfolgen:
+1.: Die Datei (Text/Bild) soll so minimal vom Original abweichen wie möglich.
+2.: Die Veränderung soll falls möglich nicht mit dem bloßen Auge zu erkennen sein.
 
 
+Man hat bei der Marktanalyse der KI-Detectoren gesehen, dass diese falsche Aussagen treffen, 
+sobald der Text Anzeichen von Gramatik- bzw. Rechtschreibfehlern aufweist.
+Daher versuchen wir diese schwachstelle auszunutzen, da Gramatik- bzw. Rechtschreibfehler relativ
+subtil sind und wir unser erstes Hauptziel damit relativ gut umsetzten können. 
+Dabei versuchen wir auch das zweite Hauptziel zu erreichen indem wir Veränderungen so minimal
+wie möglich zu halten.
 
 
 Leet-Speak -> Buchstaben werden druch Zahlen ersetzt
