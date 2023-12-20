@@ -1,14 +1,14 @@
 Einleitung:
 Unser Programm soll zwei Hauptziele verfolgen:
 1.: Die Datei (Text/Bild) soll so minimal vom Original abweichen wie möglich.
-2.: Die Veränderung soll falls möglich nicht mit dem bloßen Auge zu erkennen sein.
+2.: Die Veränderung soll, falls möglich nicht mit dem bloßen Auge zu erkennen sein.
 
 
 Man hat bei der Marktanalyse der KI-Detectoren gesehen, dass diese falsche Aussagen treffen, 
 sobald der Text Anzeichen von Gramatik- bzw. Rechtschreibfehlern aufweist.
 Daher versuchen wir diese schwachstelle auszunutzen, da Gramatik- bzw. Rechtschreibfehler relativ
 subtil sind und wir unser erstes Hauptziel damit relativ gut umsetzten können. 
-Dabei versuchen wir auch das zweite Hauptziel zu erreichen indem wir Veränderungen so minimal
+Dabei versuchen wir auch das zweite Hauptziel zu erreichen, indem wir Veränderungen so minimal
 wie möglich zu halten.
 
 Dabei werden wir folgende Konzepte ausprobieren und am Ende auswerten:
@@ -16,7 +16,7 @@ Dabei werden wir folgende Konzepte ausprobieren und am Ende auswerten:
 Haupteil:
 
 1.: Leet-Speak -> Buchstaben werden druch Zahlen ersetzt:
-Bei Leet-Speak wird in einem Text bestimmte Buchstaben durch Zahlen ersetzt die sich relativ ähneln.
+Bei Leet-Speak wird in einem Text bestimmte Buchstaben durch Zahlen ersetzt, die sich relativ ähneln.
 Ein Beispiel dazu ist das O und die Null (O -> 0), dabei bleibt der Text für einen Menschen
 relativ gut lesbar und Wörter, in welchen Zahlen eingesetzt wurden, werden als Rechtschreibfehler
 gewährtet, welches den Detektor überlisten würde. Dabei verstoßen wir aber gegen unser zweites
@@ -24,7 +24,14 @@ Hauptziel, da so eine Änderung relativ offensichtlich ist.
 
 Bsp.:
 Original:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
 Überarbeitet:
+Der braune Fuchs 5pringt über den f4ulen Hund. Die Sonne schein7 hell am Himmel und der W4ld ruht in 57ille. Plötzlich
+erwach7 ein Eichhörnchen und hu5cht geschwind zwi5chen den Bäumen hindurch. Die Blä7ter r4scheln lei5e im Wind,
+während die N47ur ihre eigene Mel0die 5piel7.
 
 
 
@@ -39,10 +46,51 @@ und Sonderzeichen wirken sich ebenfalls stärker als Zahlen aus (Sonderzeichen s
 
 Bsp.:
 Original.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
 Überarbeitet.:
+Der braune Fuchs springt über den f@ulen Hund. Die Sonne scheint hell am Himmel und der W@ld ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter r@scheln leise im Wind,
+während die N@tur ihre eigene Melodie spielt.
 
-Einsatz von Homoglyphen
 
-Leerzeichen durch "unsichtbare Zeichen" ersetzen
+
+3.:Leerzeichen durch "unsichtbare Zeichen" ersetzen:
+Hierbei werden Leerzeichen durch geschütze Leerzeichen zu ersetzen.
+#TODO: TEXT HERE
+
+Bsp.:
+Original.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
+Überarbeitet.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald
+ruht in Stille. Plötzlich erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch.
+ Die Blätter rascheln leise im Wind, während die Natur ihre eigene Melodie spielt.
+
+
+
+4.:Einsatz von Homoglyphen
+#TODO: TEXT HERE
+
+
+
+Bsp.:
+Original.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
+Überarbeitet.:
+Der braune Fuchs springt über den fаulen Hund. Die Sonne scheint hell am Himmel und der Wаld ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rаscheln leise im Wind,
+während die Nаtur ihre eigene Melodie spielt.
+
+
 
 Schluss:
+#TODO: TEXT HERE
