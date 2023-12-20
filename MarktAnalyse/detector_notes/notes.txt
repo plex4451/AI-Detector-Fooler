@@ -15,7 +15,7 @@ Dabei werden wir folgende Konzepte ausprobieren und am Ende auswerten:
 
 Haupteil:
 
-1.: Leet-Speak -> Buchstaben werden druch Zahlen ersetzt:
+1.: Buchstaben werden durch passende Zahlen ersetzt [Leet-Speak]:
 Bei Leet-Speak wird in einem Text bestimmte Buchstaben durch Zahlen ersetzt, die sich relativ ähneln.
 Ein Beispiel dazu ist das O und die Null (O -> 0), dabei bleibt der Text für einen Menschen
 relativ gut lesbar und Wörter, in welchen Zahlen eingesetzt wurden, werden als Rechtschreibfehler
@@ -35,7 +35,7 @@ während die N47ur ihre eigene Mel0die 5piel7.
 
 
 
-2.:Buchstabn durch ähnliche Symbole ändern:
+2.: Buchstaben durch ähnliche Symbole ändern:
 Hierbei wird das Prinzip wie bei Leet-Speak verwendet, jedoch ersetzten wir die Buchstaben nicht durch
 Zahlen, sondern wir nehmen passende Symbole. Ein Beispiel dazu ist das a und das @, dabei bleibt auch
 hier der Text relativ gut lesbar, lesbarer als bei Leet-Speak, jedoch würde eine solche Veränderung
@@ -57,9 +57,12 @@ während die N@tur ihre eigene Melodie spielt.
 
 
 
-3.:Leerzeichen durch "unsichtbare Zeichen" ersetzen:
-Hierbei werden Leerzeichen durch geschütze Leerzeichen zu ersetzen.
-#TODO: TEXT HERE
+3.: Leerzeichen durch geschützte Leerzeichen ersetzen:
+Hierbei werden Leerzeichen durch geschützte Leerzeichen ersetzt (" " -> " "). Dabei erfüllen wir unser
+zweites Hauptziel, da die Änderung von Leerzeichen zu geschützen Leerzeichen kaum bis gar nicht mit dem bloßen Auge
+erkennbar ist. Jedoch wird der Text relativ schwer lesbar, da geschütze Leerzeichen keine Zeilenumbrüche erzeugen,
+wodurch lange Texte blockmäßig wirken und Wörter falsch getrennt werden. Jedoch erzeugt genau das Verhalten, dass
+Wörter falsch getrennt werden, Rechtschreib- bzw. Grammatikfehler, welches die KI relativ gut überlisten kann.
 
 Bsp.:
 Original.:
