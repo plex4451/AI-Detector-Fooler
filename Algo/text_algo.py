@@ -44,17 +44,28 @@ def replace_better(txt: str, letter: str, replacment: str) -> str:
     return txt
 
 
-# Exchange-Char-Same-Char: Replaces letters with identical letters
-def change_letter_simillar_letter(txt: str) -> str:
-    txt = replace_better(txt, "a", "а")
-    # txt =replace_better(txt,"a","a\ufeff")
-    return (txt)
+def change_letter_similar_letter(txt: str) -> str:
+    """
+    Replaces letters with similar letters from different alphabets
+
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+    """
+    return replace_better(txt, "a", "а")
 
 
-# Exchange-Char-Symbol: Replaces letters with similar symbols
 def change_letter_symbol(txt: str) -> str:
-    txt = replace_better(txt, "a", "@")
-    return (txt)
+    """
+    Replaces letters with similar symbols
+
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+    """
+    return replace_better(txt, "a", "@")
 
 
 def change_invisible_char(txt: str) -> str:
@@ -97,7 +108,7 @@ def change_text(txt: str) -> str:
     Returns:
         str: The modified Text
     """
-    modified_txt = change_letter_simillar_letter(txt)
+    modified_txt = change_letter_similar_letter(txt)
     # modified_txt = change_invisible_char(modified_txt)
     # modified_txt = change_letter_symbol(modified_txt)
     # modified_txt = change_leet_speak(modified_txt)
