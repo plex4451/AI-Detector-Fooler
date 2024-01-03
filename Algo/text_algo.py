@@ -57,11 +57,17 @@ def change_letter_symbol(txt: str) -> str:
     return (txt)
 
 
-# Invisible Char: Replaces Space with a invisible char
 def change_invisible_char(txt: str) -> str:
-    txt = replace_better(txt, " ", " ")
-    return (txt)
+    """
+    Replaces Spaces with non-breaking Spaces
 
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+
+    """
+    return replace_better(txt, " ", " ")
 
 def change_leet_speak(txt: str) -> str:
     """
