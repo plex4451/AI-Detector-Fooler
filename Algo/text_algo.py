@@ -14,7 +14,8 @@ def debug_info_text(original_txt: str, final_txt: str):
     percentage_change = (x / len(original_txt)) * 100
     print("The Text is changed to "f"{percentage_change}%")
 
-def replace_last_letter(txt: str, letter: str,replacement: str) -> str:
+
+def replace_last_letter(txt: str, letter: str, replacement: str) -> str:
     """
     Replaces the last valid letter in the text
 
@@ -68,8 +69,7 @@ def replace_better(txt: str, letter: str, replacement: str) -> str:
 
         final_txt += char
 
-
-    final_txt = replace_last_letter(final_txt,letter, replacement)
+    final_txt = replace_last_letter(final_txt, letter, replacement)
 
     print(f"{final_txt.count(replacement)} letters replaced!")
 
