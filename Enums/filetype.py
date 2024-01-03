@@ -4,8 +4,9 @@ from enum import Enum
 class Filetype(Enum):
     TXT = 1
     JPG = 2
-    PNG = 3
-    UNKNOWN = 4
+    JPEG = 3
+    PNG = 4
+    UNKNOWN = 5
 
 
 #Filetype = Enum('Filetype', ['TXT', 'JPG', 'PNG', 'UNKNOWN'])
@@ -15,6 +16,8 @@ def getfiletype(s :str)-> Filetype:
         return Filetype.TXT
     elif s == "JPG":
         return Filetype.JPG
+    elif s == "JPEG":
+        return Filetype.JPEG
     elif s == "PNG":
         return Filetype.PNG
     else:
