@@ -2,6 +2,16 @@ from enum import Enum
 
 
 class Filetype(Enum):
+    """
+    An enum to represent the file type of a file.
+
+    Attributes:
+        TXT (int): The file is a text file.
+        JPG (int): The file is a jpg file.
+        JPEG (int): The file is a jpeg file.
+        PNG (int): The file is a png file.
+        UNKNOWN (int): The file type is unknown.
+    """
     TXT = 1
     JPG = 2
     JPEG = 3
