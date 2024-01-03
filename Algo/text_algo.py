@@ -5,21 +5,21 @@
 max_percentage = 200
 
 
-def compare_two_strings(original_txt: str, final_txt: str):
+def compare_two_strings(first_txt: str, second_txt: str):
     """
-    Prints information about the String
+    Compares two Strings and prints the percentage of difference
 
     Parameters:
-        original_txt (str): The original Text
-        final_txt (str): The modified Text
+        first_txt (str): The original Text
+        second_txt (str): The modified Text
     Returns:
         None
     """
-    x = 0
-    for i in range(0, len(original_txt)):
-        if original_txt[i] != final_txt[i]:
-            x += 1
-    percentage_change = (x / len(original_txt)) * 100
+    num_difference = 0
+    for i in range(0, len(first_txt)):
+        if first_txt[i] != second_txt[i]:
+            num_difference += 1
+    percentage_change = (num_difference / len(first_txt)) * 100
     print("The Text is changed to "f"{percentage_change}%")
 
 
