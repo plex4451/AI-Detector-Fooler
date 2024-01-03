@@ -1,6 +1,7 @@
 # Variables
 # max_percentage: Sets the maximum of percentage the original_txt is changed
 # TODO: MAX_PERCENTAGE DOESN'T WORK
+
 max_percentage = 200
 
 
@@ -8,20 +9,46 @@ max_percentage = 200
 def debug_info_text(original_txt: str, final_txt: str):
     x = 0
     for i in range(0, len(original_txt)):
-        if (original_txt[i] != final_txt[i]):
+        if original_txt[i] != final_txt[i]:
             x += 1
     percentage_change = (x / len(original_txt)) * 100
-    print("The Text is changed to {}%".format(percentage_change))
+    print("The Text is changed to "f"{percentage_change}%")
+
+def replace_last_letter(txt: str, letter: str,replacement: str) -> str:
+    """
+    Replaces the last valid letter in the text
+
+    Parameters:
+        txt (str): The Text to modify
+        letter (str): The letter to replace
+        replacement (str): The replacement for the letter
+    Returns:
+        str: The modified Text with the replaced letter
+    """
+
+    last_letter_index = txt.rfind(letter)
+    return txt[:last_letter_index] + replacement + txt[last_letter_index + 1:]
 
 
-# Replace-Better: Replaces evenly the letters in the text dependend on the max_percentage variable
-def replace_better(txt: str, letter: str, replacment: str) -> str:
+def replace_better(txt: str, letter: str, replacement: str) -> str:
+    """
+    Replaces letters in the text evenly dependent on the max_percentage variable
+    
+    Parameters:
+        txt (str): The Text to modify
+        letter (str): The letter to replace
+        replacement (str): The replacement for the letter
+    Returns:
+        str: The modified Text
+    """
+
     letter_count = txt.count(letter)
-    if (letter_count == 0):
-        return (txt)
-    max_possibble_percentage = (letter_count / len(txt)) * 100
-    if (max_possibble_percentage > max_percentage):
-        replace_count = round((max_percentage / max_possibble_percentage) * letter_count)
+    if letter_count == 0:
+        return txt
+
+    max_possible_percentage = (letter_count / len(txt)) * 100
+    if max_possible_percentage > max_percentage:
+        replace_count = round((max_percentage / max_possible_percentage) * letter_count)
     else:
         replace_count = letter_count
 
@@ -30,18 +57,23 @@ def replace_better(txt: str, letter: str, replacment: str) -> str:
     count = 0
     goal_count = round(letter_count / replace_count + 1)
 
-    txt_list = list(txt)
-    for i in range(0, len(txt)):
-        if ((txt_list[i] == letter)):
+    final_txt = ""
+    for char in txt:
+        if char == letter:
             count += 1
-            letter_count -= 1
-            if ((letter_count == 0) and (count > 0)) or (count == goal_count):
-                txt_list[i] = replacment
+            if count == goal_count:
+                final_txt += replacement
                 count = 0
-    txt = "".join(txt_list)
-    print("{} letters replaced!".format(txt.count(replacment)))
+                continue
 
-    return txt
+        final_txt += char
+
+
+    final_txt = replace_last_letter(final_txt,letter, replacement)
+
+    print(f"{final_txt.count(replacement)} letters replaced!")
+
+    return final_txt
 
 
 def change_letter_similar_letter(txt: str) -> str:
