@@ -34,7 +34,6 @@ def replace_last_letter(txt: str, letter: str, replacement: str) -> str:
     Returns:
         str: The modified Text with the replaced letter
     """
-
     last_letter_index = txt.rfind(letter)
     return txt[:last_letter_index] + replacement + txt[last_letter_index + 1:]
 
@@ -50,7 +49,6 @@ def replace_better(txt: str, letter: str, replacement: str) -> str:
     Returns:
         str: The modified Text
     """
-
     letter_count = txt.count(letter)
     if letter_count == 0:
         return txt
@@ -129,7 +127,6 @@ def change_leet_speak(txt: str) -> str:
     Returns:
         str: The modified Text
     """
-
     replacements = {
         "a": "4", "A": "4",
         "o": "0", "O": "0",
