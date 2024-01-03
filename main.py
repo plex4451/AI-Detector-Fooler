@@ -42,8 +42,10 @@ def main_method():
             text = file.read()
             file.close()
             final_text = change_text(text)
-
-            file = open(outputpath, "x", encoding='utf-8')
+            try:
+                file = open(outputpath, "x", encoding='utf-8')
+            except:
+                file = open(outputpath, "w", encoding='utf-8')
             file.write(final_text)
             file.close()
             end_time = time.time()
@@ -58,7 +60,7 @@ def main_method():
                 #test_txt(final_text)
                 print("test_txt is disabled!")
                 print("----------------------------------------------------------------------------")
-                debug_info_text(text, final_text)
+                compare_two_strings(text, final_text)
                 print("----------------------------------------------------------------------------")
                 print(final_text)
                 print("----------------------------------------------------------------------------")
@@ -88,8 +90,8 @@ try:
 except:
     print("ERROR 003: No given Arguments! The program needs two arguments -> main.py <inputpath> <outputpath>")
     exit(3)
-inputtype = getfiletype(inputpath.split('.')[-1].upper())
-outputtype = getfiletype(outputpath.split('.')[-1].upper())
+inputtype = get_file_type(inputpath.split('.')[-1].upper())
+outputtype = get_file_type(outputpath.split('.')[-1].upper())
 print("----------------------------------------------------------------------------")
 print("Filetype of the Input: {}".format(inputtype))
 print("Filetype of the Output: {}".format(outputtype))

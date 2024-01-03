@@ -5,8 +5,16 @@
 max_percentage = 200
 
 
-# Debug-Info-Function: Prints information about the String
-def debug_info_text(original_txt: str, final_txt: str):
+def compare_two_strings(original_txt: str, final_txt: str):
+    """
+    Prints information about the String
+
+    Parameters:
+        original_txt (str): The original Text
+        final_txt (str): The modified Text
+    Returns:
+        None
+    """
     x = 0
     for i in range(0, len(original_txt)):
         if original_txt[i] != final_txt[i]:
