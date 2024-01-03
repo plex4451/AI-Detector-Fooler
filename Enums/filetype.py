@@ -9,16 +9,18 @@ class Filetype(Enum):
     UNKNOWN = 5
 
 
-#Filetype = Enum('Filetype', ['TXT', 'JPG', 'PNG', 'UNKNOWN'])
-
-def getfiletype(s :str)-> Filetype:
-    if s == "TXT":
-        return Filetype.TXT
-    elif s == "JPG":
-        return Filetype.JPG
-    elif s == "JPEG":
-        return Filetype.JPEG
-    elif s == "PNG":
-        return Filetype.PNG
-    else:
-        return Filetype.UNKNOWN
+def get_file_type(file_type: str) -> Filetype:
+    """
+    Returns the Filetype enum based on the file type string.
+    Parameters:
+        file_type (str): The String to check
+    Returns:
+      Filetype: The corresponding Filetype enum.
+    """
+    filetypes = {
+        "TXT": Filetype.TXT,
+        "JPG": Filetype.JPG,
+        "JEPG": Filetype.JPEG,
+        "PNG": Filetype.PNG
+    }
+    return filetypes.get(file_type, Filetype.UNKNOWN)
