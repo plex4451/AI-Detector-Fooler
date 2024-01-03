@@ -52,8 +52,8 @@ def replace_better(txt: str, letter: str, replacement: str) -> str:
     else:
         replace_count = letter_count
 
-    print("{} letters to replace!".format(replace_count))
-    print("{} letters can be replaced!".format(letter_count))
+    print(f"{replace_count} letters to replace!")
+    print(f"{letter_count} letters can be replaced!")
     count = 0
     goal_count = round(letter_count / replace_count + 1)
 
@@ -111,6 +111,7 @@ def change_invisible_char(txt: str) -> str:
 
     """
     return replace_better(txt, " ", " ")
+
 
 def change_leet_speak(txt: str) -> str:
     """
