@@ -63,23 +63,29 @@ def change_invisible_char(txt: str) -> str:
     return (txt)
 
 
-# Leetspeak-Algo (replaces letters with numbers)
 def change_leet_speak(txt: str) -> str:
-    txt = replace_better(txt, "a", "4")
-    txt = replace_better(txt, "A", "4")
-    txt = replace_better(txt, "o", "0")
-    txt = replace_better(txt, "O", "0")
-    txt = replace_better(txt, "t", "7")
-    txt = replace_better(txt, "T", "7")
-    txt = replace_better(txt, "s", "5")
-    txt = replace_better(txt, "S", "5")
+    """
+    Leetspeak-Algo (replaces letters with numbers)
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+    """
+
+    replacements = {
+        "a": "4", "A": "4",
+        "o": "0", "O": "0",
+        "t": "7", "T": "7",
+        "s": "5", "S": "5"
+    }
+    for original, replacement in replacements.items():
+        txt = replace_better(txt, original, replacement)
     return txt
 
 
 def change_text(txt: str) -> str:
     """
-    Main-Function: Modify the Text
-
+   Modify the Text with a combination of Algos
     Parameters:
         txt (str): The Text to modify
     Returns:
