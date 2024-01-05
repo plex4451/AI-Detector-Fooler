@@ -59,6 +59,7 @@ class Window(tk.Tk):
         self.setup_main_menu()
         self.setup_text_frame()
         self.setup_image_frame()
+        self._select_menu_objects()
 
 
     def setup_text_frame(self):
@@ -132,9 +133,9 @@ class Window(tk.Tk):
         self.Label_Info_Menu = Label(self.Frame_Main_Menu, text='AI FOOLER!', font=("Arial", 20))
 
         # Buttons
-        self.Button_Image_Select = Button(self.Frame_Main_Menu, text='Image Converter')
-        self.Button_Text_Select = Button(self.Frame_Main_Menu, text='Text Converter')
-        self.Button_Exit_Menu = Button(self.Frame_Main_Menu, text='Exit')
+        self.Button_Image_Select = Button(self.Frame_Main_Menu, text='Image Converter',command=self._select_image_objects)
+        self.Button_Text_Select = Button(self.Frame_Main_Menu, text='Text Converter', command=self._select_text_objects)
+        self.Button_Exit_Menu = Button(self.Frame_Main_Menu, text='Exit',command=exit_object)
 
         # Packing the Objects
         # TODO: PACK
