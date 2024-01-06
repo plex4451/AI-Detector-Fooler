@@ -1,1 +1,55 @@
 
+1. Marktüberblick
+- Kurz Anwendungsweisen von Textgenerierenden KIs
+- Kurz beschreiben wie der Markt aussieht mit Hauptakteuren
+
+
+2. Funktionsweisen
+- Algorithmen und Modelle beschreiben
+- Eventuell einfache und kurze Erklärung
+- Kein exakter vergleich
+
+Textgenerierende KI funktioniert mithilfe von maschinellem Lernen ("Machine Learning"). Dabei entwickeln sie die Fähigkeit aus Erfahrungen
+zu lernen und automatisch Erkenntnisse und Vorhersagen aus Daten zu gewinnen. [1] Unter anderem werden hierzu künstliche neuronale Netzwerke
+genutzt. [5] Diese ahmen die Funktionsweise des Gehirns nach. [1] Sie bestehen aus Knotenschichten: der Eingabeschicht, einer oder mehrerer
+verdeckten Schichten und der Ausgabeschicht. [5] Sie bekommen große Datenmengen zur verfügung gestellt und müssen anhand von diesen Ergebnisse
+zu verschiedenen Aufgaben liefern. Anhand der Rückmeldungen, ob die Ergebnisse richtig sind, werden die Verbindungen zwischen den Neuronen
+verändert. Die Verknüpfungen, die zum richtigen Ergebnis führten, werden stärker und diejenigen, die zum Falschen führten schwächer. [4]
+
+
+3. aktuelle Trends
+- Beschreibung der letzten Fortschritte
+- Eventuell kleiner Ausblick auf was noch kommen kann
+
+
+4. Marktherausforderungen
+- Wichtige Sachen, die für den Konsumer Markt eingehalten werden müssen
+- Ethische Richtlinien und Begrenzungen
+- Einfluss davon auf den Markt beschreiben
+
+
+5. Marktchancen
+- Gebiete, wo man nicht dachte, dass diese KIs helfen könnten, es aber gemacht haben
+- Verschiedene Gebiete, wo solche KIs angewendet werden könnten
+
+
+6. Wettbewerbsanalyse
+- Vergleich der KIs
+
+
+7. Marktprognosen
+- Kleiner Einblick in was die Zukunft für KIs bereithält
+
+
+8. Fazit
+
+
+
+Anhang/ Quellen:
+
+IPad:
+1. https://www.genius-community.com/allgemein/wie-funktioniert-eigentlich-kuenstliche-intelligenz-7867/
+2. https://www.iks.fraunhofer.de/de/themen/kuenstliche-intelligenz.html
+3. https://www.youtube.com/watch?v=fT69SLK2m9I
+4. https://www.youtube.com/watch?v=3RsmRMqX2IY
+5. https://www.ibm.com/de-de/topics/machine-learning
