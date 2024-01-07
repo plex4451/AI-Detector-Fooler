@@ -47,11 +47,21 @@ def upload_ai_text(window: Window):
 
 
 def download_ai_text(window: Window):
+    """
+    Downloads the text from the TextboxAIFT to a file
+
+    Parameters:
+        window (Window): The Window object
+    Returns:
+        None
+    """
     file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt"), ])
-    if file_path:
+    try:
         file = open(file_path, 'w', encoding="utf-8")
         file.write(window.TextboxAIFT.get("1.0", "end"))
         file.close()
+    except:
+        print("ERROR: No File selected!")
 
 
 # AI-Image-Methods
