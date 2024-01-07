@@ -84,6 +84,14 @@ def convert_ai_image(window: Window):
 
 
 def upload_ai_image(window: Window):
+    """
+    Uploads an image file to the Label_AII_Image
+
+    Parameters:
+        window (Window): The Window object
+    Returns:
+        None
+    """
     file_path = filedialog.askopenfilename(filetypes=(("PNG files", "*.png"), ("JPGimple files", "*.jpg")))
     if file_path:
         image = Image.open(file_path)
@@ -91,6 +99,8 @@ def upload_ai_image(window: Window):
         window.Label_AII_Image.config(image=tk_image)
         window.Label_AII_Image.image = tk_image
         window.image_AI = cv2.imread(file_path)
+    else:
+        print("ERROR: No File selected!")
 
 
 def download_ai_image(window: Window):
