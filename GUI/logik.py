@@ -104,12 +104,21 @@ def upload_ai_image(window: Window):
 
 
 def download_ai_image(window: Window):
+    """
+    Downloads the image from the Label_AIFI_Image to a file
+
+    Parameters:
+        window (Window): The Window object
+    Returns:
+        None
+    """
     image = window.image_AIF
     file_path = filedialog.asksaveasfilename(defaultextension=".png",
                                              filetypes=([("PNG files", "*.png"), ("JPG files", "*.jpg")]))
-    cv2.imwrite(file_path, image)
+    if file_path:
+        cv2.imwrite(file_path, image)
+    else:
+        print("ERROR: No File selected!")
 
-
-# exit_object Method, exits the GUI with a exit code of 0
 def exit_object():
     exit(0)
