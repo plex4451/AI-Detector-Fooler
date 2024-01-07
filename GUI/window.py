@@ -1,11 +1,5 @@
 import tkinter as tk
-from tkinter import *
-from tkinter import filedialog
-from PIL import Image, ImageTk
-from logik import *
-from tkinter import *
-from PIL import Image, ImageTk
-import cv2
+from GUI.logik import *
 
 
 # TODO: REWRITE LABELS
@@ -19,8 +13,8 @@ class Window(tk.Tk):
         self.title('AI-NOOBS-UNLEASHED: AI FOOLER')
         self.resizable(True, True)
         # Variables
-        self.image_AI = cv2.imread("Assets/no_image.png")
-        self.image_AIF = cv2.imread("Assets/no_image.png")
+        self.image_AI = cv2.imread("GUI/Assets/no_image.png")
+        self.image_AIF = cv2.imread("GUI/Assets/no_image.png")
         self.Frame_Main_Menu = None
         self.Frame_AI = None
         # Textboxs
@@ -65,7 +59,7 @@ class Window(tk.Tk):
         self.TextboxAIFT = Text(self.Frame_AI)
 
         # Label-Image
-        self.tk_image = ImageTk.PhotoImage(Image.open("Assets/no_image.png"))
+        self.tk_image = ImageTk.PhotoImage(Image.open("GUI/Assets/no_image.png"))
         self.Label_AII_Image = Label(self.Frame_AI, image=self.tk_image)
         self.Label_AIFI_Image = Label(self.Frame_AI, image=self.tk_image)
 

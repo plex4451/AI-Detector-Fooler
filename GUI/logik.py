@@ -1,13 +1,13 @@
-import sys
-
-sys.path.append('../')
+from __future__ import annotations
 from Algo.text_algo import *
 from Algo.imagealgo import *
 from tkinter import filedialog
 from tkinter import *
-from window import Window
 from PIL import Image, ImageTk
 import cv2
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from GUI.window import Window
 
 
 def convert_ai_text(window: Window):
