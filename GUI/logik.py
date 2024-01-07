@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 
 def convert_ai_text(window: Window):
     """
-    Converts the text in the TextboxAIT and returns it to TextboxAIFT
+    Changes the text in the TextboxAIT and returns it to TextboxAIFT
 
     Parameters:
         window (Window): The Window object
@@ -64,8 +64,16 @@ def download_ai_text(window: Window):
         print("ERROR: No File selected!")
 
 
-# AI-Image-Methods
+
 def convert_ai_image(window: Window):
+    """
+    Changes the image in the Label_AII_Image and returns it to Label_AIFI_Image
+
+    Parameters:
+        window (Window): The Window object
+    Returns:
+        None
+    """
     image = use_alog_on_image(window.image_AI)
     window.image_AIF = image
     image_AI_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
