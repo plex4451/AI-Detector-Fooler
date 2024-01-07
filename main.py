@@ -5,14 +5,12 @@ from Algo.imagealgo import *
 from Algo.text_algo import *
 from APIs.ai_text_detector import get_scores as get_scores_txt
 from APIs.ai_image_detector import *
-from GUI.gui import open_window
+from GUI.window import Window
 import time
 import cv2
 
 
-#open_window_thread: This Method opens the GUI (exist for sepret threading)
-def open_window_thread():
-    open_window()
+
 
 # Test-Txt: This Method test the created txt with the apis
 def test_txt(txt: str):
@@ -98,6 +96,7 @@ print("Filetype of the Output: {}".format(outputtype))
 print("----------------------------------------------------------------------------")
 main_thread = threading.Thread(target=main_method())
 main_thread.start()
-open_window()
+app = Window()
+app.mainloop()
 main_thread.join()
 print("Success!")
