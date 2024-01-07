@@ -11,6 +11,14 @@ if TYPE_CHECKING:
 
 
 def convert_ai_text(window: Window):
+    """
+    Converts the text in the TextboxAIT and returns it to TextboxAIFT
+
+    Parameters:
+        window (Window): The Window object
+    Returns:
+        None
+    """
     txt = window.TextboxAIT.get("1.0", "end-1c")
     txt = change_text(txt)
     window.TextboxAIFT.delete("1.0", "end")
