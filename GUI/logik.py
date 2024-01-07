@@ -36,13 +36,13 @@ def upload_ai_text(window: Window):
         None
     """
     file_path = filedialog.askopenfilename(filetypes=(("Text files", "*.txt"),))
-    try:
+    if file_path:
         file = open(file_path, "r", encoding="utf-8")
         text = file.read()
         file.close()
         window.TextboxAIT.delete("1.0", "end")
         window.TextboxAIT.insert("end", text)
-    except:
+    else:
         print("ERROR: No File selected!")
 
 
@@ -56,11 +56,11 @@ def download_ai_text(window: Window):
         None
     """
     file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt"), ])
-    try:
+    if file_path:
         file = open(file_path, 'w', encoding="utf-8")
         file.write(window.TextboxAIFT.get("1.0", "end"))
         file.close()
-    except:
+    else:
         print("ERROR: No File selected!")
 
 
