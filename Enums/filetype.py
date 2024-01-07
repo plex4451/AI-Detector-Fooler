@@ -22,6 +22,7 @@ class Filetype(Enum):
 def get_file_type(file_type: str) -> Filetype:
     """
     Returns the Filetype enum based on the file type string.
+
     Parameters:
         file_type (str): The String to check
     Returns:
