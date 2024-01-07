@@ -1,11 +1,13 @@
 import sys
+
 sys.path.append('../')
 from Algo.text_algo import *
 from Algo.imagealgo import *
 from tkinter import filedialog
 from tkinter import *
 from window import Window
-from window import *
+from PIL import Image, ImageTk
+import cv2
 
 
 def convert_ai_text(window: Window):
@@ -58,9 +60,6 @@ def download_ai_image(window: Window):
     file_path = filedialog.asksaveasfilename(defaultextension=".png",
                                              filetypes=([("PNG files", "*.png"), ("JPG files", "*.jpg")]))
     cv2.imwrite(file_path, image)
-
-
-
 
 
 # exit_object Method, exits the GUI with a exit code of 0
