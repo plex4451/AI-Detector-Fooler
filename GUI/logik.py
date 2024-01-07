@@ -64,7 +64,6 @@ def download_ai_text(window: Window):
         print("ERROR: No File selected!")
 
 
-
 def convert_ai_image(window: Window):
     """
     Changes the image in the Label_AII_Image and returns it to Label_AIFI_Image
@@ -120,5 +119,14 @@ def download_ai_image(window: Window):
     else:
         print("ERROR: No File selected!")
 
+
 def exit_object():
+    """
+    Exits the GUI with an exit code of 0
+
+    Parameters:
+        None
+    Returns:
+        None
+    """
     exit(0)
