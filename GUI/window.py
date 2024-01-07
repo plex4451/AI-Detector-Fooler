@@ -1,6 +1,10 @@
 import tkinter as tk
 from GUI.logik import *
 
+"""
+This file contains the GUI Window class and the setup for the GUI
+"""
+
 
 # TODO: REWRITE LABELS
 # Variables

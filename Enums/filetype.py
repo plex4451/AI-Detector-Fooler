@@ -1,5 +1,9 @@
 from enum import Enum
 
+"""
+This file contains the Filetype enum.
+"""
+
 
 class Filetype(Enum):
     """

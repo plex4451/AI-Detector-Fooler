@@ -10,6 +10,10 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from GUI.window import Window
 
+"""
+This file contains all the logic for the GUI
+"""
+
 
 def convert_ai_text(window: Window):
     """
