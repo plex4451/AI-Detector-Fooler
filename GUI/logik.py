@@ -6,6 +6,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 import cv2
 from typing import TYPE_CHECKING
+
 if TYPE_CHECKING:
     from GUI.window import Window
 
@@ -26,12 +27,23 @@ def convert_ai_text(window: Window):
 
 
 def upload_ai_text(window: Window):
+    """
+    Uploads a text file to the TextboxAIT
+
+    Parameters:
+        window (Window): The Window object
+    Returns:
+        None
+    """
     file_path = filedialog.askopenfilename(filetypes=(("Text files", "*.txt"),))
-    file = open(file_path, "r", encoding="utf-8")
-    text = file.read()
-    file.close()
-    window.TextboxAIT.delete("1.0", "end")
-    window.TextboxAIT.insert("end", text)
+    try:
+        file = open(file_path, "r", encoding="utf-8")
+        text = file.read()
+        file.close()
+        window.TextboxAIT.delete("1.0", "end")
+        window.TextboxAIT.insert("end", text)
+    except:
+        print("ERROR: No File selected!")
 
 
 def download_ai_text(window: Window):
