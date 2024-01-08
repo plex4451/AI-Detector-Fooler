@@ -106,4 +106,8 @@ während die Nаtur ihre eigene Melodie spielt.
 
 
 Schluss:
-#TODO: TEXT HERE
+Wir haben einige Möglichkeiten gefunden, welche die beiden aufgestellten Bedingung mehr oder weniger erfüllen.
+Diese Methoden werden im späteren Verlauf implementiert und ausgewährtet. Dabei halten wir ausschau nach
+weiteren Möglichkeiten und implementieren diese ebenfalls. Wir erhoffen uns das beste Ergebnis bei den Homoglyphen
+zu erreichen, da diese Methode beiden Bedingung am besten Umsetzten. Wir werden ebenfalls eine Kombination
+aus den verschiedenen Methoden testen und diese auswerten.
