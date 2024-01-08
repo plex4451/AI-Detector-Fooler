@@ -78,7 +78,17 @@ ruht in Stille. Plötzlich erwacht ein Eichhörnchen und huscht geschwind z
 
 
 4.:Einsatz von Homoglyphen
-#TODO: TEXT HERE
+Hierbei werden römische Buchstaben durch Buchstaben ersetzt aus einer anderen Sprache die relativ ähnlich sind.
+Ein Beispiel dazu ist der Austausch von einem römischen "a" zu einem kyrillischen "а". Diese Änderung ist
+mit dem bloßen Auge kaum erkennbar, welches die 2 Bedingung die wir aufgestellt haben erfüllt ist. Ebenfalls 
+ist die Änderung über die gesamte Datei sehr minimal, da mir bloß einen Buchstaben austauschen, welches 
+ebenfalls die erste Bedingung erfüllt. Der Nachteil ist, das einige Schriftarten diesen Unterschied
+kenntlich machen, indem sie die a's unterschieldlich zeichnen. Jedoch gibt es einige Schriftarten, bei 
+dennen der Unterschied sehr minimal bis garnicht zu erkennbar ausfalleb.
+Dadurch das wir römische Zeichen durch kyrillische ersetzen, werden die Wörter welche aus 
+römischen und kyrilischen Buchstaben bestehen als Rechtschreibfehler gewährtet, wodurch
+wir die KI relativ zuverlässig überlisten könnten. Damit könnte Homoglyphen die beste Wahl für eine Textbasierte
+KI sein.
 
 
 
