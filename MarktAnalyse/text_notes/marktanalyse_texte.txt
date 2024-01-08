@@ -9,12 +9,14 @@
 - Eventuell einfache und kurze Erklärung
 - Kein exakter vergleich
 
-Textgenerierende KI funktioniert mithilfe von maschinellem Lernen ("Machine Learning"). Dabei entwickeln sie die Fähigkeit aus Erfahrungen
-zu lernen und automatisch Erkenntnisse und Vorhersagen aus Daten zu gewinnen. [1] Unter anderem werden hierzu künstliche neuronale Netzwerke
-genutzt. [5] Diese ahmen die Funktionsweise des Gehirns nach. [1] Sie bestehen aus Knotenschichten: der Eingabeschicht, einer oder mehrerer
-verdeckten Schichten und der Ausgabeschicht. [5] Sie bekommen große Datenmengen zur verfügung gestellt und müssen anhand von diesen Ergebnisse
-zu verschiedenen Aufgaben liefern. Anhand der Rückmeldungen, ob die Ergebnisse richtig sind, werden die Verbindungen zwischen den Neuronen
-verändert. Die Verknüpfungen, die zum richtigen Ergebnis führten, werden stärker und diejenigen, die zum Falschen führten schwächer. [4]
+Textgenerierende KI werden auch Large Language Models (LLM) genannt.[6] LLMs funktionieren mithilfe von maschinellem Lernen ("Machine Learning").
+Dabei entwickeln sie die Fähigkeit aus Erfahrungen zu lernen und automatisch Erkenntnisse und Vorhersagen aus Daten zu gewinnen.[1]
+Unter anderem werden hierzu künstliche neuronale Netzwerke genutzt. [5] Diese ahmen die Funktionsweise des Gehirns nach.[1]
+Sie bestehen aus Knotenschichten: der Eingabeschicht, einer oder mehrerer verdeckten Schichten und der Ausgabeschicht.[5]
+Sie bekommen große Datenmengen zur verfügung gestellt und müssen, anhand von diesen, Ergebnisse zu verschiedenen Aufgaben liefern. Anhand der
+Rückmeldungen, ob die Ergebnisse richtig sind, werden die Verbindungen zwischen den Neuronen verändert. Die Verknüpfungen, die zum richtigen
+Ergebnis führten, werden stärker und diejenigen, die zum Falschen führten schwächer.[4]
+Diese Neuronenverbindungen ermöglichen es der KI Wahrscheinlichkeiten für Wortfolgen vorherzusagen.[6]
 
 
 3. aktuelle Trends
@@ -26,6 +28,25 @@ verändert. Die Verknüpfungen, die zum richtigen Ergebnis führten, werden stä
 - Wichtige Sachen, die für den Konsumer Markt eingehalten werden müssen
 - Ethische Richtlinien und Begrenzungen
 - Einfluss davon auf den Markt beschreiben
+
+- KI-Verordnung für Hochrisiko-KI-Systeme
+- geringe Anforderungen für KIs mit mittleren und niedrigen Risiken
+- Deutschland, Frankreich, Italien Gegner strenger Regulierung -> Risiko in Anwendung, nicht in Technologie
+https://www.handelsblatt.com/finanzen/steuern-recht/recht/gesetzgebung-sprachmodelle-stellen-bisherige-einigung-zur-ki-regulierung-infrage/100002063.html
+-KI-VO erstmaliger gesetzlicher Rahmen für Entwicklung und Nutzung KI
+- Klassifizierung nach Risiko -> risikoarm, begrenzt riskant, riskant, verboten
+- "social scoring"-Systeme sollen verboten werden
+    - bewerten Verhalten, Emotionen, von Menschen -> bspw. Vernehmung Verdächtiger
+- Hersteller sollen Risiken ihrer Produkte bewerten, Standards für Trainingsdaten erfüllen -> von Prüfbehörden kontrolliert
+- KI darf nicht auf verzerrte Datensätze zurückgreifen -> verhindern von Diskriminierung
+- tritt voraussichtlich 2026 in Kraft
+https://www.tagesschau.de/ausland/europa/eu-ki-100.html
+- AI Act: Risikogruppen: unannehmbares Risiko, hohes Risiko (Hochrisiko-KI-Systeme), geringes oder minimales Risiko
+- Anwendungen des unannehmbaren Risikos verboten
+    - manipulieren/ schaden Menschen
+    - biometrische Identifizierung von Menschen (Ausnahme: Abwehr von Terrorismus/ Aufklärung schwerer Straftat)
+    - ermöglicht negative Bewertung aufgrund von sozialem Verhalten/ persönlicher Charakteristik
+- geringes/ minimales Risiko: minimale Transparenz- und Informationspflicht über Einsatz
 
 
 5. Marktchancen
@@ -53,3 +74,4 @@ IPad:
 3. https://www.youtube.com/watch?v=fT69SLK2m9I
 4. https://www.youtube.com/watch?v=3RsmRMqX2IY
 5. https://www.ibm.com/de-de/topics/machine-learning
+6. https://www.bigdata-insider.de/was-ist-ein-large-language-model-a-d735d93bbc24d3c4091de8ce25aa36e8/
