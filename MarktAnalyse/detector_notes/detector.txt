@@ -13,6 +13,9 @@ Der folgende Text wird sich um diese KI-Detektoren drehen und wie diese funktion
 
 2.:Marktüberblick
 
+Auf dem Markt gibt es eine große Auswahl an generativen Modellen, welche KI Inhalte erstellen können.[1]
+
+
 Kurz Anwendungsweisen von Bild- und Textgenerierenden KIs
 Kurz beschreiben wie der Markt aussieht mit Hauptakteuren
 
@@ -65,3 +68,4 @@ Kleiner Einblick in was die Zukunft für KIs bereithält
 
 
 Anhang und Quellen
+1.: https://buzzmatic.net/ai-tools-die-ultimative-liste/
