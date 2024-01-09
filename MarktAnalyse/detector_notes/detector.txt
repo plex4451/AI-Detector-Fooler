@@ -4,6 +4,11 @@ Popai
 
 1.:Einleitung
 
+Nicht nur in der Wissenschaft, sondern auch in der Industrie werden künstliche Intelligenzen immer wichtiger.
+Umso wichtiger ist es echte Inhalte von KI erstellten Inhalten zu unterscheiden.
+Dazu kommen sogenannte KI-Detektoren zum Einsatz, welche KI erstellte Inhalte erkennen können und filtern können.
+Der folgende Text wird sich um diese KI-Detektoren drehen und wie diese funktionieren, um einen besseren überblick über diese zu bekommen.
+
 
 
 2.:Marktüberblick
