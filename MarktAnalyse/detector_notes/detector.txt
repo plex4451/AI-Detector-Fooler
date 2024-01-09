@@ -1,3 +1,62 @@
 chatgpt
 Chatsonic
 Popai
+
+1.:Einleitung
+
+
+
+2.:Marktüberblick
+
+Kurz Anwendungsweisen von Bild- und Textgenerierenden KIs
+Kurz beschreiben wie der Markt aussieht mit Hauptakteuren
+
+
+
+3.:Funktionsweisen
+
+Algorithmen und Modelle beschreiben
+Eventuell einfache und kurze Erklärung
+Kein exakter vergleich
+
+Bildgenerierende KI
+
+
+
+
+Textgenerierende KI
+
+
+
+
+
+KI-Detektoren
+
+4.:Aktuelle Trends
+Beschreibung der letzten Fortschritte
+Eventuell kleiner Ausblick auf was noch kommen kann
+
+
+5.:Marktherausforderungen
+
+Wichtige Sachen, die für den Konsumer Markt eingehalten werden müssen
+Ethische Richtlinien und Begrenzungen
+Einfluss davon auf den Markt beschreiben
+
+6.:Marktchancen
+
+Gebiete, wo man nicht dachte dass diese KIs helfen könnten, es aber gemacht haben
+Verschiedene Gebiete, wo solche KIs angewendet werden könnten
+
+Wettbewerbsanalyse
+
+Vergleich der KIs
+
+7.:Marktprognosen
+
+Kleiner Einblick in was die Zukunft für KIs bereithält
+
+8.:Fazit
+
+
+Anhang und Quellen
