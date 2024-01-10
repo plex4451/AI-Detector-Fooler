@@ -1,3 +1,4 @@
+import uuid
 import cv2
 import numpy as np
 import piexif
@@ -223,9 +224,14 @@ def use_algo_on_folder(folder_path):
 
 
 def save_image(image):
-    path = "/Users/loukielhorn/Downloads/output.jpg"
-    cv2.imwrite(path, image)
-    return path
+    script_folder = os.path.dirname(os.path.realpath(__file__))
+    image_folder = os.path.join(script_folder, "edited_images")
+    if not os.path.exists(image_folder):
+        os.makedirs(image_folder)
+    image_path = image_folder + "/" + str(uuid.uuid4()) + ".jpg"
+    cv2.imwrite(image_path, image)
+    return image_path
+
 
 def test_main():
     path = "/Users/loukielhorn/Library/Mobile Documents/com~apple~CloudDocs/Studium/3. Semester/Programmier-Challenge/Ai-Generated-Images/old_car.jpg"
