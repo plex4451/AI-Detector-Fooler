@@ -23,6 +23,22 @@ Diese Neuronenverbindungen ermöglichen es der KI Wahrscheinlichkeiten für Wort
 - Beschreibung der letzten Fortschritte
 - Eventuell kleiner Ausblick auf was noch kommen kann
 
+- Technikmesse CES zeigt Neuheiten und Zukunft:
+    - BMW: Augmented Reality-Brillen, BMW Intelligent Personal Assistant -> digitaler KFZ Experte, Gespräch über Fahrzeug oder geplante Trips
+           -> Brille gibt Zusatzinformationen wie Schilder oder Warnungen
+           -> Intellegent Personal Assistant ermöglicht Gespräch mit Fahrzeug
+    - Mercedes: MBUX Virtual Assistent
+    - Spiegel scannt Gesicht und kann anhand dessen Gesundheitszustand überprüfen (Blutdruck, Cholesterinspiegel, Blutzuckerspiegel, Herzinfarktrisiko etc)
+    - Drohne zum Transport von Laborproben und Medikamenten
+- Übersetzungsapp für medizinische Fachkräfte -> hilft beim Verfassen von Arztbriefen
+- Seeing AI -> App zur Unterstützung von Menschen mit Seheinschränkung, erkennt Objekte, Texte, liest Erkanntes vor/ berichtet über Erkanntes
+Benjamin Daniel, Wie KI die US-Elektromesse beherrscht, 10.01.2024
+https://www.zdf.de/nachrichten/wirtschaft/elektronikmesse-ces-ki-kuenstliche-intelligenz-100.html
+
+
+- KIs mit noch mehr Parametern -> verringert "Halluzinationen"
+
+
 
 4. Marktherausforderungen
 - Wichtige Sachen, die für den Konsumer Markt eingehalten werden müssen
@@ -75,10 +91,41 @@ Für KIs mit geringem oder minimalem Risiko gilt eine minimale Transparenz- und 
 Chatbots. Es stellt sich die Frage, ob das Gefahrenpotenzial von KIs dieser Klassifizierung unterschätzt wird.[2]
 
 
+
+- Bildgenerierende KIs werden mit Bildern von Künstlern trainiert, ohne deren Zustimmung -> benötigen eigentlich Lizenz zur Vervielfältigung
+- Sammelklage aus USA gegen Stability AI, Deviant Art, Midjourney von drei Künstlern wegen Urheberrechtsverletzungen
+- Rechtswissenschaftler Nikolaus Forgo: KI-Firmen verletzen Urheberrecht bereits, wenn sie Bilder von Künstlern und Künstlerinnen für das
+  Training verwenden (muss man den Bildern nicht ansehen) -> Einspielen in eigenen Systeme ist unerlaubte Vervielfältigung
+- KI-Kunst selber kein Urheberrecht, da dieses nur persönliche geistige Schöpfungen schützt (§ 2 Abs. 2 UrhG)
+Mickey Manakas, Stable Diffusion und Co: Kann man für die Nutzung von Bilder-KIs geklagt werden?, 01.02.2023
+https://www.derstandard.de/story/2000142990088/stable-diffusion-und-co-kann-man-fuer-die-nutzung-von
+
+- der Stil eines Künstlers ist nicht geschützt
+- KI-Bilder nicht uneingeschränkt nutzbar -> Anbieter kann Bedingungen festlegen
+Barbara Wimmer, Dürfen KI-Generatoren meine Bilder zum Trainieren verwenden?, 25.01.2023
+https://futurezone.at/netzpolitik/ki-urheberrecht-interview-bilder-stable-diffusion-klage-recht/402297809
+
+- "Data Mining": automatisierte Analyse von digitalen oder digitalisierten Werken zur Gewinnung von Informationen
+                -> § 44 b) UrhG Vervielfältigung ohne Einwilligung für Data-Mining erlaubt
+                - Daten sind nach Abschluss des Trainings zu löschen
+- enthält ein Werk "ein gewisses Mindestmaß an Schöpfungshöhe", kann es urheberrechtlich geschützt werden (Nutzer)
+- KI-Werke müssen einen gewissen Abstand zum ursprünglichen Werk aufweisen
+    -> ist das nicht der Fall und der Nutzer veröffentlicht das Werk, ist dieser der Täter der Urheberrechtsverletzung
+Dr. Peggy Müller, The future is now: Künstliche Intelligenz und das Urheberrecht, 02.03.2023
+https://www.haufe.de/recht/weitere-rechtsgebiete/kuenstliche-intelligenz-und-das-urheberrecht_216_588912.html
+
+
+
+
 5. Marktchancen
 - Gebiete, wo man nicht dachte, dass diese KIs helfen könnten, es aber gemacht haben
 - Verschiedene Gebiete, wo solche KIs angewendet werden könnten
 
+- Unternehmen: - Muster im Kundenverhalten identifizieren
+               - Chatbots für Kunden: Bedarf identifizieren
+               - welche Waren sollten wo im Geschäft platziert werden
+- Finanzbereich: Prognosen und Empfehlungen für Wertpapierhandel
+- Rechnungswesen/ Finanzbuchhaltung: automatisierte Bearbeitung von Eingansrechnungen
 
 6. Wettbewerbsanalyse
 - Vergleich der KIs
@@ -86,7 +133,6 @@ Chatbots. Es stellt sich die Frage, ob das Gefahrenpotenzial von KIs dieser Klas
 
 7. Marktprognosen
 - Kleiner Einblick in was die Zukunft für KIs bereithält
-
 
 8. Fazit
 
