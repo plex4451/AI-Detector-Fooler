@@ -35,6 +35,61 @@ Diese Neuronenverbindungen ermöglichen es der KI Wahrscheinlichkeiten für Wort
 Benjamin Daniel, Wie KI die US-Elektromesse beherrscht, 10.01.2024
 https://www.zdf.de/nachrichten/wirtschaft/elektronikmesse-ces-ki-kuenstliche-intelligenz-100.html
 
+- VW baut ChatGPT in Serienfahrzeuge ein -> Sprachassistent IDA
+    - Kommunikation mit Auto soll natürlicher werden
+    - soll mehr als nur Fragen zur Bedienung beantworten können
+Przemyslaw Szymanski, Volkswagen integriert ChatGPT in Sprachassistenten, 09.01.2024
+https://www.computerbild.de/artikel/cb-News-Connected-Car-Volkswagen-integriert-ChatGPT-in-Sprachassistenten-37819053.html
+- Fragen sollen erst von Sprachassistenz-Software beantwortet werden, kann diese sie nicht beantworten, hilft ChatGPT aus
+- ChatGPT soll dabei keinen Zugriff auf die Fahrzeugdaten erhalten
+- Fragen und Antworten werden gelöscht -> Datenschutz
+Spiegel, VW baut ChatGPT in seine Autos ein, 09.01.2024
+https://www.spiegel.de/netzwelt/tech-messe-ces-vw-baut-chatgpt-in-seine-autos-ein-a-27516197-ed99-4e8c-aba9-7348bedcc09c
+- IDA basiert auf Cerence Chat Pro -> Programm verwendet verschiedene Quellen, darunter jetzt auch ChatGPT
+Pressemitteilung VW, Weltpremiere auf der CES: Volkswagen integriert "ChatGPT" in aktuelle Modelle, 08.01.2024
+https://www.volkswagen-newsroom.com/de/pressemitteilungen/weltpremiere-auf-der-ces-volkswagen-integriert-chatgpt-in-aktuelle-modelle-18048
+
+VW stellte seinen neuen Sprachassistenten IDA vor. Dieser basiert auf Cerence Chat Pro, ein Programm, welches verschiedene Quellen zur
+Beantwortung von Fragen verwendet, darunter nun auch ChatGPT. Dadurch soll die Kommunikation natürlicher werden. IDA soll Fragen über
+die Bedienung des Fahrzeuges hinaus beantworten können. Diese sollen erst von der Sprachassistenz-Software selber beantwortet werden.
+Ist dies nicht möglich, wird auf ChatGPT zurückgegriffen. ChatGPT soll hierbei jedoch keinen Zugriff auf Fahrzeugdaten erhalten.
+Gestellte Fragen sollen direkt nach der Beantwortung gelöscht werden, um Datenschutz zu gewährleisten.
+
+- Fernglas, das Vogelarten automatisch erkennt
+    - identifiziert rund 8000 Vogelarten, 300 Säugetiere und verschiedene Schmetterlinge
+    - auch Erstellen von Fotos und Videos möglich
+Sarah Ignor, Swarovski AX Vision: KI-unterstütztes Fernglas erkennt Vogelarten, 08.01.2024
+https://www.computerbild.de/artikel/cb-News-Freizeit-Swarovski-AX-Visio-KI-unterstuetztes-Fernglas-erkennt-Vogelarten-37827657.html
+- Fernglas ergänzt reales Erlebnis um digitale Informationen
+- nutzt Merlin-Bird-ID-Datenbank zur Vogelerkennung
+- integriertes GPS und digitaler Kompass -> Nutzer können Orte markieren, an denen sie Tiere beobachten konnte
+Andreas Donath, Fernglas erkennt tausende von Tierarten, 10.01.2024
+https://www.golem.de/news/swarovski-ax-visio-fernglas-erkennt-tausende-von-tierarten-2401-180964.html
+
+Die Firma Swarovski präsentierte ein Fernglas als ihre jüngste Innovation. Dieses identifiziert rund 8000 Vogelarten, etwa 300 Säugetiere
+und eine Vielzahl von Schmetterlingen. Das Fernglas soll das reale Erlebnis einer Vogelbeobachtung um digitale Informationen ergänzen.
+Hierzu nutzt es die Merlin-Bird-ID-Datenbank der Cornell Lab of Ornithology. Auch das Erstellen von Fotos und Videos ist möglich.
+Durch ein integriertes GPS und den digitalen Kompass können Nutzer Orte markieren, an denen sie Tiere beobachten konnten.
+
+- Echtzeit Übersetzungsgadget
+    - In-Ear-Kopfhörer mit Mikro
+    - Mikro nimmt Gesagtes auf und schickt es an zugehörigen Hub
+    - Übersetzung findet in Cloud statt -> WLAN-Verbindung
+    - Wiedergabe bisher noch mechanisch klingend
+    - 5 Sprachen mit 20 Teilnehmern möglich
+Rainer Schuldt und Dirk General-Kuchel, Timekettle Interpreter Hub X1: Echtzeit-Übersetzer ausprobiert, 09.01.2024
+https://www.computerbild.de/artikel/cb-News-Smart-Home-Timekettle-Interpreter-Hub-X1-Echtzeit-uebersetzer-ausprobiert-37836567.html
+- jeder Teilnehmer eines Meetings bspw. benötigt dieses Modul
+- Gesagtes wird aufgenommen und übersetzt in die jeweiligen Sprachen der anderen Teilnehmer
+- bisher 40 Sprachen möglich
+Timekettle, https://www.timekettle.co/de/products/x1-ai-interpreter-hub?_pos=1&_psq=hub+x1&_ss=e&_v=1.0
+
+Die Firma Timkettle stellte ein Echtzeit-Übersetzungsgadget vor. Dieses besteht aus einem Hub und den dazugehörigen In-Ear-Kopfhörern
+mit Mikro. Dieses nimmt Gesagtes auf und schickt es an den Hub, woraufhin eine Übersetzung in der Cloud stattfindet. Jeder Teilnehmer eines
+Meetings muss einen solchen Interpreter besitzen, damit das Gesagte in die jeweilige Sprache des Teilnehmers überführt werden kann.
+Bei einem solchen Meeting sind bis zu 20 Teilnehmer und 5 verschiedene Sprachen möglich. Bisher steht eine Auswahl von 40 Sprachen zur
+Verfügung.
+
 
 - KIs mit noch mehr Parametern -> verringert "Halluzinationen"
 
