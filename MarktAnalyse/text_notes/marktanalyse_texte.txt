@@ -114,6 +114,23 @@ https://futurezone.at/netzpolitik/ki-urheberrecht-interview-bilder-stable-diffus
 Dr. Peggy Müller, The future is now: Künstliche Intelligenz und das Urheberrecht, 02.03.2023
 https://www.haufe.de/recht/weitere-rechtsgebiete/kuenstliche-intelligenz-und-das-urheberrecht_216_588912.html
 
+-Data Mining auch in USA erlaubt -> Fair-Use-Doktrin
+Nina Kirst, KI und Recht: "Data Mining ist grundsätzlich erlaubt - auch für kommerzielle Zwecke", 06.02.2023
+https://page-online.de/branche-karriere/data-mining-ist-grundsaetzlich-erlaubt-auch-fuer-kommerzielle-zwecke/
+
+
+Bildgenerierende KIs werden mit großen Datensätzen trainiert, um Bilder in verschiedensten Stilen zu generieren. Darunter befinden sich auch
+urheberrechtlich geschützte Werke von Künstlern. Diese sind davon wenig erfreut. Drei von ihnen haben sich in den USA zu einer Sammelklage
+gegen Stability AI, Deviant Art und Midjourney wegen Urheberrechtsverletzung zusammengeschlossen. Das unbefugte Einbringen in die eigenen
+Systeme stelle eine unzulässige Vervielfältigung dar.
+Data Mining, also die automatisierte Analyse von digitalen oder digitalisierten Werken, zur Gewinnung von Informationen über Muster, Trends
+und Korrelationen, ist jedoch nicht verboten. Weder in den USA noch in Deutschland. Dies wird durch das Fair-Use-Doktrin, bzw. Durch
+§ 44 b) UrhG geregelt. Es erlaubt die Vervielfältigung von Werken für das Data Mining ohne Einwilligung. Die Daten sind jedoch nach
+Abschluss des Trainings zu löschen.
+
+Doch auch Nutzer der bildgenerierenden KIs müssen aufpassen. Entstehende Werke müssen einen gewissen Abstand zum ursprünglichen Werk
+aufweisen. Ist dies nicht der Fall und der Nutzer veröffentlicht das Werk, ist dieser Täter einer Urheberrechtsverletzung.
+Die von der KI geschaffenen Werke selber sind jedoch nicht geschützt, da die KI nicht als persönliche geistige Schöpfung gilt.
 
 
 
