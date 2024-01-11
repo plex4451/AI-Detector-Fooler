@@ -2,11 +2,22 @@
 import struct
 import sys
 import json
-import cv2
-import base64
-import numpy as np
-from Algo.text_algo import change_text
-from Algo.imagealgo import use_alog_on_image, save_image
+import logging
+
+sys.path.append('/Users/loukielhorn/anaconda3/lib/python3.10')
+
+logging.basicConfig(filename='native_messaging_host.log', level=logging.DEBUG)
+
+try:
+    logging.debug('Versuche externe Bibliotheken zu importieren.')
+    import base64
+    import numpy as np
+    import cv2
+    from Algo.text_algo import change_text
+    from Algo.imagealgo import use_alog_on_image, save_image
+    logging.debug('Externe Bibliotheken erfolgreich importiert.')
+except Exception as e:
+    logging.error(f'Fehler beim Importieren von einer externen Bibliothek: {str(e)}')
 
 
 def send_message(message):
@@ -45,6 +56,7 @@ message_length = struct.unpack('I', message_length_bytes)[0]
 # Read the text (JSON object) of the message.
 message_raw = sys.stdin.buffer.read(message_length).decode('utf-8')
 message_json = json.loads(message_raw)
+
 
 if 'text' in message_json:
     text = message_json["text"]
