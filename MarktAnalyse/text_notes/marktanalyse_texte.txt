@@ -206,6 +206,44 @@ Die von der KI geschaffenen Werke selber sind jedoch nicht geschützt, da die KI
 7. Marktprognosen
 - Kleiner Einblick in was die Zukunft für KIs bereithält
 
+- Marktgröße jährliche Wachstumsrate von 15,15% -> Marktvolumen 2030: 27,27 Mrd.€
+- Datenmengen werden immer größer -> mehr Daten zum Trainieren von KI
+- Fortschritte bei Rechenleistung -> leistungsfähigere KI
+- wachsende Nachfrage nach Automatisierung treibt Einführung von KI-Technologien voran
+Jens Weitemeyer, Künstliche Intelligenz - Deutschland, August 2023
+https://de.statista.com/outlook/tmo/kuenstliche-intelligenz/deutschland#analystenmeinung
+
+- KI im Bereich Kryptowährung einsetzen möglich
+    - weniger Energie beim Mining
+    - Skalierbarkeit erhöht
+    - Sicherheit auf Krypto-Börsen maximieren -> KI erschwert Hacken
+    - Datenschutz verbessern -> Daten der Nutzer durch KI schützen
+    -> gut möglich, dass KI und Krypto bald zusammengehören
+Ryan Matthews, Jede interessante Künstliche Intelligenz Statistik 2024: KI-Trends, 20.09.2023
+https://cryptomonday.de/jede-interessante-kunstliche-intelligenz-statistik-ki-trends/
+
+- KI wird in Zukunft große Rolle spielen
+    - könnte Gesundheitszuständ älterer oder kranker Menschen permanent überwachen
+    - könnte Straßenverkehr sicher machen (-> gefährliche Situationen erkennen und reagieren) oder Verkehrssysteme verbessern
+    - könnte Lehrmethoden verbessern und effektivere Nachhilfe geben -> kann sich an individuelle Bedürfnisse und Vorlieben anpassen
+KI von PolygonSoftware, KI in der Zukunft: Wie wird sie unser Leben beeinflussen?
+https://polygon-software.ch/blog/ki-in-der-zukunft-wie-wird-sie-unser-leben-beeinflussen/
+
+-Industrie
+    - Fahrerlose Transportsysteme
+    - Basistechnologien für autonome Fabriken
+- Gesundheitswesen
+    - Unterstützende Roboter in der Pflege
+    - automatisierte Helfer bei Diagnosen
+    - autonome Roboter in der Chirurgie
+- Alltag
+    - Paketauslieferung durch Roboter/ Drohnen
+    - autonomes Fahren
+    - Haushaltsroboter
+progressive, Künstliche Intelligenz in der Zukunft - Was uns bei KI zukünftig erwartet
+https://www.progressiverecruitment.com/de-de/blog/2018/11/kuenstliche-intelligenz-was-uns-bei-ki-zukuenftig-erwartet/
+
+
 8. Fazit
 
 
