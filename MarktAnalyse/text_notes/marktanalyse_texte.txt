@@ -243,6 +243,17 @@ https://polygon-software.ch/blog/ki-in-der-zukunft-wie-wird-sie-unser-leben-beei
 progressive, Künstliche Intelligenz in der Zukunft - Was uns bei KI zukünftig erwartet
 https://www.progressiverecruitment.com/de-de/blog/2018/11/kuenstliche-intelligenz-was-uns-bei-ki-zukuenftig-erwartet/
 
+Die Nachfrage nach Automatisierung wächst und treibt die Einführung von KI-Technologien voran. Die Größe des deutschen KI-Marktes hat eine
+jährliche Wachstumsrate von 15,15% (CAGR 2024-2030).  Das Marktvolumen wird demnach bis 2030 wahrscheinlich auf 27,27Mrd. € steigen.
+KI wird in Zukunft also eine immer größere Rolle spielen.
+Rechenleistung und Datenmengen werden immer größer, wodurch KIs besser trainiert und leistungsfähiger werden. Die Auswahl an Gebieten,
+in denen sie eingesetzt werden könnten, wird immer größer. Sie könnte die Gesundheit älterer und kranker Menschen permanent überwachen,
+Verkehrssysteme verbessern oder den Straßenverkehr sicherer machen, da sie gefährliche Situationen schneller erkennen und auf diese
+reagieren kann. KI könnte auch Lehrmethoden verbessern und effektivere Nachhilfe geben, da sie sich an individuelle Vorlieben und Bedürfnisse
+anpassen kann.
+In der Industrie könnte es fahrerlose Transportsysteme geben. Auch Basistechnologien für autonome Fabriken sind möglich. Im Alltag könnten
+durch KI gesteuerte Roboter und Drohnen unsere Pakete liefern, die Autos könnten autonom fahren und unser Haushalt wird von Robotern geführt.
+
 
 8. Fazit
 
