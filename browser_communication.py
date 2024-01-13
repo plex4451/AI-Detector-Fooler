@@ -1,15 +1,21 @@
-#!/usr/bin/env python3
+#!/Users/loukielhorn/anaconda3/bin/python3
+
 import struct
 import sys
 import json
 import logging
+import os
 
-sys.path.append('/Users/loukielhorn/anaconda3/lib/python3.10')
+python_executable_path = os.path.dirname(sys.executable)
+libraries_path = os.path.join(python_executable_path, 'lib', 'site-packages')
+sys.path.append(libraries_path)
 
 logging.basicConfig(filename='native_messaging_host.log', level=logging.DEBUG)
 
 try:
     logging.debug('Versuche externe Bibliotheken zu importieren.')
+    logging.debug(python_executable_path)
+    logging.debug(libraries_path)
     import base64
     import numpy as np
     import cv2
