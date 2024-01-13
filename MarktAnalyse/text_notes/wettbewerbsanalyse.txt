@@ -20,7 +20,7 @@ PopAi: - erfordert Account-Erstellung und bietet verschiedenen Abonnementoptione
        - klar strukturierte Website mit direkter Interaktionsoption über ein durchgängig eingeblendetes Textfeld
        - Nutzer kann zwischen verschiedenen Funktionen wie Chatbot, "Chat with Document" und "Create with AI" wählen
        - gute Übersicht über verschiedene Möglichkeiten
-            - sobald eine ausgewählt, gibt es weitere Möglichkeiten -> wirkt im ersten Moment überfordernd, jedoch sinnvoll sortiert
+            - sobald eine ausgewählt, gibt es weitere Möglichkeiten → wirkt im ersten Moment überfordernd, jedoch sinnvoll sortiert
 
 ChatGPT: - erfordert Account-Erstellung, Möglichkeit zum Upgrade auf GPT-4 durch Abonnement
          - benutzerfreundliche Oberfläche nach Anmeldung, einfacher Zugriff auf Chats
@@ -111,10 +111,3 @@ Copy.ai: 13 - 13 - 16
 - knüpft gut an vorgegebene Sätze an
 - Geschichten komplett unterschiedlich, keinerlei Ähnlichkeiten
 - keine Verwendung von Namen
-
-
-
-
-Wettbewerbsanalyse:
-
-Um die Qualität erzeugter Texte durch KI zu evaluieren habe ich mir vier Modelle ausgesucht.
