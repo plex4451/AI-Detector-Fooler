@@ -45,6 +45,10 @@ PopAi:
 - nennt Formel
 - Rechenweg
 
+copy.ai:
+- nennt Formel
+- Rechenweg
+
 
 3x + 7 = 16
 ChatGPT:
@@ -60,6 +64,9 @@ Writesonic (Chatsonic):
 - Lösung aus Internet
 
 PopAi:
+- Rechenweg + Erklärung
+
+copy.ai:
 - Rechenweg + Erklärung
 
 
@@ -78,6 +85,10 @@ PopAi:
 - Rechenweg + Erklärung
 - zeigt Erweiterung der Brüche
 
+copy.ai:
+- Rechenweg + Erklärung
+- zeigt Erweiterung der Brüche
+
 
 Primzahlen (1 - 50):
 ChatGPT:
@@ -92,6 +103,12 @@ Writesonic (Chatsonic):
 
 PopAi:
 - Auflistung Primzahlen
+
+copy.ai:
+- Antwort auf Englisch
+- Auflistung Primzahlen
+- Erwähnung 1 keine Primzahl
+(- Auflistung Quellen)
 
 
 f(x) = x^2 Integral von 0 - 2
@@ -111,6 +128,12 @@ PopAi:
 - Rechenweg + Erklärung
 - nutzt Fachbegriffe: bestimmtes/ unbestimmtes Integral, Integrationsgrenzen
 - bedenkt C
+
+copy.ai:
+- schreibt zum Teil auf Englisch
+- nutzt Fachbegriffe: bestimmtes Integral, Anti-Ableitung
+- berechnet Stammfunktion (Anti-Ableitung)
+- Rechenweg
 
 
 Fähigkeit Text zusammenfassen:
@@ -274,6 +297,43 @@ References
 3) https://www.bpb.de/kurz-knapp/hintergrund-aktuell/208302/genfer-protokoll-zum-verbot-chemischer-und-biologischer-waffen/
 
 -> Punkt 1, 4, 6. executive order fehlt. Gipfel fehlt. "KI-Sicherheit" fehlt. Viel irrelevanter Inhalt, der nicht Teil des Artikels war.
+
+
+copy.ai:
+1. Durchlauf:
+Die Verwendung von künstlicher Intelligenz (KI) in der Entwicklung biologischer Waffen und Cyberangriffen könnte eine existenzielle Bedrohung
+darstellen und hat die Aufmerksamkeit von Politikern und KI-Forschern auf der ganzen Welt auf sich gezogen. US-Präsident Joe Biden hat eine
+executive order zur Regulierung von KI unterzeichnet und Regierungsbeamte, Unternehmensleiter und Forscher haben sich in London versammelt,
+um über KI-Gefahren zu diskutieren. Elon Musk war einer der prominentesten Gäste des Gipfels und warnte vor der potenziellen Bedrohung von KI.
+Die "KI-Sicherheit" ist umstritten und es gibt unterschiedliche Ansichten darüber, wo die Gefahren durch KI entstehen. Einige KI-Forscher
+sind der Meinung, dass die Gefahr von der Art und Weise der Verwendung von KI durch Menschen und Unternehmen ausgeht, während andere glauben,
+dass die Technologie selbst eine Bedrohung darstellt.
+
+-> 2, 3, 5, 6. Elon Musks Bezeichnung der KI als "existenzielle Bedrohung" fehlt. Punkt 1 fehlt.
+
+2. Durchlauf:
+Die Sorge, dass künstliche Intelligenz gefährlich werden könnte, wird von einigen KI-Forschern geäußert, insbesondere in Bezug auf die
+Entwicklung biologischer Waffen und Cyberangriffe. Die Politik nimmt diese Bedenken ernst, wie die Unterzeichnung einer executive order
+durch US-Präsident Joe Biden zur Regulierung von KI und eine Diskussion über die Gefahren von KI in London zeigen. Elon Musk warnte vor
+der Existenzialbedrohung durch KI. Es gibt eine kontroverse Debatte darüber, ob die Gefahr von der Technologie selbst oder von den Menschen,
+die sie einsetzen, ausgeht. Einige glauben, dass nicht nur die Verwendung von KI, sondern auch ihre Natur reguliert werden sollte.
+Andere hingegen sind der Meinung, dass die Gefahr eher von den Menschen und Unternehmen ausgeht.
+
+-> 2, 3, 4. Denkrichtung "KI-Sicherheit" nicht explizit genannt. Punkt 1 nicht vollständig genannt. Forschermeinung fehlt.
+
+3. Durchlauf:
+- Die Möglichkeit, biologische Waffen mit Hilfe von künstlicher Intelligenz herzustellen, bereitet einigen Forschern und Politikern Sorgen.
+- US-Präsident Joe Biden hat eine executive order unterzeichnet, um KI zu regulieren.
+- Ein Gipfel in London, zu dem Regierungsvertreter, Unternehmenschefs und Forscher eingeladen waren, diskutierte die Gefahren der
+  künstlichen Intelligenz.
+- Elon Musk war ein prominenter Gast und äußerte drastische Warnungen zur Bedrohung durch KI.
+- Der höchste Grad der Wahrnehmung von KI besteht darin, dass KI nicht nur von Menschen verwendet werden könnte, sondern auch selbst
+  eine Gefahr darstellt.
+- Es gibt Kontroversen darüber, ob die Gefahren von KI von der Technologie selbst oder von den Menschen und Unternehmen ausgehen,
+  die sie nutzen.
+
+-> 2, 3, 4. Stichpunkte? Punkt 1 nicht vollständig. Denkrichtung nicht explizit genannt. Forschermeinung fehlt.
+
 
 
 Fähigkeit Kreativität:
@@ -472,6 +532,52 @@ ihr Zuhause war, immer willkommen sein würde.
 - 2. und 3. Geschichte fast gleich
 
 
+copy.ai:
+1. Durchlauf:
+Das Einhorn hatte so großen Hunger, dass es beschloss, auf die Suche nach einer köstlichen Erdbeerkuchenquelle zu gehen. Es galoppierte
+durch den Wald und hörte plötzlich ein seltsames Geräusch. Neugierig folgte das Einhorn dem Lärm und entdeckte ein kleines Eichhörnchen,
+das traurig in einer Ecke saß. Das Eichhörnchen hatte Taschentücher in der Hand und weinte bitterlich. Das Einhorn trat näher und fragte
+besorgt, warum das Eichhörnchen weinte. Das Eichhörnchen schluchzte und erklärte, dass es sein Handy verloren hatte. Das Einhorn, das
+erstaunt war, dass Tiere Handys besaßen, beschloss, dem traurigen Eichhörnchen zu helfen. Zusammen durchsuchten sie den Wald nach dem
+verlorenen Gerät. Nach einer Weile fanden sie es zwischen hohen Grashalmen versteckt. Das Eichhörnchen war vor Freude außer sich und
+bedankte sich unzählige Male bei dem Einhorn. Als Dankeschön lud das Eichhörnchen das Einhorn ein, Erdbeerkuchen mit ihm zu teilen.
+Das Einhorn willigte freudig ein und zusammen genossen sie den köstlichen Kuchen. Von diesem Tag an waren das Einhorn und das Eichhörnchen
+die besten Freunde und erlebten viele weitere Abenteuer im Wald zusammen.
+
+-> 13 Sätze
+
+2. Durchlauf:
+Das Einhorn beschloss, seinem knurrenden Magen nachzugeben und machte sich auf den Weg zu seinem Lieblingsbäcker in der nahegelegenen Stadt.
+Auf dem Weg begegnete es einem neugierigen Eichhörnchen, das seine Taschentücher in der Hand hielt. Das Einhorn lächelte und fragte das
+Eichhörnchen, ob es einen bestimmten Grund gab, warum es Taschentücher dabei hatte. Das Eichhörnchen antwortete fröhlich, dass es immer
+Taschentücher dabei hatte, um beim Essen den Mund abwischen zu können. Erstaunt über die Weisheit des kleinen Eichhörnchens folgte das
+Einhorn ihm in den Wald, wo es ein sonniges Plätzchen für ein Picknick fand. Das Einhorn holte aus seinem Rucksack eine Decke und einen Korb
+mit leckerem Erdbeerkuchen hervor. Gemeinsam genossen sie den köstlichen Kuchen und teilten ihre Geschichten und Abenteuer miteinander.
+Plötzlich hörten sie ein lautes Klirren und ein Handy fiel aus einem Baum. Das Einhorn hob das Handy auf und las eine Nachricht auf dem
+Bildschirm: "Danke, dass du mein Handy gefunden hast! Ich habe versucht, ein Foto von dir und dem Eichhörnchen zu machen, aber es ist mir
+aus der Hand gerutscht." Das Einhorn schmunzelte und zeigte das Handy dem Eichhörnchen. Gemeinsam machten sie ein Selfie und lachten fröhlich.
+Das Einhorn und das Eichhörnchen wurden zu unzertrennlichen Freunden, die fortan viele Abenteuer erlebten und dabei stets von leckerem
+Erdbeerkuchen begleitet wurden.
+
+-> 13 Sätze
+
+3. Durchlauf:
+Das Einhorn wurde von diesem lauten Magenknurren so überrascht, dass es sich vor Schreck das Horn an einem Ast stieß. Es wand sich vor
+Schmerz und konnte sich nur mühsam auf den Beinen halten. In diesem Moment hörte das Einhorn ein kleines Rascheln über sich und sah ein
+Eichhörnchen, das besorgt auf einem benachbarten Ast saß. Das Eichhörnchen sprang herunter und reichte dem Einhorn ein paar Taschentücher,
+um die Blutung zu stoppen. Das Einhorn bedankte sich und drückte das Eichhörnchen liebevoll mit seiner weichen Nase. Doch das Einhorn
+brauchte dringend Hilfe, um sein verletztes Horn zu heilen. Es erinnerte sich, dass es von Menschen gehört hatte, die ein elektronisches
+Gerät namens Handy benutzen, um in Notfällen Hilfe zu rufen. Es entschied sich, ein solches Gerät zu finden. Es machte sich auf die Suche
+im Wald und fand schließlich ein verlorenes Handy unter einem großen Stein. Da das Einhorn jedoch nicht wusste, wie es das Handy benutzen
+sollte, fragte es das Eichhörnchen um Rat. Das Eichhörnchen, clever wie es war, erklärte dem Einhorn, wie es das Handy einschalten und den
+Notruf wählen konnte. Das Einhorn folgte den Anweisungen des Eichhörnchens und bald darauf hörte es die Stimme eines freundlichen Menschen
+am anderen Ende der Leitung. Das Einhorn schilderte seine Verletzung und die Person am Telefon versprach, sofort einen Tierarzt zu schicken.
+Wenig später traf der Tierarzt ein und kümmerte sich liebevoll um das verletzte Horn des Einhorns. Das Einhorn war so dankbar für die Hilfe
+des Eichhörnchens und des Menschen am Telefon, dass es beschloss, eine lebenslange Freundschaft mit ihnen zu schließen. Von diesem Tag an aß
+das Einhorn immer gemeinsam mit dem Eichhörnchen Erdbeerkuchen, während es auf seinem bunten und geheilten Horn stolz durch den Wald
+galoppierte.
+
+-> 16 Sätze
 
 Benutzerfreundlichkeit:
 
@@ -527,4 +633,26 @@ Writesonic:
 - Seite auf Englisch gestaltet, lässt sich aber mit google translate gut übersetzen
 
 - nach einloggen neue Seite, Bibliothek automatisch geöffnet
--
+- oben Werbung für Möglichkeiten, die angeboten werden
+- darunter Begrüßung mit Namen und daneben Möglichkeit neuen Chat zu starten oder ein neues Dokument zu erstellen
+    - klickt man auf etwas noch nie benutztes, erscheint ein Erklärungsvideo
+- darunter Suchleiste für Templates
+- darunter ein Schnellzugriff mit allen Möglichkeiten
+- und darunter Votschläge für mich
+- links an der Seite Leiste, an der man einen neuen Ordner erstellen kann, zur Bibliothek gelangt, Zugriff auf alle angebotenen Möglichkeiten hat und ganz unten Upgrade Möglichkeit
+
+
+Copy.ai:
+
+- wenn Website geöffnet in der Mitte direkt Textfeld zum Eingeben der E-Mail-Adresse
+- scrollt man runter, wird Copy.ai vorgestellt
+- am oberen Rand befindet sich eine Leiste mit den Produkten, den Use cases, den Ressourcen und den Preisen
+- oben rechts in der Ecke hat man die Möglichkeit sich einzuloggen oder zu registrieren
+
+- es ist ein Account nötig
+    - dafür muss man einige Fragen beantworten
+
+- eingeloggt erscheint direkt der letze Chat
+- in einem leeren Chat werden einem Vorschläge angezeigt
+- unter der Texteingabe hat man die Möglichkeit Datein hochzuladen, sich die Möglichkeiten an Prompts anzeigen zu lassen und den Stil der eigenen Marke hinzuzufügen
+- oben rechts hat man die Möglichkeit den Chat zu löschen oder ein neues Projekt zu starten
