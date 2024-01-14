@@ -86,8 +86,16 @@ def __get_score_from_illuminarty(image_path: str) -> float:
         return -1
 
 
-def __get_score_from_isitai(image_path) -> float:
-    # Gets score from Isitai.com
+def __get_score_from_isitai(image_path: str) -> float:
+    """
+    This function gets the score from Isitai.com
+
+    Parameters:
+        image_path (str): The path to the image
+    Returns:
+        float: The score from Isitai.com
+
+    """
     try:
         driver.get("https://isitai.com/ai-image-detector/")
 
