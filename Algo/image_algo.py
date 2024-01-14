@@ -185,6 +185,13 @@ def extreme_sharpening(image: np.ndarray) -> np.ndarray:
 
 
 def add_copyright_text(background_img: np.ndarray) -> np.ndarray:
+    """
+    This method adds a watermark to the image
+    Parameters:
+        background_img (cv2 image): The image to modify
+    Returns:
+        cv2 image: The modified image
+    """
     overlay_img = cv2.imread("../resources/Copyright.png", cv2.IMREAD_UNCHANGED)
 
     scale_percent = max(background_img.shape[0] / overlay_img.shape[0],
