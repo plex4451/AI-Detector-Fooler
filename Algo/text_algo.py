@@ -2,7 +2,7 @@
 This file contains all the logic for the Text-Algo
 for changing the text to fool the AI
 """
-
+max_percentage = 200
 
 def compare_two_strings(first_txt: str, second_txt: str):
     """
