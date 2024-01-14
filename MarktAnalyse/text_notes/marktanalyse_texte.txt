@@ -18,6 +18,16 @@ Rückmeldungen, ob die Ergebnisse richtig sind, werden die Verbindungen zwischen
 Ergebnis führten, werden stärker und diejenigen, die zum Falschen führten schwächer.[4]
 Diese Neuronenverbindungen ermöglichen es der KI Wahrscheinlichkeiten für Wortfolgen vorherzusagen.[6]
 
+Anhang/ Quellen:
+
+IPad:
+1. https://www.genius-community.com/allgemein/wie-funktioniert-eigentlich-kuenstliche-intelligenz-7867/
+2. https://www.iks.fraunhofer.de/de/themen/kuenstliche-intelligenz.html
+3. https://www.youtube.com/watch?v=fT69SLK2m9I
+4. https://www.youtube.com/watch?v=3RsmRMqX2IY
+5. https://www.ibm.com/de-de/topics/machine-learning
+6. https://www.bigdata-insider.de/was-ist-ein-large-language-model-a-d735d93bbc24d3c4091de8ce25aa36e8/
+
 
 3. aktuelle Trends
 - Beschreibung der letzten Fortschritte
@@ -244,7 +254,7 @@ progressive, Künstliche Intelligenz in der Zukunft - Was uns bei KI zukünftig 
 https://www.progressiverecruitment.com/de-de/blog/2018/11/kuenstliche-intelligenz-was-uns-bei-ki-zukuenftig-erwartet/
 
 Die Nachfrage nach Automatisierung wächst und treibt die Einführung von KI-Technologien voran. Die Größe des deutschen KI-Marktes hat eine
-jährliche Wachstumsrate von 15,15% (CAGR 2024-2030).  Das Marktvolumen wird demnach bis 2030 wahrscheinlich auf 27,27Mrd. € steigen.
+jährliche Wachstumsrate von 15,15% (CAGR 2024-2030). Das Marktvolumen wird demnach bis 2030 wahrscheinlich auf 27,27Mrd. € steigen.
 KI wird in Zukunft also eine immer größere Rolle spielen.
 Rechenleistung und Datenmengen werden immer größer, wodurch KIs besser trainiert und leistungsfähiger werden. Die Auswahl an Gebieten,
 in denen sie eingesetzt werden könnten, wird immer größer. Sie könnte die Gesundheit älterer und kranker Menschen permanent überwachen,
@@ -257,14 +267,10 @@ durch KI gesteuerte Roboter und Drohnen unsere Pakete liefern, die Autos könnte
 
 8. Fazit
 
+Künstliche Intelligenz ist vielseitig einsetzbar. Es ist schwer voraussagbar, was die Zukunft für KIs bereithält, aber die Möglichkeiten sind groß.
+Ob im Bereich der Medizin, der Industrie oder sogar der Bildung, sie wird uns in Zukunft bei den alltäglichsten Dingen begleiten. Das wird allerdings noch
+einige Zeit dauern. Zuerst wird die Gesetzesgrundlage geklärt werden müssen. KI sollte nicht unreguliert bleiben. Auch wie KI den Arbeitsmarkt verändern
+wird, bleibt noch unklar. Sicherlich werden einige Arbeitsplätze wegfallen, aber auch viele neue entstehen.
+Es bleibt mit Spannung abzuwarten, was die Zukunft für KI bereithält.
 
 
-Anhang/ Quellen:
-
-IPad:
-1. https://www.genius-community.com/allgemein/wie-funktioniert-eigentlich-kuenstliche-intelligenz-7867/
-2. https://www.iks.fraunhofer.de/de/themen/kuenstliche-intelligenz.html
-3. https://www.youtube.com/watch?v=fT69SLK2m9I
-4. https://www.youtube.com/watch?v=3RsmRMqX2IY
-5. https://www.ibm.com/de-de/topics/machine-learning
-6. https://www.bigdata-insider.de/was-ist-ein-large-language-model-a-d735d93bbc24d3c4091de8ce25aa36e8/
