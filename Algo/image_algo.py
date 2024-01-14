@@ -259,7 +259,13 @@ def print_image_metadata(path: str):
 
 
 def add_fake_metadata(path: str):
-    # This function adds fake metadata to an image path
+    """
+    This function adds fake metadata to an image path
+    Parameters:
+        path (str): The path to the image
+    Returns:
+        None
+    """
     image = Image.open(path)
 
     exif_ifd = {piexif.ExifIFD.UserComment: 'Author: Max Mustermann'.encode()}
