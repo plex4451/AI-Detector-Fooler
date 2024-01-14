@@ -59,9 +59,17 @@ def add_gray_noise_to_image(image: Image, mean=0, stddev=25) -> Image:
     return noisy_image
 
 
-def add_median_color_noise_to_image(image, stddev=25, scale=0.5):
+def add_median_color_noise_to_image(image: Image, stddev=25, scale=0.5) -> Image:
     # Adds noise to a cv2 image with the color of the median color of the image and the specified stddev
-
+    """
+    Adds noise to a cv2 image with the color of the median color of the image and the specified stddev
+    Parameters:
+        image (cv2 image): The image to modify
+        stddev (int): The standard deviation of the noise
+        scale (float): The scale of the noise
+    Returns:
+        cv2 image: The modified image
+    """
     # Calculate the median color of the image
     median_color = np.median(image, axis=(0, 1))
 
