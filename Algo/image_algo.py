@@ -91,7 +91,15 @@ def add_median_color_noise_to_image(image: Image, stddev=25, scale=0.5) -> Image
     return noisy_image
 
 
-def add_blur_to_image(image, strength=35):
+def add_blur_to_image(image: Image, strength=35) -> Image:
+    """
+    Adds blur to a cv2 image with the standard value 35
+    Parameters:
+        image (cv2 image): The image to modify
+        strength (int): The strength of the blur
+    Returns:
+        cv2 image: The modified image
+    """
     # Adds blur to a cv2 image with the standard value 35
     return cv2.GaussianBlur(image, (strength, strength), 0)
 
