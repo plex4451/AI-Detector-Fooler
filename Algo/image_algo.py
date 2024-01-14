@@ -118,7 +118,14 @@ def make_dark_pixels_brighter(image: Image, brightness_increase=10, threshold=20
     return image
 
 
-def add_white_brush_with_alpha(image):
+def add_white_brush_with_alpha(image: Image) -> Image:
+    """
+    This method adds a white brush with alpha to the image
+    Parameters:
+        image (cv2 image): The image to modify
+    Returns:
+        cv2 image: The modified image
+    """
     # Create a white brush with alpha
     brush_color = (255, 255, 255)
     alpha = 0.25
