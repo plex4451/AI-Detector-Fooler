@@ -85,10 +85,19 @@ def wait_element_visible_text(driver: webdriver.Chrome, wait: WebDriverWait, ele
 
 
 class ElementVisibilityChecker(object):
+    """
+    This class checks if an element is visible.
+
+    Parameters:
+        locator (selenium.webdriver.remote.webelement.WebElement): The Selenium element
+    Returns:
+        bool: True if the element is visible, False if not
+    """
+
     def __init__(self, locator):
         self.locator = locator
 
-    def __call__(self, driver):
+    def __call__(self, driver) -> bool:
         try:
             element = self.locator
             return element.value_of_css_property("visibility") == "visible"
