@@ -8,8 +8,8 @@ import time
 # Setup Selenium and get driver and wait
 driver, wait = setup_selenium()
 
-# -------------------------------DEBUG------------------------------------------
 
+# -------------------------------DEBUG------------------------------------------
 
 
 def __get_score_from_huggingface(image_path: str) -> float:
@@ -138,7 +138,8 @@ def __get_score_from_hivemoderation(image_path: str) -> float:
         image_field.send_keys(image_path)
 
         time.sleep(2.5)
-        score = wait_element_visible_text(driver, wait, "//span[contains(text(), '%') and not(contains(text(), '>'))]").text
+        score = wait_element_visible_text(driver, wait,
+                                          "//span[contains(text(), '%') and not(contains(text(), '>'))]").text
 
         print("Hivemoderation.com score: " + score + " AI created image!")
         return float(score.replace('%', ''))
