@@ -193,7 +193,6 @@ def add_fake_metadata(path):
 
 
 def use_alog_on_image(image):
-    #TODO: COPYRIGHT_TEXT
     """
     This function applies modifications (such as blur and noise) to an image, adds fake metadata,
     and evaluates both the original and the modified images. The function calculates
