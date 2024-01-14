@@ -10,12 +10,19 @@ from time import *
 driver, wait = setup_selenium()
 
 # -------------------------------DEBUG------------------------------------------
-# Define test text
-test_text = "This is a example Text!"
 
 
-def __get_score_from_grammica(text_to_check) -> float:
-    # Gets score from Grammica.com -> only english!
+
+def __get_score_from_grammica(text_to_check: str) -> float:
+    """
+    This function gets the score from Grammica.com
+
+    Parameters:
+        text_to_check (str): The text to check
+    Returns:
+        float: The score from Grammica.com
+
+    """
     try:
         driver.get("https://grammica.com/ai-detector")
         textbox = driver.find_element(by=By.XPATH, value='//*[@id="text"]')
