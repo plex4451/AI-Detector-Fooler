@@ -43,8 +43,38 @@ That's it! You can now run the project.
    
    
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+To start the project, follow these steps:
 
+1. Open the project folder in your terminal.
+2. Run the following command to start the project:
+    ```bash
+    python main.py /path/to/input/file /path/to/output/file
+    ```
+   **python** may also be replaced with **python3** or **py** on some systems.
+    An example command would be:
+    ```bash
+    python main.py c:/Users/Username/Desktop/input.txt c:/Users/Username/Desktop/output.txt
+    ```
+
+3. A GUI will open with the following options
+   1. Main Menu:
+       - Text Converter Button: Opens the Text Converter GUI
+       - Image Converter Button: Opens the Image Converter GUI
+       - Exit Button: Closes the Program
+   2. Text Converter:
+      - Upload-Text Button: Opens a file explorer to select a text file to upload to the program and displays the text of the text file in the left text box
+      - Change-Text Button: Converts the text of the left textbox and displays the converted text in the right text box
+      - Download-Text Button: Opens a file explorer to select a location to save the text of the right text box as a text file
+      - Back to Menu Button: Returns to the Main Menu
+   3. Image Converter:
+      - Upload-Image Button: Opens a file explorer to select an image file to upload to the program and displays the image in the left image box
+      - Change-Image Button: Converts the image of the left image box and displays the converted image in the right image box
+      - Download-Image Button: Opens a file explorer to select a location to save the image of the right image box as an image file
+      - Back to Menu Button: Returns to the Main Menu
+
+4. To close the program, click the X in the top right corner of the window or click the Exit Button in the Main Menu
+    
+   
 ## Support
 Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
