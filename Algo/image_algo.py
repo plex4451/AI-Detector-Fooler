@@ -282,6 +282,11 @@ def use_alog_on_image(image: np.ndarray) -> np.ndarray:
     This function applies modifications (such as blur and noise) to an image, adds fake metadata,
     and evaluates both the original and the modified images. The function calculates
     and prints the time taken for the image modification operations.
+
+    Parameters:
+        image (cv2 image): The image to modify
+    Returns:
+        cv2 image: The modified image
     """
     # print_image_metadata(path)
     modified_image = image
