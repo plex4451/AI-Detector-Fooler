@@ -52,11 +52,30 @@ def wait_element_css(wait: WebDriverWait, css_path: str):
     return element
 
 
-def wait_for_attribute(wait, element, attribute):
+def wait_for_attribute(wait: WebDriverWait, element, attribute: str):
+    """
+    This function waits for an attribute to be present.
+    Parameters:
+        wait (WebDriverWait): The Selenium wait
+        element (selenium.webdriver.remote.webelement.WebElement): The Selenium element
+        attribute (str): The attribute to wait for
+    Returns:
+        None
+    """
     wait.until(lambda driver: element.get_attribute(attribute).strip() != '')
 
 
-def wait_element_visible_text(driver, wait, element_xpath):
+def wait_element_visible_text(driver: webdriver.Chrome, wait: WebDriverWait, element_xpath: str):
+    """
+    This function waits for an element to be visible and returns it.
+
+    Parameters:
+        driver (webdriver.Chrome): The Selenium driver
+        wait (WebDriverWait): The Selenium wait
+        element_xpath (str): The xpath of the element
+    Returns:
+        element (selenium.webdriver.remote.webelement.WebElement): The Selenium element
+    """
     element = wait_element(driver, wait, element_xpath)
     wait.until(Expected.visibility_of(element))
     wait.until(ElementVisibilityChecker(element))
