@@ -1,0 +1,276 @@
+
+1. Marktüberblick
+- Kurz Anwendungsweisen von Textgenerierenden KIs
+- Kurz beschreiben wie der Markt aussieht mit Hauptakteuren
+
+
+2. Funktionsweisen
+- Algorithmen und Modelle beschreiben
+- Eventuell einfache und kurze Erklärung
+- Kein exakter vergleich
+
+Textgenerierende KI werden auch Large Language Models (LLM) genannt.[6] LLMs funktionieren mithilfe von maschinellem Lernen ("Machine Learning").
+Dabei entwickeln sie die Fähigkeit aus Erfahrungen zu lernen und automatisch Erkenntnisse und Vorhersagen aus Daten zu gewinnen.[1]
+Unter anderem werden hierzu künstliche neuronale Netzwerke genutzt. [5] Diese ahmen die Funktionsweise des Gehirns nach.[1]
+Sie bestehen aus Knotenschichten: der Eingabeschicht, einer oder mehrerer verdeckten Schichten und der Ausgabeschicht.[5]
+Sie bekommen große Datenmengen zur verfügung gestellt und müssen, anhand von diesen, Ergebnisse zu verschiedenen Aufgaben liefern. Anhand der
+Rückmeldungen, ob die Ergebnisse richtig sind, werden die Verbindungen zwischen den Neuronen verändert. Die Verknüpfungen, die zum richtigen
+Ergebnis führten, werden stärker und diejenigen, die zum Falschen führten schwächer.[4]
+Diese Neuronenverbindungen ermöglichen es der KI Wahrscheinlichkeiten für Wortfolgen vorherzusagen.[6]
+
+Anhang/ Quellen:
+
+IPad:
+1. https://www.genius-community.com/allgemein/wie-funktioniert-eigentlich-kuenstliche-intelligenz-7867/
+2. https://www.iks.fraunhofer.de/de/themen/kuenstliche-intelligenz.html
+3. https://www.youtube.com/watch?v=fT69SLK2m9I
+4. https://www.youtube.com/watch?v=3RsmRMqX2IY
+5. https://www.ibm.com/de-de/topics/machine-learning
+6. https://www.bigdata-insider.de/was-ist-ein-large-language-model-a-d735d93bbc24d3c4091de8ce25aa36e8/
+
+
+3. aktuelle Trends
+- Beschreibung der letzten Fortschritte
+- Eventuell kleiner Ausblick auf was noch kommen kann
+
+- Technikmesse CES zeigt Neuheiten und Zukunft:
+    - BMW: Augmented Reality-Brillen, BMW Intelligent Personal Assistant -> digitaler KFZ Experte, Gespräch über Fahrzeug oder geplante Trips
+           -> Brille gibt Zusatzinformationen wie Schilder oder Warnungen
+           -> Intellegent Personal Assistant ermöglicht Gespräch mit Fahrzeug
+    - Mercedes: MBUX Virtual Assistent
+    - Spiegel scannt Gesicht und kann anhand dessen Gesundheitszustand überprüfen (Blutdruck, Cholesterinspiegel, Blutzuckerspiegel, Herzinfarktrisiko etc)
+    - Drohne zum Transport von Laborproben und Medikamenten
+- Übersetzungsapp für medizinische Fachkräfte -> hilft beim Verfassen von Arztbriefen
+- Seeing AI -> App zur Unterstützung von Menschen mit Seheinschränkung, erkennt Objekte, Texte, liest Erkanntes vor/ berichtet über Erkanntes
+Benjamin Daniel, Wie KI die US-Elektromesse beherrscht, 10.01.2024
+https://www.zdf.de/nachrichten/wirtschaft/elektronikmesse-ces-ki-kuenstliche-intelligenz-100.html
+
+- VW baut ChatGPT in Serienfahrzeuge ein -> Sprachassistent IDA
+    - Kommunikation mit Auto soll natürlicher werden
+    - soll mehr als nur Fragen zur Bedienung beantworten können
+Przemyslaw Szymanski, Volkswagen integriert ChatGPT in Sprachassistenten, 09.01.2024
+https://www.computerbild.de/artikel/cb-News-Connected-Car-Volkswagen-integriert-ChatGPT-in-Sprachassistenten-37819053.html
+- Fragen sollen erst von Sprachassistenz-Software beantwortet werden, kann diese sie nicht beantworten, hilft ChatGPT aus
+- ChatGPT soll dabei keinen Zugriff auf die Fahrzeugdaten erhalten
+- Fragen und Antworten werden gelöscht -> Datenschutz
+Spiegel, VW baut ChatGPT in seine Autos ein, 09.01.2024
+https://www.spiegel.de/netzwelt/tech-messe-ces-vw-baut-chatgpt-in-seine-autos-ein-a-27516197-ed99-4e8c-aba9-7348bedcc09c
+- IDA basiert auf Cerence Chat Pro -> Programm verwendet verschiedene Quellen, darunter jetzt auch ChatGPT
+Pressemitteilung VW, Weltpremiere auf der CES: Volkswagen integriert "ChatGPT" in aktuelle Modelle, 08.01.2024
+https://www.volkswagen-newsroom.com/de/pressemitteilungen/weltpremiere-auf-der-ces-volkswagen-integriert-chatgpt-in-aktuelle-modelle-18048
+
+VW stellte seinen neuen Sprachassistenten IDA vor. Dieser basiert auf Cerence Chat Pro, ein Programm, welches verschiedene Quellen zur
+Beantwortung von Fragen verwendet, darunter nun auch ChatGPT. Dadurch soll die Kommunikation natürlicher werden. IDA soll Fragen über
+die Bedienung des Fahrzeuges hinaus beantworten können. Diese sollen erst von der Sprachassistenz-Software selber beantwortet werden.
+Ist dies nicht möglich, wird auf ChatGPT zurückgegriffen. ChatGPT soll hierbei jedoch keinen Zugriff auf Fahrzeugdaten erhalten.
+Gestellte Fragen sollen direkt nach der Beantwortung gelöscht werden, um Datenschutz zu gewährleisten.
+
+- Fernglas, das Vogelarten automatisch erkennt
+    - identifiziert rund 8000 Vogelarten, 300 Säugetiere und verschiedene Schmetterlinge
+    - auch Erstellen von Fotos und Videos möglich
+Sarah Ignor, Swarovski AX Vision: KI-unterstütztes Fernglas erkennt Vogelarten, 08.01.2024
+https://www.computerbild.de/artikel/cb-News-Freizeit-Swarovski-AX-Visio-KI-unterstuetztes-Fernglas-erkennt-Vogelarten-37827657.html
+- Fernglas ergänzt reales Erlebnis um digitale Informationen
+- nutzt Merlin-Bird-ID-Datenbank zur Vogelerkennung
+- integriertes GPS und digitaler Kompass -> Nutzer können Orte markieren, an denen sie Tiere beobachten konnte
+Andreas Donath, Fernglas erkennt tausende von Tierarten, 10.01.2024
+https://www.golem.de/news/swarovski-ax-visio-fernglas-erkennt-tausende-von-tierarten-2401-180964.html
+
+Die Firma Swarovski präsentierte ein Fernglas als ihre jüngste Innovation. Dieses identifiziert rund 8000 Vogelarten, etwa 300 Säugetiere
+und eine Vielzahl von Schmetterlingen. Das Fernglas soll das reale Erlebnis einer Vogelbeobachtung um digitale Informationen ergänzen.
+Hierzu nutzt es die Merlin-Bird-ID-Datenbank der Cornell Lab of Ornithology. Auch das Erstellen von Fotos und Videos ist möglich.
+Durch ein integriertes GPS und den digitalen Kompass können Nutzer Orte markieren, an denen sie Tiere beobachten konnten.
+
+- Echtzeit Übersetzungsgadget
+    - In-Ear-Kopfhörer mit Mikro
+    - Mikro nimmt Gesagtes auf und schickt es an zugehörigen Hub
+    - Übersetzung findet in Cloud statt -> WLAN-Verbindung
+    - Wiedergabe bisher noch mechanisch klingend
+    - 5 Sprachen mit 20 Teilnehmern möglich
+Rainer Schuldt und Dirk General-Kuchel, Timekettle Interpreter Hub X1: Echtzeit-Übersetzer ausprobiert, 09.01.2024
+https://www.computerbild.de/artikel/cb-News-Smart-Home-Timekettle-Interpreter-Hub-X1-Echtzeit-uebersetzer-ausprobiert-37836567.html
+- jeder Teilnehmer eines Meetings bspw. benötigt dieses Modul
+- Gesagtes wird aufgenommen und übersetzt in die jeweiligen Sprachen der anderen Teilnehmer
+- bisher 40 Sprachen möglich
+Timekettle, https://www.timekettle.co/de/products/x1-ai-interpreter-hub?_pos=1&_psq=hub+x1&_ss=e&_v=1.0
+
+Die Firma Timkettle stellte ein Echtzeit-Übersetzungsgadget vor. Dieses besteht aus einem Hub und den dazugehörigen In-Ear-Kopfhörern
+mit Mikro. Dieses nimmt Gesagtes auf und schickt es an den Hub, woraufhin eine Übersetzung in der Cloud stattfindet. Jeder Teilnehmer eines
+Meetings muss einen solchen Interpreter besitzen, damit das Gesagte in die jeweilige Sprache des Teilnehmers überführt werden kann.
+Bei einem solchen Meeting sind bis zu 20 Teilnehmer und 5 verschiedene Sprachen möglich. Bisher steht eine Auswahl von 40 Sprachen zur
+Verfügung.
+
+
+- KIs mit noch mehr Parametern -> verringert "Halluzinationen"
+
+
+
+4. Marktherausforderungen
+- Wichtige Sachen, die für den Konsumer Markt eingehalten werden müssen
+- Ethische Richtlinien und Begrenzungen
+- Einfluss davon auf den Markt beschreiben
+
+- KI-Verordnung für Hochrisiko-KI-Systeme
+- geringe Anforderungen für KIs mit mittleren und niedrigen Risiken
+- Deutschland, Frankreich, Italien Gegner strenger Regulierung -> Risiko in Anwendung, nicht in Technologie
+https://www.handelsblatt.com/finanzen/steuern-recht/recht/gesetzgebung-sprachmodelle-stellen-bisherige-einigung-zur-ki-regulierung-infrage/100002063.html
+-KI-VO erstmaliger gesetzlicher Rahmen für Entwicklung und Nutzung KI
+- Klassifizierung nach Risiko -> risikoarm, begrenzt riskant, riskant, verboten
+- "social scoring"-Systeme sollen verboten werden
+    - bewerten Verhalten, Emotionen, von Menschen -> bspw. Vernehmung Verdächtiger
+- Hersteller sollen Risiken ihrer Produkte bewerten, Standards für Trainingsdaten erfüllen -> von Prüfbehörden kontrolliert
+- KI darf nicht auf verzerrte Datensätze zurückgreifen -> verhindern von Diskriminierung
+- tritt voraussichtlich 2026 in Kraft
+https://www.tagesschau.de/ausland/europa/eu-ki-100.html
+- AI Act: Risikogruppen: unannehmbares Risiko, hohes Risiko (Hochrisiko-KI-Systeme), geringes oder minimales Risiko
+- Anwendungen des unannehmbaren Risikos verboten
+    - manipulieren/ schaden Menschen
+    - biometrische Identifizierung von Menschen (Ausnahme: Abwehr von Terrorismus/ Aufklärung schwerer Straftat)
+    - ermöglicht negative Bewertung aufgrund von sozialem Verhalten/ persönlicher Charakteristik
+- Hochrisiko-KI-Systeme: - Einrichtung, Dokumentation, Aufrechterhaltung eines Risikomanagements
+                         - Einhalten von Daten-Governance- und Datenverwaltungsverfahren, Bewertung der Verfügbarkeit, Menge, Eignung der benötigten Datensätze
+                         - Führen technischer Dokumentation
+                         - Aufsichtsführung durch menschliches Personal
+                         - Aufsichtspflicht über Vorgänge und Ereignisse
+                         - transparente Informationen für Nutzer -> Merkmale, Fähigkeiten, Leistungsgrenzen
+- geringes/ minimales Risiko: minimale Transparenz- und Informationspflicht über Einsatz
+- Chatbots fallen unter geringes/ minimales Risiko
+https://eu-digitalstrategie.de/ai-act/#:~:text=Der%20Artificial%20Intelligence%20Act%20folgt,Einsatzbereich%20der%20K%C3%BCnstlichen%20Intelligenz%20einhergeht. [2]
+- April 2021 EU-Kommission ersten Entwurf zum AI-Act -> Gesetzgebungsverfahren in Gang gebracht
+- Zeitpunkt Verabschiedung und Gültigkeit noch unklar
+https://haerting.de/wissen/kuenstliche-intelligenz-ki-aktueller-stand-des-gesetzgebungsverfahrens-ai-act/ [1]
+
+
+Mit dem ersten Entwurf zum AI-Act (KI-Verordnung) hat die europäische Kommission im April 2021 das erste Gesetzgebungsverfahren zu
+künstlicher Intelligenz in Gang gebracht. Wann dieses Verabschiedet und gültig sein wird, ist noch unklar.[1]
+Die Verordnung sieht eine Klassifizierung der KIs nach Risiko vor: unannehmbares Risiko, hohes Risiko (Hochrisiko-KI-Systeme) und geringes
+oder minimales Risiko.
+Anwendungen des unannehmbaren Risikos sind verboten. Hierzu zählen KIs, die Menschen manipulieren oder schaden, Anwendungen zur biometrischen
+Identifizierung von Menschen und solche, die negative Bewertungen aufgrund von sozialem Verhalten oder persönlicher Charakteristik ermöglichen.
+Für Hochrisiko-KI-Systeme gelten klare Vorgaben: es muss ein Risikomanagement eingerichtet, dokumentiert und aufrechterhalten werden,
+Daten-Governance- und Datenverwaltungsverfahren müssen eingehalten werden und es muss eine Bewertung der Verfügbarkeit, Menge und Eignung
+der benötigten Datensätze durchgeführt werden. Weiterhin beinhalten sie die Führung technischer Dokumentation, die Aufsichtsführung durch
+menschliches Personal und die Aufsichtspflicht über Vorgänge und Ereignisse. Nutzer müssen über die Merkmale, Fähigkeiten und Leistungsgrenzen
+der KI informiert werden.
+Für KIs mit geringem oder minimalem Risiko gilt eine minimale Transparenz- und Informationspflicht über deren Einsatz. Zu diesen zählen auch
+Chatbots. Es stellt sich die Frage, ob das Gefahrenpotenzial von KIs dieser Klassifizierung unterschätzt wird.[2]
+
+
+
+- Bildgenerierende KIs werden mit Bildern von Künstlern trainiert, ohne deren Zustimmung -> benötigen eigentlich Lizenz zur Vervielfältigung
+- Sammelklage aus USA gegen Stability AI, Deviant Art, Midjourney von drei Künstlern wegen Urheberrechtsverletzungen
+- Rechtswissenschaftler Nikolaus Forgo: KI-Firmen verletzen Urheberrecht bereits, wenn sie Bilder von Künstlern und Künstlerinnen für das
+  Training verwenden (muss man den Bildern nicht ansehen) -> Einspielen in eigenen Systeme ist unerlaubte Vervielfältigung
+- KI-Kunst selber kein Urheberrecht, da dieses nur persönliche geistige Schöpfungen schützt (§ 2 Abs. 2 UrhG)
+Mickey Manakas, Stable Diffusion und Co: Kann man für die Nutzung von Bilder-KIs geklagt werden?, 01.02.2023
+https://www.derstandard.de/story/2000142990088/stable-diffusion-und-co-kann-man-fuer-die-nutzung-von
+
+- der Stil eines Künstlers ist nicht geschützt
+- KI-Bilder nicht uneingeschränkt nutzbar -> Anbieter kann Bedingungen festlegen
+Barbara Wimmer, Dürfen KI-Generatoren meine Bilder zum Trainieren verwenden?, 25.01.2023
+https://futurezone.at/netzpolitik/ki-urheberrecht-interview-bilder-stable-diffusion-klage-recht/402297809
+
+- "Data Mining": automatisierte Analyse von digitalen oder digitalisierten Werken zur Gewinnung von Informationen
+                -> § 44 b) UrhG Vervielfältigung ohne Einwilligung für Data-Mining erlaubt
+                - Daten sind nach Abschluss des Trainings zu löschen
+- enthält ein Werk "ein gewisses Mindestmaß an Schöpfungshöhe", kann es urheberrechtlich geschützt werden (Nutzer)
+- KI-Werke müssen einen gewissen Abstand zum ursprünglichen Werk aufweisen
+    -> ist das nicht der Fall und der Nutzer veröffentlicht das Werk, ist dieser der Täter der Urheberrechtsverletzung
+Dr. Peggy Müller, The future is now: Künstliche Intelligenz und das Urheberrecht, 02.03.2023
+https://www.haufe.de/recht/weitere-rechtsgebiete/kuenstliche-intelligenz-und-das-urheberrecht_216_588912.html
+
+-Data Mining auch in USA erlaubt -> Fair-Use-Doktrin
+Nina Kirst, KI und Recht: "Data Mining ist grundsätzlich erlaubt - auch für kommerzielle Zwecke", 06.02.2023
+https://page-online.de/branche-karriere/data-mining-ist-grundsaetzlich-erlaubt-auch-fuer-kommerzielle-zwecke/
+
+
+Bildgenerierende KIs werden mit großen Datensätzen trainiert, um Bilder in verschiedensten Stilen zu generieren. Darunter befinden sich auch
+urheberrechtlich geschützte Werke von Künstlern. Diese sind davon wenig erfreut. Drei von ihnen haben sich in den USA zu einer Sammelklage
+gegen Stability AI, Deviant Art und Midjourney wegen Urheberrechtsverletzung zusammengeschlossen. Das unbefugte Einbringen in die eigenen
+Systeme stelle eine unzulässige Vervielfältigung dar.
+Data Mining, also die automatisierte Analyse von digitalen oder digitalisierten Werken, zur Gewinnung von Informationen über Muster, Trends
+und Korrelationen, ist jedoch nicht verboten. Weder in den USA noch in Deutschland. Dies wird durch das Fair-Use-Doktrin, bzw. Durch
+§ 44 b) UrhG geregelt. Es erlaubt die Vervielfältigung von Werken für das Data Mining ohne Einwilligung. Die Daten sind jedoch nach
+Abschluss des Trainings zu löschen.
+
+Doch auch Nutzer der bildgenerierenden KIs müssen aufpassen. Entstehende Werke müssen einen gewissen Abstand zum ursprünglichen Werk
+aufweisen. Ist dies nicht der Fall und der Nutzer veröffentlicht das Werk, ist dieser Täter einer Urheberrechtsverletzung.
+Die von der KI geschaffenen Werke selber sind jedoch nicht geschützt, da die KI nicht als persönliche geistige Schöpfung gilt.
+
+
+
+5. Marktchancen
+- Gebiete, wo man nicht dachte, dass diese KIs helfen könnten, es aber gemacht haben
+- Verschiedene Gebiete, wo solche KIs angewendet werden könnten
+
+- Unternehmen: - Muster im Kundenverhalten identifizieren
+               - Chatbots für Kunden: Bedarf identifizieren
+               - welche Waren sollten wo im Geschäft platziert werden
+- Finanzbereich: Prognosen und Empfehlungen für Wertpapierhandel
+- Rechnungswesen/ Finanzbuchhaltung: automatisierte Bearbeitung von Eingansrechnungen
+
+6. Wettbewerbsanalyse
+- Vergleich der KIs
+
+
+7. Marktprognosen
+- Kleiner Einblick in was die Zukunft für KIs bereithält
+
+- Marktgröße jährliche Wachstumsrate von 15,15% -> Marktvolumen 2030: 27,27 Mrd.€
+- Datenmengen werden immer größer -> mehr Daten zum Trainieren von KI
+- Fortschritte bei Rechenleistung -> leistungsfähigere KI
+- wachsende Nachfrage nach Automatisierung treibt Einführung von KI-Technologien voran
+Jens Weitemeyer, Künstliche Intelligenz - Deutschland, August 2023
+https://de.statista.com/outlook/tmo/kuenstliche-intelligenz/deutschland#analystenmeinung
+
+- KI im Bereich Kryptowährung einsetzen möglich
+    - weniger Energie beim Mining
+    - Skalierbarkeit erhöht
+    - Sicherheit auf Krypto-Börsen maximieren -> KI erschwert Hacken
+    - Datenschutz verbessern -> Daten der Nutzer durch KI schützen
+    -> gut möglich, dass KI und Krypto bald zusammengehören
+Ryan Matthews, Jede interessante Künstliche Intelligenz Statistik 2024: KI-Trends, 20.09.2023
+https://cryptomonday.de/jede-interessante-kunstliche-intelligenz-statistik-ki-trends/
+
+- KI wird in Zukunft große Rolle spielen
+    - könnte Gesundheitszuständ älterer oder kranker Menschen permanent überwachen
+    - könnte Straßenverkehr sicher machen (-> gefährliche Situationen erkennen und reagieren) oder Verkehrssysteme verbessern
+    - könnte Lehrmethoden verbessern und effektivere Nachhilfe geben -> kann sich an individuelle Bedürfnisse und Vorlieben anpassen
+KI von PolygonSoftware, KI in der Zukunft: Wie wird sie unser Leben beeinflussen?
+https://polygon-software.ch/blog/ki-in-der-zukunft-wie-wird-sie-unser-leben-beeinflussen/
+
+-Industrie
+    - Fahrerlose Transportsysteme
+    - Basistechnologien für autonome Fabriken
+- Gesundheitswesen
+    - Unterstützende Roboter in der Pflege
+    - automatisierte Helfer bei Diagnosen
+    - autonome Roboter in der Chirurgie
+- Alltag
+    - Paketauslieferung durch Roboter/ Drohnen
+    - autonomes Fahren
+    - Haushaltsroboter
+progressive, Künstliche Intelligenz in der Zukunft - Was uns bei KI zukünftig erwartet
+https://www.progressiverecruitment.com/de-de/blog/2018/11/kuenstliche-intelligenz-was-uns-bei-ki-zukuenftig-erwartet/
+
+Die Nachfrage nach Automatisierung wächst und treibt die Einführung von KI-Technologien voran. Die Größe des deutschen KI-Marktes hat eine
+jährliche Wachstumsrate von 15,15% (CAGR 2024-2030). Das Marktvolumen wird demnach bis 2030 wahrscheinlich auf 27,27Mrd. € steigen.
+KI wird in Zukunft also eine immer größere Rolle spielen.
+Rechenleistung und Datenmengen werden immer größer, wodurch KIs besser trainiert und leistungsfähiger werden. Die Auswahl an Gebieten,
+in denen sie eingesetzt werden könnten, wird immer größer. Sie könnte die Gesundheit älterer und kranker Menschen permanent überwachen,
+Verkehrssysteme verbessern oder den Straßenverkehr sicherer machen, da sie gefährliche Situationen schneller erkennen und auf diese
+reagieren kann. KI könnte auch Lehrmethoden verbessern und effektivere Nachhilfe geben, da sie sich an individuelle Vorlieben und Bedürfnisse
+anpassen kann.
+In der Industrie könnte es fahrerlose Transportsysteme geben. Auch Basistechnologien für autonome Fabriken sind möglich. Im Alltag könnten
+durch KI gesteuerte Roboter und Drohnen unsere Pakete liefern, die Autos könnten autonom fahren und unser Haushalt wird von Robotern geführt.
+
+
+8. Fazit
+
+Künstliche Intelligenz ist vielseitig einsetzbar. Es ist schwer voraussagbar, was die Zukunft für KIs bereithält, aber die Möglichkeiten sind groß.
+Ob im Bereich der Medizin, der Industrie oder sogar der Bildung, sie wird uns in Zukunft bei den alltäglichsten Dingen begleiten. Das wird allerdings noch
+einige Zeit dauern. Zuerst wird die Gesetzesgrundlage geklärt werden müssen. KI sollte nicht unreguliert bleiben. Auch wie KI den Arbeitsmarkt verändern
+wird, bleibt noch unklar. Sicherlich werden einige Arbeitsplätze wegfallen, aber auch viele neue entstehen.
+Es bleibt mit Spannung abzuwarten, was die Zukunft für KI bereithält.
+
+

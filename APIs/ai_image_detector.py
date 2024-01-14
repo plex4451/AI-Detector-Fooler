@@ -8,13 +8,20 @@ import time
 # Setup Selenium and get driver and wait
 driver, wait = setup_selenium()
 
+
 # -------------------------------DEBUG------------------------------------------
-# Define test image url
-test_image_url = "/Users/loukielhorn/Downloads/8-4fqx1SIbpiFAChp.png"
 
 
-def __get_score_from_huggingface(image_path) -> float:
-    # Gets score from Huggingface.co
+def __get_score_from_huggingface(image_path: str) -> float:
+    """
+    This function gets the score from Huggingface.co
+
+    Parameters:
+        image_path (str): The path to the image
+    Returns:
+        float: The score from Huggingface.co
+
+    """
     try:
         driver.get("https://huggingface.co/spaces/umm-maybe/AI-image-detector")
 
@@ -41,8 +48,16 @@ def __get_score_from_huggingface(image_path) -> float:
         return -1
 
 
-def __get_score_from_illuminarty(image_path) -> float:
-    # Gets score from Illuminarty.ai
+def __get_score_from_illuminarty(image_path: str) -> float:
+    """
+    This function gets the score from Illuminarty.ai
+
+    Parameters:
+        image_path (str): The path to the image
+    Returns:
+        float: The score from Illuminarty.ai
+
+    """
     try:
         driver.get("https://app.illuminarty.ai/")
 
@@ -70,8 +85,16 @@ def __get_score_from_illuminarty(image_path) -> float:
         return -1
 
 
-def __get_score_from_isitai(image_path) -> float:
-    # Gets score from Isitai.com
+def __get_score_from_isitai(image_path: str) -> float:
+    """
+    This function gets the score from Isitai.com
+
+    Parameters:
+        image_path (str): The path to the image
+    Returns:
+        float: The score from Isitai.com
+
+    """
     try:
         driver.get("https://isitai.com/ai-image-detector/")
 
@@ -92,8 +115,16 @@ def __get_score_from_isitai(image_path) -> float:
         return -1
 
 
-def __get_score_from_hivemoderation(image_path) -> float:
-    # Gets score from hivemoderation.com
+def __get_score_from_hivemoderation(image_path: str) -> float:
+    """
+    This function gets the score from Hivemoderation.com
+
+    Parameters:
+        image_path (str): The path to the image
+    Returns:
+        float: The score from Hivemoderation.com
+
+    """
     try:
         driver.get("https://hivemoderation.com/ai-generated-content-detection")
         time.sleep(3)
@@ -107,7 +138,8 @@ def __get_score_from_hivemoderation(image_path) -> float:
         image_field.send_keys(image_path)
 
         time.sleep(2.5)
-        score = wait_element_visible_text(driver, wait, "//span[contains(text(), '%') and not(contains(text(), '>'))]").text
+        score = wait_element_visible_text(driver, wait,
+                                          "//span[contains(text(), '%') and not(contains(text(), '>'))]").text
 
         print("Hivemoderation.com score: " + score + " AI created image!")
         return float(score.replace('%', ''))
@@ -116,8 +148,17 @@ def __get_score_from_hivemoderation(image_path) -> float:
         return -1
 
 
-def get_ai_image_scores(path):
+def get_ai_image_scores(path: str) -> list[float]:
+    """
+    This function gets the scores from all the APIs
+
+    Parameters:
+        path (str): The path to the image
+    Returns:
+        list: The scores from all the APIs
+    """
     scores = []
     scores.append(__get_score_from_hivemoderation(path))
     scores.append(__get_score_from_illuminarty(path))
     scores.append(__get_score_from_isitai(path))
+    return scores
