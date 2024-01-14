@@ -81,7 +81,7 @@ def make_dark_pixels_brighter(image, brightness_increase=10, threshold=20):
 def add_white_brush_with_alpha(image):
     # Create a white brush with alpha
     brush_color = (255, 255, 255)
-    alpha = 0.05
+    alpha = 0.25
 
     # Create a transparent white brush
     brush = np.zeros_like(image, dtype=np.uint8)
@@ -200,13 +200,10 @@ def use_alog_on_image(image):
     and prints the time taken for the image modification operations.
     """
     # print_image_metadata(path)
-    modified_image = make_dark_pixels_brighter(image, 5, 100)
-    modified_image = add_gray_noise_to_image(modified_image,  10, 25)
-    modified_image = add_noise_to_image(modified_image, 10, 20)
+    modified_image = image
+    modified_image = extreme_sharpening(modified_image)
     modified_image = add_white_brush_with_alpha(modified_image)
-    modified_image = light_sharpening(modified_image)
-    # modified_image = add_copyright_text(modified_image)
-    # modified_image = add_blur_to_image(modified_image, 5)
+    modified_image = add_gray_noise_to_image(modified_image,  10, 25)
     return modified_image
 
 
@@ -234,7 +231,7 @@ def save_image(image):
 
 
 def test_main():
-    path = "/Users/loukielhorn/Library/Mobile Documents/com~apple~CloudDocs/Studium/3. Semester/Programmier-Challenge/Ai-Generated-Images/old_car.jpg"
+    path = "/Users/loukielhorn/Library/Mobile Documents/com~apple~CloudDocs/Studium/3. Semester/Programmier-Challenge/Ai-Generated-Images/girl_2.jpg"
     image = cv2.imread(path)
     modified_image = use_alog_on_image(image)
     image_name = os.path.basename(path)
