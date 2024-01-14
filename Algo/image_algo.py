@@ -1,14 +1,21 @@
+import os
 import uuid
 import cv2
 import numpy as np
 import piexif
-import os
 from PIL import Image, ExifTags
-from APIs.ai_image_detector import get_ai_image_scores
 
 
-def add_noise_to_image(image, mean=0, stddev=25):
-    # Adds noise to a cv2 image with the standard value 25
+def add_noise_to_image(image: np.ndarray, mean=0, stddev=25) -> np.ndarray:
+    """
+    Adds noise to a cv2 image with the standard value 25
+    Parameters:
+        image (cv2 image): The image to modify
+        mean (int): The mean of the noise
+        stddev (int): The standard deviation of the noise
+    Returns:
+        cv2 image: The modified image
+    """
     # Load the image
     image = image.astype(np.float32)
 
@@ -22,8 +29,16 @@ def add_noise_to_image(image, mean=0, stddev=25):
     return noisy_image
 
 
-def add_gray_noise_to_image(image, mean=0, stddev=25):
-    # Adds gray noise to a cv2 image with the specified mean and stddev
+def add_gray_noise_to_image(image: np.ndarray, mean=0, stddev=25) -> np.ndarray:
+    """
+    Adds gray noise to a cv2 image with the specified mean and stddev
+    Parameters:
+        image (cv2 image): The image to modify
+        mean (int): The mean of the noise
+        stddev (int): The standard deviation of the noise
+    Returns:
+        cv2 image: The modified image
+    """
     # Load the image
     image = image.astype(np.float32)
 
@@ -41,9 +56,16 @@ def add_gray_noise_to_image(image, mean=0, stddev=25):
     return noisy_image
 
 
-def add_median_color_noise_to_image(image, stddev=25, scale=0.5):
-    # Adds noise to a cv2 image with the color of the median color of the image and the specified stddev
-
+def add_median_color_noise_to_image(image: np.ndarray, stddev=25, scale=0.5) -> np.ndarray:
+    """
+    Adds noise to a cv2 image with the color of the median color of the image and the specified stddev
+    Parameters:
+        image (cv2 image): The image to modify
+        stddev (int): The standard deviation of the noise
+        scale (float): The scale of the noise
+    Returns:
+        cv2 image: The modified image
+    """
     # Calculate the median color of the image
     median_color = np.median(image, axis=(0, 1))
 
@@ -65,20 +87,44 @@ def add_median_color_noise_to_image(image, stddev=25, scale=0.5):
     return noisy_image
 
 
-def add_blur_to_image(image, strength=35):
+def add_blur_to_image(image: np.ndarray, strength=35) -> np.ndarray:
+    """
+    Adds blur to a cv2 image with the standard value 35
+    Parameters:
+        image (cv2 image): The image to modify
+        strength (int): The strength of the blur
+    Returns:
+        cv2 image: The modified image
+    """
     # Adds blur to a cv2 image with the standard value 35
     return cv2.GaussianBlur(image, (strength, strength), 0)
 
 
-def make_dark_pixels_brighter(image, brightness_increase=10, threshold=20):
-    # This method creates a black image mask an adds a brightness value to the mask and image
-    # This should emulate a camera which makes an image in the dark
+def make_dark_pixels_brighter(image: np.ndarray, brightness_increase=10, threshold=20)-> np.ndarray:
+    """
+    This method creates a black image mask an adds a brightness value to the mask and image
+    This should emulate a camera which makes an image in the dark
+    Parameters:
+        image (cv2 image): The image to modify
+        brightness_increase (int): The brightness increase
+        threshold (int): The threshold for the brightness increase
+    Returns:
+        cv2 image: The modified image
+
+    """
     dark_pixel_mask = np.all(image < threshold, axis=2)
     image[dark_pixel_mask] = np.minimum(255, image[dark_pixel_mask] + brightness_increase)
     return image
 
 
-def add_white_brush_with_alpha(image):
+def add_white_brush_with_alpha(image: np.ndarray) -> np.ndarray:
+    """
+    This method adds a white brush with alpha to the image
+    Parameters:
+        image (cv2 image): The image to modify
+    Returns:
+        cv2 image: The modified image
+    """
     # Create a white brush with alpha
     brush_color = (255, 255, 255)
     alpha = 0.25
@@ -93,8 +139,18 @@ def add_white_brush_with_alpha(image):
     return image
 
 
-def light_sharpening(image, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold=0):
-    """Return a sharpened version of the image, using an unsharp mask."""
+def light_sharpening(image: np.ndarray, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold=0) -> np.ndarray:
+    """
+    Return a sharpened version of the image, using an unsharp mask.
+    Parameters:
+        image (cv2 image): The image to modify
+        kernel_size (tuple): The kernel size
+        sigma (float): The sigma
+        amount (float): The amount
+        threshold (int): The threshold
+    Returns:
+        cv2 image: The modified image
+    """
     blurred = cv2.GaussianBlur(image, kernel_size, sigma)
     sharpened = float(amount + 1) * image - float(amount) * blurred
     sharpened = np.maximum(sharpened, np.zeros(sharpened.shape))
@@ -106,11 +162,18 @@ def light_sharpening(image, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold
     return sharpened
 
 
-def extreme_sharpening(image):
-    # Warning use with caution extreme sharping!
+def extreme_sharpening(image: np.ndarray) -> np.ndarray:
+    """
+    This method applies extreme sharpening to the image
+    WARNING!: use with caution extreme sharping!
+    Parameters:
+        image (cv2 image): The image to modify
+    Returns:
+        cv2 image: The modified image
+    """
     # Create a sharpening kernel
     kernel = np.array([[-1, -1, -1],
-                       [-1,  9, -1],
+                       [-1, 9, -1],
                        [-1, -1, -1]])
 
     # Apply the kernel to the image using filter2D
@@ -119,10 +182,18 @@ def extreme_sharpening(image):
     return sharpened_image
 
 
-def add_copyright_text(background_img):
+def add_copyright_text(background_img: np.ndarray) -> np.ndarray:
+    """
+    This method adds a watermark to the image
+    Parameters:
+        background_img (cv2 image): The image to modify
+    Returns:
+        cv2 image: The modified image
+    """
     overlay_img = cv2.imread("../resources/Copyright.png", cv2.IMREAD_UNCHANGED)
 
-    scale_percent = max(background_img.shape[0] / overlay_img.shape[0], background_img.shape[1] / overlay_img.shape[1]) + 50
+    scale_percent = max(background_img.shape[0] / overlay_img.shape[0],
+                        background_img.shape[1] / overlay_img.shape[1]) + 50
     width = int(overlay_img.shape[1] * scale_percent / 100)
     height = int(overlay_img.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -156,8 +227,14 @@ def add_copyright_text(background_img):
     return background_img
 
 
-def print_image_metadata(path):
-    # Prints all available metadata
+def print_image_metadata(path: str):
+    """
+    This function prints all available metadata of an image
+    Parameters:
+        path (str): The path to the image
+    Returns:
+        None
+    """
     image = Image.open(path)
 
     # Get all available image metadata
@@ -179,8 +256,14 @@ def print_image_metadata(path):
         print("This image has no metadata.")
 
 
-def add_fake_metadata(path):
-    # This function adds fake metadata to an image path
+def add_fake_metadata(path: str):
+    """
+    This function adds fake metadata to an image path
+    Parameters:
+        path (str): The path to the image
+    Returns:
+        None
+    """
     image = Image.open(path)
 
     exif_ifd = {piexif.ExifIFD.UserComment: 'Author: Max Mustermann'.encode()}
@@ -192,22 +275,34 @@ def add_fake_metadata(path):
     image.save(path, exif=exif_dat)
 
 
-def use_alog_on_image(image):
-    #TODO: COPYRIGHT_TEXT
+def use_alog_on_image(image: np.ndarray) -> np.ndarray:
     """
     This function applies modifications (such as blur and noise) to an image, adds fake metadata,
     and evaluates both the original and the modified images. The function calculates
     and prints the time taken for the image modification operations.
+
+    Parameters:
+        image (cv2 image): The image to modify
+    Returns:
+        cv2 image: The modified image
     """
     # print_image_metadata(path)
     modified_image = image
     modified_image = extreme_sharpening(modified_image)
     modified_image = add_white_brush_with_alpha(modified_image)
-    modified_image = add_gray_noise_to_image(modified_image,  10, 25)
+    modified_image = add_gray_noise_to_image(modified_image, 10, 25)
     return modified_image
 
 
-def use_algo_on_folder(folder_path):
+def use_algo_on_folder(folder_path: str):
+    """
+    This function applies the use_alog_on_image function to all images in a folder.
+
+    Parameters:
+        folder_path (str): The path to the folder
+    Returns:
+        None
+    """
     # List all files in the folder
     all_files = os.listdir(folder_path)
 
@@ -217,10 +312,18 @@ def use_algo_on_folder(folder_path):
     # Create full paths for each image file
     image_paths = [os.path.join(folder_path, file) for file in image_files]
     for image_path in image_paths:
-        use_alog_on_image(image_path)
+        image_to_modify = cv2.imread(image_path)
+        use_alog_on_image(image_to_modify)
 
 
-def save_image(image):
+def save_image(image: np.ndarray) -> str:
+    """
+    This function saves an image to the edited_images folder and returns the path to the image
+    Parameters:
+        image (cv2 image): The image to save
+    Returns:
+        str: The path to the saved image
+    """
     script_folder = os.path.dirname(os.path.realpath(__file__))
     image_folder = os.path.join(script_folder, "edited_images")
     if not os.path.exists(image_folder):
@@ -228,16 +331,3 @@ def save_image(image):
     image_path = image_folder + "/" + str(uuid.uuid4()) + ".jpg"
     cv2.imwrite(image_path, image)
     return image_path
-
-
-def test_main():
-    path = "/Users/loukielhorn/Library/Mobile Documents/com~apple~CloudDocs/Studium/3. Semester/Programmier-Challenge/Ai-Generated-Images/girl_2.jpg"
-    image = cv2.imread(path)
-    modified_image = use_alog_on_image(image)
-    image_name = os.path.basename(path)
-    print("New image scores from " + image_name + ":")
-    get_ai_image_scores(save_image(modified_image))
-
-
-if __name__ == '__main__':
-    test_main()

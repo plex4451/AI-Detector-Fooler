@@ -20,13 +20,21 @@ try:
     import numpy as np
     import cv2
     from Algo.text_algo import change_text
-    from Algo.imagealgo import use_alog_on_image, save_image
+    from Algo.image_algo import use_alog_on_image, save_image
     logging.debug('Externe Bibliotheken erfolgreich importiert.')
 except Exception as e:
     logging.error(f'Fehler beim Importieren von einer externen Bibliothek: {str(e)}')
 
 
-def send_message(message):
+def send_message(message: dict):
+    """
+    Send a message to stdout.
+
+    Parameters:
+        message (dict): The message to send
+    Returns:
+        None
+    """
     # Convert the message to a JSON-formatted string.
     json_message = json.dumps(message)
 
@@ -38,7 +46,15 @@ def send_message(message):
     sys.stdout.flush()
 
 
-def base64_to_cv2(base64_string):
+def base64_to_cv2(base64_string: str) -> np.ndarray:
+    """
+    Convert a base64 string to an OpenCV image.
+
+    Parameters:
+        base64_string (str): The base64 string
+    Returns:
+        img (cv2 image): The OpenCV image
+    """
     # Decode the base64 string into bytes
     img_data = base64.b64decode(base64_string)
 

@@ -21,6 +21,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 For more information, please refer to <https://choosealicense.com/licenses/mit>
-
-#Todo: Maybe Change the License to Apache 2.0 or something else 
-#Todo: More Info under https://choosealicense.com/licenses/
