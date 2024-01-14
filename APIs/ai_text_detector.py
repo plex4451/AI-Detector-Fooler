@@ -129,7 +129,15 @@ def __get_score_from_gptzero(text_to_check: str) -> float:
         print("GPTzero.me is not available!")
         return -1
 
-def __get_score_from_writer(text_to_check) -> float:
+def __get_score_from_writer(text_to_check: str) -> float:
+    """
+    This function gets the score from Writer.com
+
+    Parameters:
+        text_to_check (str): The text to check
+    Returns:
+        float: The score from Writer.com
+    """
     try:
         driver.get("https://writer.com/ai-content-detector/")
         # Input text and click submit button
