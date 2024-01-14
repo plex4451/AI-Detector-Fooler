@@ -5,12 +5,31 @@ from GUI.logik import *
 This file contains the GUI Window class and the setup for the GUI
 """
 
-
-# TODO: REWRITE LABELS
-# Variables
-# TODO: MAYBE REMOVE THEM LATER
-
 class Window(tk.Tk):
+    """
+    This class represents the GUI Window
+
+    Attributes:
+        image_AI (cv2.image): The image of the AI
+        image_AIF (cv2.image): The image of the AI after the modification
+        Frame_Main_Menu (tk.Frame): The main menu frame
+        Frame_AI (tk.Frame): The AI frame
+        TextboxAIT (tk.Text): The AI Textbox
+        TextboxAIFT (tk.Text): The AI Textbox after the modification
+        Label_Left (tk.Label): The left label
+        Label_Right (tk.Label): The right label
+        Label_Info_Menu (tk.Label): The menu label
+        tk_image (tk.PhotoImage): The image of the AI
+        Label_AII_Image (tk.Label): The AI image label
+        Label_AIFI_Image (tk.Label): The AI image label after the modification
+        Button_Text_Select (tk.Button): The text select button
+        Button_Image_Select (tk.Button): The image select button
+        Button_Exit_Menu (tk.Button): The exit button
+        Button_Convert (tk.Button): The convert button
+        Button_Download (tk.Button): The download button
+        Button_Upload (tk.Button): The upload button
+        Button_Back_Menu (tk.Button): The back button
+    """
     def __init__(self):
         super().__init__()
         self.geometry(f"{self.winfo_screenwidth()}x{self.winfo_screenheight()}")
