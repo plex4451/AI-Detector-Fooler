@@ -31,7 +31,16 @@ def add_noise_to_image(image: Image, mean=0, stddev=25) -> Image:
     return noisy_image
 
 
-def add_gray_noise_to_image(image, mean=0, stddev=25):
+def add_gray_noise_to_image(image: Image, mean=0, stddev=25) -> Image:
+    """
+    Adds gray noise to a cv2 image with the specified mean and stddev
+    Parameters:
+        image (cv2 image): The image to modify
+        mean (int): The mean of the noise
+        stddev (int): The standard deviation of the noise
+    Returns:
+        cv2 image: The modified image
+    """
     # Adds gray noise to a cv2 image with the specified mean and stddev
     # Load the image
     image = image.astype(np.float32)
@@ -119,7 +128,7 @@ def extreme_sharpening(image):
     # Warning use with caution extreme sharping!
     # Create a sharpening kernel
     kernel = np.array([[-1, -1, -1],
-                       [-1,  9, -1],
+                       [-1, 9, -1],
                        [-1, -1, -1]])
 
     # Apply the kernel to the image using filter2D
@@ -131,7 +140,8 @@ def extreme_sharpening(image):
 def add_copyright_text(background_img):
     overlay_img = cv2.imread("../resources/Copyright.png", cv2.IMREAD_UNCHANGED)
 
-    scale_percent = max(background_img.shape[0] / overlay_img.shape[0], background_img.shape[1] / overlay_img.shape[1]) + 50
+    scale_percent = max(background_img.shape[0] / overlay_img.shape[0],
+                        background_img.shape[1] / overlay_img.shape[1]) + 50
     width = int(overlay_img.shape[1] * scale_percent / 100)
     height = int(overlay_img.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -211,7 +221,7 @@ def use_alog_on_image(image):
     modified_image = image
     modified_image = extreme_sharpening(modified_image)
     modified_image = add_white_brush_with_alpha(modified_image)
-    modified_image = add_gray_noise_to_image(modified_image,  10, 25)
+    modified_image = add_gray_noise_to_image(modified_image, 10, 25)
     return modified_image
 
 
