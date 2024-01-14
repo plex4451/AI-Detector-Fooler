@@ -1,11 +1,9 @@
+import os
 import uuid
 import cv2
-import numpy
 import numpy as np
 import piexif
-import os
 from PIL import Image, ExifTags
-from APIs.ai_image_detector import get_ai_image_scores
 
 
 def add_noise_to_image(image: np.ndarray, mean=0, stddev=25) -> np.ndarray:
