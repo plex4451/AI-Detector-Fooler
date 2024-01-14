@@ -44,6 +44,11 @@ class Window(tk.Tk):
         self._setup()
 
     def _setup(self):
+        """
+        This function setups the GUI
+        Returns:
+            None
+        """
         self.setup_main_menu()
         self.setup_ai_frame()
         # self.setup_image_frame()
