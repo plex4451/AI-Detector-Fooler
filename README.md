@@ -35,11 +35,11 @@ Tell people where they can go to for help. It can be any combination of an issue
 If you have ideas for releases in the future, it is a good idea to list them in the README.
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+We are open to contributors, and there are no specific prerequisites for contributing to this project. Whether you're interested in fixing bugs, implementing new features, or suggesting improvements, your contributions are welcome!
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Feel free to fork the project, create your branch, make your changes, and submit a pull request. If you're unsure where to start or have questions, don't hesitate to reach out.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+For more Information refer to the [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Authors and acknowledgment
 This project is created by the Informati Cup 2023 Team:
@@ -63,3 +63,5 @@ For more Information refer to the [LICENSE.md](LICENSE.md) File.
 
 ## Project status
 Development for this project has stopped. Feel free to fork the project and continue its development.
+
+For more Information refer to the 'Notice!' topic in the [CONTRIBUTING.md](CONTRIBUTING.md) File.
