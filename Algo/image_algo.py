@@ -297,6 +297,14 @@ def use_alog_on_image(image: np.ndarray) -> np.ndarray:
 
 
 def use_algo_on_folder(folder_path: str):
+    """
+    This function applies the use_alog_on_image function to all images in a folder.
+
+    Parameters:
+        folder_path (str): The path to the folder
+    Returns:
+        None
+    """
     # List all files in the folder
     all_files = os.listdir(folder_path)
 
