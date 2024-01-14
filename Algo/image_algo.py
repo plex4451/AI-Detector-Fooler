@@ -17,7 +17,6 @@ def add_noise_to_image(image: Image, mean=0, stddev=25) -> Image:
     Returns:
         cv2 image: The modified image
     """
-    # Adds noise to a cv2 image with the standard value 25
     # Load the image
     image = image.astype(np.float32)
 
@@ -41,7 +40,6 @@ def add_gray_noise_to_image(image: Image, mean=0, stddev=25) -> Image:
     Returns:
         cv2 image: The modified image
     """
-    # Adds gray noise to a cv2 image with the specified mean and stddev
     # Load the image
     image = image.astype(np.float32)
 
@@ -60,7 +58,6 @@ def add_gray_noise_to_image(image: Image, mean=0, stddev=25) -> Image:
 
 
 def add_median_color_noise_to_image(image: Image, stddev=25, scale=0.5) -> Image:
-    # Adds noise to a cv2 image with the color of the median color of the image and the specified stddev
     """
     Adds noise to a cv2 image with the color of the median color of the image and the specified stddev
     Parameters:
@@ -104,9 +101,18 @@ def add_blur_to_image(image: Image, strength=35) -> Image:
     return cv2.GaussianBlur(image, (strength, strength), 0)
 
 
-def make_dark_pixels_brighter(image, brightness_increase=10, threshold=20):
-    # This method creates a black image mask an adds a brightness value to the mask and image
-    # This should emulate a camera which makes an image in the dark
+def make_dark_pixels_brighter(image: Image, brightness_increase=10, threshold=20)-> Image:
+    """
+    This method creates a black image mask an adds a brightness value to the mask and image
+    This should emulate a camera which makes an image in the dark
+    Parameters:
+        image (cv2 image): The image to modify
+        brightness_increase (int): The brightness increase
+        threshold (int): The threshold for the brightness increase
+    Returns:
+        cv2 image: The modified image
+
+    """
     dark_pixel_mask = np.all(image < threshold, axis=2)
     image[dark_pixel_mask] = np.minimum(255, image[dark_pixel_mask] + brightness_increase)
     return image
