@@ -6,8 +6,15 @@ from selenium.common.exceptions import StaleElementReferenceException
 import time
 
 
-def setup_selenium():
-    # Initialize the web driver with options
+def setup_selenium() -> (webdriver.Chrome, WebDriverWait):
+    """
+    This function sets up the Selenium driver and wait
+    The driver is set to headless mode.
+
+    Returns:
+        driver (webdriver.Chrome): The Selenium driver
+        wait (WebDriverWait): The Selenium wait
+    """
     selenium_options = webdriver.ChromeOptions()
     selenium_options.add_argument('--headless')
     driver = webdriver.Chrome(options=selenium_options)
@@ -15,7 +22,17 @@ def setup_selenium():
     return driver, wait
 
 
-def wait_element(driver, wait, element_xpath):
+def wait_element(driver: webdriver.Chrome, wait: WebDriverWait, element_xpath: str) -> webdriver.remote.webelement.WebElement:
+    """
+    This function waits for an element to be present and returns it.
+
+    Parameters:
+        driver (webdriver.Chrome): The Selenium driver
+        wait (WebDriverWait): The Selenium wait
+        element_xpath (str): The xpath of the element
+    Returns:
+        element (selenium.webdriver.remote.webelement.WebElement): The Selenium element
+    """
     wait.until(Expected.presence_of_element_located((By.XPATH, element_xpath)))
     element = driver.find_element(By.XPATH, element_xpath)
     return element
