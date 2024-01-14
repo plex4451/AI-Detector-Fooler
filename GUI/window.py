@@ -50,6 +50,11 @@ class Window(tk.Tk):
         self._select_menu_objects()
 
     def setup_ai_frame(self):
+        """
+        This function setups the AI frame
+        Returns:
+            None
+        """
         # Ihre Code-Logik für Frame_Text hier
         # Frame-Text
         self.Frame_AI = Frame(self, width=str(self.winfo_screenwidth()), height=str(self.winfo_screenheight()))
