@@ -116,8 +116,16 @@ def __get_score_from_isitai(image_path: str) -> float:
         return -1
 
 
-def __get_score_from_hivemoderation(image_path) -> float:
-    # Gets score from hivemoderation.com
+def __get_score_from_hivemoderation(image_path: str) -> float:
+    """
+    This function gets the score from Hivemoderation.com
+
+    Parameters:
+        image_path (str): The path to the image
+    Returns:
+        float: The score from Hivemoderation.com
+
+    """
     try:
         driver.get("https://hivemoderation.com/ai-generated-content-detection")
         time.sleep(3)
