@@ -75,12 +75,10 @@ To start the project, follow these steps:
 4. To close the program, click the X in the top right corner of the window or click the Exit Button in the Main Menu
     
    
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Adittional Extensions
+There is an extension for the Google Chrome and Chromium Browsers available for this project. It allows you to convert text and images while surfing the web.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
+For more Information refer to the [AI-Fooler-Browser-Extension](https://gitlab.uni-hannover.de/informaticup-2024/gruppe-7/ai-fooler-browser-extension) project.
 ## Contributing
 We are open to contributors, and there are no specific prerequisites for contributing to this project. Whether you're interested in fixing bugs, implementing new features, or suggesting improvements, your contributions are welcome!
 
