@@ -148,8 +148,17 @@ def __get_score_from_hivemoderation(image_path: str) -> float:
         return -1
 
 
-def get_ai_image_scores(path):
+def get_ai_image_scores(path: str) -> list[float]:
+    """
+    This function gets the scores from all the APIs
+
+    Parameters:
+        path (str): The path to the image
+    Returns:
+        list: The scores from all the APIs
+    """
     scores = []
     scores.append(__get_score_from_hivemoderation(path))
     scores.append(__get_score_from_illuminarty(path))
     scores.append(__get_score_from_isitai(path))
+    return scores
