@@ -20,7 +20,7 @@ try:
     import numpy as np
     import cv2
     from Algo.text_algo import change_text
-    from Algo.imagealgo import use_alog_on_image, save_image
+    from Algo.image_algo import use_alog_on_image, save_image
     logging.debug('Externe Bibliotheken erfolgreich importiert.')
 except Exception as e:
     logging.error(f'Fehler beim Importieren von einer externen Bibliothek: {str(e)}')

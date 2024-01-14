@@ -1,7 +1,7 @@
 #Library
 from tkinter import *
 from Algo.text_algo import *
-from Algo.imagealgo import * 
+from Algo.image_algo import *
 from tkinter import filedialog
 from PIL import Image,ImageTk
 import cv2

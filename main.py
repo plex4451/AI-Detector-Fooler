@@ -1,7 +1,7 @@
 import sys
 import threading
 from Enums.filetype import *
-from Algo.imagealgo import *
+from Algo.image_algo import *
 from Algo.text_algo import *
 from APIs.ai_text_detector import get_ai_text_scores as get_scores_txt
 from APIs.ai_image_detector import *

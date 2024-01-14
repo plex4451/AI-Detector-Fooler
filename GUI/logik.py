@@ -1,6 +1,6 @@
 from __future__ import annotations
 from Algo.text_algo import *
-from Algo.imagealgo import *
+from Algo.image_algo import *
 from tkinter import filedialog
 from tkinter import *
 from PIL import Image, ImageTk
