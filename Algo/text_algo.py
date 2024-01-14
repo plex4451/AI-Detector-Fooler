@@ -1,104 +1,152 @@
-#Variables
-#max_percentage: Sets the maximum of percentage the original_txt is changed
-max_percentage = 100
+""""
+This file contains all the logic for the Text-Algo
+for changing the text to fool the AI
+"""
+max_percentage = 200
+
+def compare_two_strings(first_txt: str, second_txt: str):
+    """
+    Compares two Strings and prints the percentage of difference
+
+    Parameters:
+        first_txt (str): The original Text
+        second_txt (str): The modified Text
+    Returns:
+        None
+    """
+    num_difference = 0
+    for i in range(0, len(first_txt)):
+        if first_txt[i] != second_txt[i]:
+            num_difference += 1
+    percentage_change = (num_difference / len(first_txt)) * 100
+    print("The Text is changed to "f"{percentage_change}%")
 
 
+def replace_last_letter(txt: str, letter: str, replacement: str) -> str:
+    """
+    Replaces the last valid letter in the text
+
+    Parameters:
+        txt (str): The Text to modify
+        letter (str): The letter to replace
+        replacement (str): The replacement for the letter
+    Returns:
+        str: The modified Text with the replaced letter
+    """
+    last_letter_index = txt.rfind(letter)
+    return txt[:last_letter_index] + replacement + txt[last_letter_index + 1:]
 
 
-#Debug-Info-Function: Prints information about the String
-def debug_info_text(original_txt: str,final_txt: str):
-    x = 0
-    for i in range(0,len(original_txt)):
-        if(original_txt[i]!=final_txt[i]):
-            x += 1
-    percentage_change = (x/len(original_txt))*100
-    print("The Text is changed to {}%".format(percentage_change))
-
-
-#Replace-Better: Replaces evenly the letters in the text dependend on the max_percentage variable
-def replace_better(txt: str, letter: str, replacment: str) -> str:
-
+def replace_better(txt: str, letter: str, replacement: str) -> str:
+    """
+    Replaces letters in the text evenly dependent on the max_percentage variable
+    
+    Parameters:
+        txt (str): The Text to modify
+        letter (str): The letter to replace
+        replacement (str): The replacement for the letter
+    Returns:
+        str: The modified Text
+    """
     letter_count = txt.count(letter)
-    max_possibble_percentage = (letter_count/len(txt))*100
-    if(max_possibble_percentage>max_percentage):
-        replace_count = round((max_percentage/max_possibble_percentage)*letter_count)
+    if letter_count == 0:
+        return txt
+
+    max_possible_percentage = (letter_count / len(txt)) * 100
+    if max_possible_percentage > max_percentage:
+        replace_count = round((max_percentage / max_possible_percentage) * letter_count)
     else:
         replace_count = letter_count
 
-
-
-    print("{} letters to replace!".format(replace_count))
-    print("{} letters can be replaced!".format(letter_count))
+    print(f"{replace_count} letters to replace!")
+    print(f"{letter_count} letters can be replaced!")
     count = 0
-    goal_count = round(letter_count/replace_count)
+    goal_count = round(letter_count / replace_count + 1)
 
-
-    txt_list = list(txt)
-    for i in range(0, len(txt)):
-        if ((txt_list[i] == letter)):
+    final_txt = ""
+    for char in txt:
+        if char == letter:
             count += 1
-            letter_count -= 1
-            if((letter_count == 0) and (count>0)) or (count == goal_count):
-                txt_list[i] = replacment
+            if count == goal_count:
+                final_txt += replacement
                 count = 0
-    txt = "".join(txt_list)
-    print("{} letters replaced!".format(txt.count(replacment)))
+                continue
 
-    return txt
+        final_txt += char
 
+    final_txt = replace_last_letter(final_txt, letter, replacement)
 
+    print(f"{final_txt.count(replacement)} letters replaced!")
 
-
-
-
-
+    return final_txt
 
 
+def change_letter_similar_letter(txt: str) -> str:
+    """
+    Replaces letters with similar letters from different alphabets
+
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+    """
+    return replace_better(txt, "a", "а")
 
 
-
-
-
-
-#Exchange-Char-Same-Char: Replaces letters with identical letters
-def change_letter_simillar_letter(txt: str) -> str:
-    txt = replace_better(txt,"a","а")
-    #txt =replace_better(txt,"a","a\ufeff")
-    return(txt)
-
-#Exchange-Char-Symbol: Replaces letters with similar symbols
 def change_letter_symbol(txt: str) -> str:
-    txt = replace_better(txt,"a","@")
-    return(txt)
+    """
+    Replaces letters with similar symbols
+
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+    """
+    return replace_better(txt, "a", "@")
 
 
-
-# Invisible Char: Replaces Space with a invisible char
 def change_invisible_char(txt: str) -> str:
-    txt = replace_better(txt," ", " ")
-    return (txt)
+    """
+    Replaces Spaces with non-breaking Spaces
+
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+
+    """
+    return replace_better(txt, " ", " ")
 
 
-# Leetspeak-Algo (replaces letters with numbers)
 def change_leet_speak(txt: str) -> str:
-    txt = replace_better(txt,"a", "4")
-    txt = replace_better(txt,"A", "4")
-    txt = replace_better(txt,"o", "0")
-    txt = replace_better(txt,"O", "0")
-    txt = replace_better(txt,"t", "7")
-    txt = replace_better(txt,"T", "7")
-    txt = replace_better(txt,"s", "5")
-    txt = replace_better(txt,"S", "5")
+    """
+    Leetspeak-Algo (replaces letters with numbers)
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+    """
+    replacements = {
+        "a": "4", "A": "4",
+        "o": "0", "O": "0",
+        "t": "7", "T": "7",
+        "s": "5", "S": "5"
+    }
+    for original, replacement in replacements.items():
+        txt = replace_better(txt, original, replacement)
     return txt
 
-#Main Methode to change txt (Deactivate certain Methods with a "#")
+
 def change_text(txt: str) -> str:
-    original_txt = txt
-    txt = change_letter_simillar_letter(txt)
-    #txt = change_invisible_char(txt)
-    #txt = change_letter_symbol(txt)
-    #txt = change_leet_speak(txt)
-    return (txt)
-
-
-
+    """
+   Modify the Text with a combination of Algos
+    Parameters:
+        txt (str): The Text to modify
+    Returns:
+        str: The modified Text
+    """
+    modified_txt = change_letter_similar_letter(txt)
+    # modified_txt = change_invisible_char(modified_txt)
+    # modified_txt = change_letter_symbol(modified_txt)
+    # modified_txt = change_leet_speak(modified_txt)
+    return modified_txt
