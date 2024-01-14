@@ -35,8 +35,16 @@ def __get_score_from_grammica(text_to_check: str) -> float:
     return -1
 
 
-def __get_score_from_scribbr(text_to_check) -> float:
-    # Gets score from Scribbr.com -> only english!
+def __get_score_from_scribbr(text_to_check: str) -> float:
+    """
+    This function gets the score from Scribbr.com
+
+    Parameters:
+        text_to_check (str): The text to check
+    Returns:
+        float: The score from Scribbr.com
+
+    """
     try:
         driver.get("https://www.scribbr.com/ai-detector/")
 
