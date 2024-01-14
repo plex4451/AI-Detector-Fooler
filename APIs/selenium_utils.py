@@ -22,7 +22,7 @@ def setup_selenium() -> (webdriver.Chrome, WebDriverWait):
     return driver, wait
 
 
-def wait_element(driver: webdriver.Chrome, wait: WebDriverWait, element_xpath: str) -> webdriver.remote.webelement.WebElement:
+def wait_element(driver: webdriver.Chrome, wait: WebDriverWait, element_xpath: str):
     """
     This function waits for an element to be present and returns it.
 
@@ -38,7 +38,16 @@ def wait_element(driver: webdriver.Chrome, wait: WebDriverWait, element_xpath: s
     return element
 
 
-def wait_element_css(wait, css_path):
+def wait_element_css(wait: WebDriverWait, css_path: str):
+    """
+    This function waits for an element to be present and returns it (for CSS elements).
+
+    Parameters:
+        wait (WebDriverWait): The Selenium wait
+        css_path (str): The CSS path of the element
+    Returns:
+        element (selenium.webdriver.remote.webelement.WebElement): The Selenium element
+    """
     element = wait.until(Expected.presence_of_element_located((By.CSS_SELECTOR, css_path)))
     return element
 
