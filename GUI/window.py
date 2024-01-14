@@ -159,7 +159,7 @@ class Window(tk.Tk):
 
         # Change Config of Labels
         self.Label_Left.config(text="Insert a AI generated text here:")
-        self.Label_Right.config(text="Result of the AI generated text:")
+        self.Label_Right.config(text="Result of the text algorithm:")
 
         # Place Textboxes
         self.TextboxAIFT.place(x=str(1080), y=str(40), width=str(800), height=str(700))
@@ -184,7 +184,7 @@ class Window(tk.Tk):
 
         # Change Config of Labels
         self.Label_Left.config(text="Upload a AI generated Image here:")
-        self.Label_Right.config(text="Result of the AI generated Image:")
+        self.Label_Right.config(text="Result of the image algorithm:")
 
         # Place Images
         self.Label_AII_Image.place(x=str(40), y=str(40), width=str(800), height=str(700))
