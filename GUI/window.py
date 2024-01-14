@@ -88,7 +88,11 @@ class Window(tk.Tk):
         self.Label_AIFI_Image.place(x=str(1080), y=str(40), width=str(800), height=str(700))
 
     def setup_main_menu(self):
-        # Ihre Code-Logik für Frame_Main_Menu hier
+        """
+        This function setups the main menu
+        Returns:
+            None
+        """
         self.Frame_Main_Menu = Frame(self, width=str(self.winfo_screenwidth()), height=str(self.winfo_screenheight()))
 
         # Label
@@ -101,15 +105,13 @@ class Window(tk.Tk):
         self.Button_Exit_Menu = Button(self.Frame_Main_Menu, text='Exit', command=exit_object)
 
         # Packing the Objects
-        # TODO: PACK
         self.Frame_Main_Menu.pack()
         self.Button_Text_Select.place(x=str(860), y=str(400), width=str(200), height=str(50))
         self.Button_Image_Select.place(x=str(860), y=str(500), width=str(200), height=str(50))
         self.Button_Exit_Menu.place(x=str(860), y=str(600), width=str(200), height=str(50))
         self.Label_Info_Menu.place(x=str(860), y=str(200), width=str(200), height=str(50))
 
-    # Objects-Selector-Methods
-    # Hides every non Text object and showes every Text object
+    # Object selection functions
     def _select_text_objects(self):
         """
         This function hides every non Text object and shows every Text object
