@@ -10,52 +10,51 @@ import time
 import cv2
 
 
-
-
 # Test-Txt: This Method test the created txt with the apis
 def test_txt(txt: str):
     points_array = get_scores_txt(txt)
-    detector_list = ["Grammica.com","Scribbr.com","Detecting-ai.com Methode-A","Detecting-ai.com Methode-B","Writer.com","UKNOWN","UKNOWN","UKNOWN","UKNOWN","UKNOWN"]
+    detector_list = ["Grammica.com", "Scribbr.com", "Detecting-ai.com Methode-A", "Detecting-ai.com Methode-B",
+                     "Writer.com", "UKNOWN", "UKNOWN", "UKNOWN", "UKNOWN", "UKNOWN"]
     counter = 0
     for i in points_array:
-        print(("{name:} score: {score:}%".format(name = detector_list[counter], score = i)))
+        print(("{name:} score: {score:}%".format(name=detector_list[counter], score=i)))
         counter += 1
 
 
-
-
 def main_method():
-    # ERROR Handeling with mismatching Filetypes and UKNOWN Filetypes
-    if ((inputtype != outputtype) or ((inputtype == Filetype.UNKNOWN) or (outputtype == Filetype.UNKNOWN))):
-        if (inputtype != outputtype):
-            print("ERROR 001: Output-type and Input-type are mismatching!")
-            exit(1)
-        else:
+    # ERROR Handeling with mismatching Filetypes (not the sam) and UKNOWN Filetypes
+    if ((input_type == Filetype.TXT or output_type == Filetype.TXT) and (output_type != input_type)) or (
+            (input_type == Filetype.UNKNOWN) or (output_type == Filetype.UNKNOWN)):
+        if input_type == Filetype.UNKNOWN or output_type == Filetype.UNKNOWN:
             print("ERROR 002: Input-type or Output-type is not known to this Program!")
             exit(2)
+        else:
+            print("ERROR 001: Output-type and Input-type are mismatching!")
+            exit(1)
+
     else:
-        if(inputtype == Filetype.TXT):
+        if input_type == Filetype.TXT:
             start_time = time.time()
-            file = open(inputpath,"r",encoding="utf-8")
+            file = open(input_path, "r", encoding="utf-8")
             text = file.read()
             file.close()
             final_text = change_text(text)
             try:
-                file = open(outputpath, "x", encoding='utf-8')
+                file = open(output_path, "x", encoding='utf-8')
             except:
-                file = open(outputpath, "w", encoding='utf-8')
+                file = open(output_path, "w", encoding='utf-8')
             file.write(final_text)
             file.close()
             end_time = time.time()
-            elapsed_time = end_time - start_time    
-            
+            elapsed_time = end_time - start_time
+
             print("----------------------------------------------------------------------------")
             print("Text Algo used in: ", elapsed_time)
             print("----------------------------------------------------------------------------")
 
-            if(debug):
+            if (debug):
                 print("----------------------------------------------------------------------------")
-                #test_txt(final_text)
+                # test_txt(final_text)
                 print("test_txt is disabled!")
                 print("----------------------------------------------------------------------------")
                 compare_two_strings(text, final_text)
@@ -63,19 +62,20 @@ def main_method():
                 print(final_text)
                 print("----------------------------------------------------------------------------")
             print("Text-ALGO Completed")
-        
-        else: 
+
+        else:
             start_time = time.time()
-            image = cv2.imread(inputpath)
+            image = cv2.imread(input_path)
             final_image = use_alog_on_image(image)
-            cv2.imwrite(outputpath, final_image)
+            cv2.imwrite(output_path, final_image)
             end_time = time.time()
-            elapsed_time = end_time - start_time    
+            elapsed_time = end_time - start_time
 
             print("----------------------------------------------------------------------------")
             print("Image Algo used in: ", elapsed_time)
             print("----------------------------------------------------------------------------")
             print("Image-Algo Completed!")
+
 
 # MAIN-METHOD
 
@@ -83,16 +83,16 @@ def main_method():
 debug = True
 # ERROR Handleing with missing arguments
 try:
-    inputpath = sys.argv[1]
-    outputpath = sys.argv[2]
+    input_path = sys.argv[1]
+    output_path = sys.argv[2]
 except:
     print("ERROR 003: No given Arguments! The program needs two arguments -> main.py <inputpath> <outputpath>")
     exit(3)
-inputtype = get_file_type(inputpath.split('.')[-1].upper())
-outputtype = get_file_type(outputpath.split('.')[-1].upper())
+input_type = get_file_type(input_path.split('.')[-1].upper())
+output_type = get_file_type(output_path.split('.')[-1].upper())
 print("----------------------------------------------------------------------------")
-print("Filetype of the Input: {}".format(inputtype))
-print("Filetype of the Output: {}".format(outputtype))
+print("Filetype of the Input: {}".format(input_type))
+print("Filetype of the Output: {}".format(output_type))
 print("----------------------------------------------------------------------------")
 main_thread = threading.Thread(target=main_method())
 main_thread.start()
