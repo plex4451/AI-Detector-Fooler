@@ -314,10 +314,18 @@ def use_algo_on_folder(folder_path: str):
     # Create full paths for each image file
     image_paths = [os.path.join(folder_path, file) for file in image_files]
     for image_path in image_paths:
-        use_alog_on_image(image_path)
+        image_to_modify = cv2.imread(image_path)
+        use_alog_on_image(image_to_modify)
 
 
 def save_image(image: np.ndarray) -> str:
+    """
+    This function saves an image to the edited_images folder and returns the path to the image
+    Parameters:
+        image (cv2 image): The image to save
+    Returns:
+        str: The path to the saved image
+    """
     script_folder = os.path.dirname(os.path.realpath(__file__))
     image_folder = os.path.join(script_folder, "edited_images")
     if not os.path.exists(image_folder):
