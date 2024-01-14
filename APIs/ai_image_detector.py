@@ -13,8 +13,16 @@ driver, wait = setup_selenium()
 test_image_url = "/Users/loukielhorn/Downloads/8-4fqx1SIbpiFAChp.png"
 
 
-def __get_score_from_huggingface(image_path) -> float:
-    # Gets score from Huggingface.co
+def __get_score_from_huggingface(image_path: str) -> float:
+    """
+    This function gets the score from Huggingface.co
+
+    Parameters:
+        image_path (str): The path to the image
+    Returns:
+        float: The score from Huggingface.co
+
+    """
     try:
         driver.get("https://huggingface.co/spaces/umm-maybe/AI-image-detector")
 
