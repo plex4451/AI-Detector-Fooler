@@ -1,0 +1,113 @@
+Kriterien:
+- Geschwindigkeit der Generierung
+- Benutzerfreundlichkeit
+- Qualität des Textes (Lesbarkeit):
+    - zu viele Fachbegriffe?
+    - zu kompliziert formuliert?
+    - zu viele Wiederholungen?
+    - grammatikalisch korrekt?
+    - Rechtschreibfehler vorhanden?
+- Fähigkeiten in bestimmten Fachbereichen:
+    - Mathe
+    - Texte zusammenfassen
+    - Kreativität
+- Einhalten von Bedingungen
+
+
+Benutzerfreundlichkeit:
+
+PopAi: - erfordert Account-Erstellung und bietet verschiedenen Abonnementoptionen
+       - klar strukturierte Website mit direkter Interaktionsoption über ein durchgängig eingeblendetes Textfeld
+       - Nutzer kann zwischen verschiedenen Funktionen wie Chatbot, "Chat with Document" und "Create with AI" wählen
+       - gute Übersicht über verschiedene Möglichkeiten
+            - sobald eine ausgewählt, gibt es weitere Möglichkeiten → wirkt im ersten Moment überfordernd, jedoch sinnvoll sortiert
+
+ChatGPT: - erfordert Account-Erstellung, Möglichkeit zum Upgrade auf GPT-4 durch Abonnement
+         - benutzerfreundliche Oberfläche nach Anmeldung, einfacher Zugriff auf Chats
+         - schnelle Erstellung neuer Chats mit vorgeschlagenen Fragen
+         - klare Leiste für Chat-Übersicht und Accountverwaltung
+
+Writesonic: - Account-Erstellung erforderlich, bietet unterschiedliche Abo-Optionen
+            - Informative Website mit Videoerklärungen, klare Darstellung der Produkte und Preise
+            - nach dem Einloggen wird automatisch Bibliothek geöffnet
+                -> Bibliothek zeigt eine Begrüßung des Nutzers, Möglichkeit neuen Chat zu starten oder ein neues Dokument zu erstellen,
+                   einen Schnellzugriff mit allen Möglichkeiten und persönliche Vorschläge
+
+Copy.ai: - Account erforderlich, nach 2000 Worten Abo nötig
+         - Vorstellung von Copy.ai auf Website
+         - eingeloggt erscheint direkt letzter Chat, bzw. neuer Chat
+         - unter Texteingabefeld verschiedene Möglichkeiten: Datei hochladen, Vorschau Prompt Möglichkeiten, Brand Voice hinzufügen
+
+
+
+Qualität des Textes:
+
+- allgemein generieren alle Plattformen einen gut lesbaren Text, der grammatikalisch korrekt und ohne Rechtschreibfehler ist
+- Fachbegriffe werden, wenn nötig verwendet, die Texte jedoch dadurch nicht kompliziert gestaltet
+
+- ChatGPT nummeriert manchmal seine Stichpunkte falsch
+- Writesonic (Chatsonic) zum Teil aus dem Internet stammende Antworten
+- PopAi antwortet manchmal erst auf Englisch, auf Nachfrage aber auch auf Deutsch
+
+
+
+Fähigkeiten in bestimmten Fachbereichen:
+
+Mathe:
+
+- KIs sollten Grundlegende mathematische Aufgaben lösen: Umfang Kreis berechnen, Gleichung lösen, Brüche addieren, Primzahlen bis 50 aufzählen, Integral berechnen
+- alle Plattformen boten korrekte Lösungen
+    - nur Writesonic konnte die Gleichung nicht lösen, versuchte Lösung aus Internet, bei drei Versuchen aber nur einer richtig
+- manche KIs detailliertere Lösungen als andere
+    - PopAi und Copy.ai herausgestochen
+
+Texte zusammenfassen:
+
+ChatGPT: 1. Durchlauf: nur 2/4 Schlüsselpunkten vorhanden
+         2. Durchlauf: 4/6 Schlüsselpunkte vorhanden, allerdings nicht vollständig
+         3. Durchlauf: nur ein Schlüsselpunkt fehlt
+
+PopAi: 1. Durchlauf: nur ein Schlüsselpunkt fehlt
+       2. Durchlauf: 4/6 Schlüsselpunkte genannt
+       3. Durchlauf: nur ein Schlüsselpunkt fehlt
+
+Writesonic: 1. Durchlauf: 3/6 Schlüsselpunkte vorhanden, ergänzt Zusammenfassung mit Informationen aus Internet (nennt Quellen)
+            2. Durchlauf: 3/6 Schlüsselpunkte vorhanden
+            3. Durchlauf: 3/6 Schlüsselpunkte vorhanden, viel irrelevanter ergänzter Inhalt aus Internet (nennt Quellen)
+
+Copy.ai: 1. Durchlauf: 4/6 Schlüsselpunkte vorhanden
+         2. Durchlauf: 3/6 Schlüsselpunkte vorhanden
+         3. Durchlauf: 3/6 Schlüsselpunkte vorhanden, Zusammenfassung in Stichpunkten
+
+Fazit:
+- keine KI hat alle Schlüsselpunkte
+    - ich habe andere Ansichten was wichtig ist, als die KIs
+- PopAi am besten
+- Writesonic hilfreich, wenn man weitere Informationen erhalten möchte, nur zum Zusammenfassen ansonsten eher nicht hilfreich
+- ChatGPT und Copy.ai ungefähr gleich gut
+- man sollte KI Zusammenfassung überprüfen und Aspekte, auf die man selbst Wert legt möglicherweise ergänzen
+
+Kreativität:
+
+- keine der Plattform hat sich an die gewünschten 10 Sätze gehalten, alle überschreiten sie
+
+ChatGPT: 18 - 15 - 15
+- zwei von drei Geschichten haben denselben ersten Satz
+- zwei Geschichten sehr ähnlich
+- schlechte Anknüpfung an vorgegebene Sätze
+- teilweise gleiche Namen
+
+PopAi: 15 - 27 - 18
+- knüpft gut an vorgegebene Sätze an
+- Geschichten sind verschieden, lediglich der Fokus (Freundschaft) ist gleich
+- Verwendung verschiedener Namen
+
+Writesonic: 17 - 28 - 19
+- knüpft nicht gut an vorgegebene Sätze an
+- mehrmals selbe Namen verwendet
+- zwei von drei Geschichten fast gleich
+
+Copy.ai: 13 - 13 - 16
+- knüpft gut an vorgegebene Sätze an
+- Geschichten komplett unterschiedlich, keinerlei Ähnlichkeiten
+- keine Verwendung von Namen
