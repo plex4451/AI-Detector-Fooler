@@ -104,7 +104,15 @@ def __get_score_from_detectingai(text_to_check: str)-> float:
         print("Detecting-ai.com is not available!")
         return -1
 
-def __get_score_from_gptzero(text_to_check) -> float:
+def __get_score_from_gptzero(text_to_check: str) -> float:
+    """
+    This function gets the score from GPTzero.me
+
+    Parameters:
+        text_to_check (str): The text to check
+    Returns:
+        float: The score from GPTzero.me
+    """
     try:
         driver.get("https://gptzero.me/")
         # Input text and click submit button
