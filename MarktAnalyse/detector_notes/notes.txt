@@ -1,0 +1,113 @@
+Einleitung:
+Unser Programm soll zwei Hauptziele verfolgen:
+1.: Die Datei (Text/Bild) soll so minimal vom Original abweichen wie möglich.
+2.: Die Veränderung soll, falls möglich nicht mit dem bloßen Auge zu erkennen sein.
+
+
+Man hat bei der Marktanalyse der KI-Detectoren gesehen, dass diese falsche Aussagen treffen, 
+sobald der Text Anzeichen von Gramatik- bzw. Rechtschreibfehlern aufweist.
+Daher versuchen wir diese schwachstelle auszunutzen, da Gramatik- bzw. Rechtschreibfehler relativ
+subtil sind und wir unser erstes Hauptziel damit relativ gut umsetzten können. 
+Dabei versuchen wir auch das zweite Hauptziel zu erreichen, indem wir Veränderungen so minimal
+wie möglich zu halten.
+
+Dabei werden wir folgende Konzepte ausprobieren und am Ende auswerten:
+
+Haupteil:
+
+1.: Buchstaben werden durch passende Zahlen ersetzt [Leet-Speak]:
+Bei Leet-Speak wird in einem Text bestimmte Buchstaben durch Zahlen ersetzt, die sich relativ ähneln.
+Ein Beispiel dazu ist das O und die Null (O -> 0), dabei bleibt der Text für einen Menschen
+relativ gut lesbar und Wörter, in welchen Zahlen eingesetzt wurden, werden als Rechtschreibfehler
+gewährtet, welches den Detektor überlisten würde. Dabei verstoßen wir aber gegen unser zweites
+Hauptziel, da so eine Änderung relativ offensichtlich ist.
+
+Bsp.:
+Original:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
+Überarbeitet:
+Der braune Fuchs 5pringt über den f4ulen Hund. Die Sonne schein7 hell am Himmel und der W4ld ruht in 57ille. Plötzlich
+erwach7 ein Eichhörnchen und hu5cht geschwind zwi5chen den Bäumen hindurch. Die Blä7ter r4scheln lei5e im Wind,
+während die N47ur ihre eigene Mel0die 5piel7.
+
+
+
+2.: Buchstaben durch ähnliche Symbole ändern:
+Hierbei wird das Prinzip wie bei Leet-Speak verwendet, jedoch ersetzten wir die Buchstaben nicht durch
+Zahlen, sondern wir nehmen passende Symbole. Ein Beispiel dazu ist das a und das @, dabei bleibt auch
+hier der Text relativ gut lesbar, lesbarer als bei Leet-Speak, jedoch würde eine solche Veränderung
+relativ schnell wieder auffallen, wodurch wir wieder gegen unser zweites Hauptziel verstoßen würden.
+Jedoch würden die Wörter, in welchen die a's durch @'s ausgetauscht wurden, als Rechtschreibfehler erkannt
+und Sonderzeichen wirken sich ebenfalls stärker als Zahlen aus (Sonderzeichen sind seltener), wodurch eine
+Überlistung einer KI relativ denkbar wäre.
+
+Bsp.:
+Original.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
+Überarbeitet.:
+Der braune Fuchs springt über den f@ulen Hund. Die Sonne scheint hell am Himmel und der W@ld ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter r@scheln leise im Wind,
+während die N@tur ihre eigene Melodie spielt.
+
+
+
+3.: Leerzeichen durch geschützte Leerzeichen ersetzen:
+Hierbei werden Leerzeichen durch geschützte Leerzeichen ersetzt (" " -> " "). Dabei erfüllen wir unser
+zweites Hauptziel, da die Änderung von Leerzeichen zu geschützen Leerzeichen kaum bis gar nicht mit dem bloßen Auge
+erkennbar ist. Jedoch wird der Text relativ schwer lesbar, da geschütze Leerzeichen keine Zeilenumbrüche erzeugen,
+wodurch lange Texte blockmäßig wirken und Wörter falsch getrennt werden. Jedoch erzeugt genau das Verhalten, dass
+Wörter falsch getrennt werden, Rechtschreib- bzw. Grammatikfehler, welches die KI relativ gut überlisten kann.
+
+Bsp.:
+Original.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
+Überarbeitet.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald
+ruht in Stille. Plötzlich erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch.
+ Die Blätter rascheln leise im Wind, während die Natur ihre eigene Melodie spielt.
+
+
+
+4.:Einsatz von Homoglyphen
+Hierbei werden römische Buchstaben durch Buchstaben ersetzt aus einer anderen Sprache die relativ ähnlich sind.
+Ein Beispiel dazu ist der Austausch von einem römischen "a" zu einem kyrillischen "а". Diese Änderung ist
+mit dem bloßen Auge kaum erkennbar, welches die 2 Bedingung die wir aufgestellt haben erfüllt ist. Ebenfalls 
+ist die Änderung über die gesamte Datei sehr minimal, da mir bloß einen Buchstaben austauschen, welches 
+ebenfalls die erste Bedingung erfüllt. Der Nachteil ist, das einige Schriftarten diesen Unterschied
+kenntlich machen, indem sie die a's unterschieldlich zeichnen. Jedoch gibt es einige Schriftarten, bei 
+dennen der Unterschied sehr minimal bis garnicht zu erkennbar ausfalleb.
+Dadurch das wir römische Zeichen durch kyrillische ersetzen, werden die Wörter welche aus 
+römischen und kyrilischen Buchstaben bestehen als Rechtschreibfehler gewährtet, wodurch
+wir die KI relativ zuverlässig überlisten könnten. Damit könnte Homoglyphen die beste Wahl für eine Textbasierte
+KI sein.
+
+
+
+Bsp.:
+Original.:
+Der braune Fuchs springt über den faulen Hund. Die Sonne scheint hell am Himmel und der Wald ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rascheln leise im Wind,
+während die Natur ihre eigene Melodie spielt.
+
+Überarbeitet.:
+Der braune Fuchs springt über den fаulen Hund. Die Sonne scheint hell am Himmel und der Wаld ruht in Stille. Plötzlich
+erwacht ein Eichhörnchen und huscht geschwind zwischen den Bäumen hindurch. Die Blätter rаscheln leise im Wind,
+während die Nаtur ihre eigene Melodie spielt.
+
+
+
+Schluss:
+Wir haben einige Möglichkeiten gefunden, welche die beiden aufgestellten Bedingung mehr oder weniger erfüllen.
+Diese Methoden werden im späteren Verlauf implementiert und ausgewährtet. Dabei halten wir ausschau nach
+weiteren Möglichkeiten und implementieren diese ebenfalls. Wir erhoffen uns das beste Ergebnis bei den Homoglyphen
+zu erreichen, da diese Methode beiden Bedingung am besten Umsetzten. Wir werden ebenfalls eine Kombination
+aus den verschiedenen Methoden testen und diese auswerten.
