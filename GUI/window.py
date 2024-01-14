@@ -111,6 +111,11 @@ class Window(tk.Tk):
     # Objects-Selector-Methods
     # Hides every non Text object and showes every Text object
     def _select_text_objects(self):
+        """
+        This function hides every non Text object and shows every Text object
+        Returns:
+            None
+        """
         self.Frame_AI.pack()
         self.Label_AII_Image.place_forget()
         self.Label_AIFI_Image.place_forget()
@@ -131,6 +136,11 @@ class Window(tk.Tk):
 
     # Hides every non Image object and shows every Image object
     def _select_image_objects(self):
+        """
+        This function hides every non Image object and shows every Image object
+        Returns:
+            None
+        """
         self.Frame_AI.pack()
         self.TextboxAIT.place_forget()
         self.TextboxAIFT.place_forget()
@@ -151,6 +161,11 @@ class Window(tk.Tk):
 
     # Hides every non menu object and shows every Menu object
     def _select_menu_objects(self):
+        """
+        This function hides every non menu object and shows every Menu object
+        Returns:
+            None
+        """
         self.Frame_AI.pack_forget()
         self.Frame_Main_Menu.pack()
 
