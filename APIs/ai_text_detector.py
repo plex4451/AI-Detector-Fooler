@@ -9,8 +9,8 @@ from time import *
 # Setup Selenium and get driver and wait
 driver, wait = setup_selenium()
 
-# -------------------------------DEBUG------------------------------------------
 
+# -------------------------------DEBUG------------------------------------------
 
 
 def __get_score_from_grammica(text_to_check: str) -> float:
@@ -49,8 +49,8 @@ def __get_score_from_scribbr(text_to_check: str) -> float:
         driver.get("https://www.scribbr.com/ai-detector/")
 
         # Accept cookies
-        #cookie_button = wait.until(Expected.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")))
-        #cookie_button.click()
+        # cookie_button = wait.until(Expected.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")))
+        # cookie_button.click()
 
         # Input text and get score
         textbox = driver.find_element(by=By.XPATH, value='//*[@role="textbox"]')
@@ -65,7 +65,7 @@ def __get_score_from_scribbr(text_to_check: str) -> float:
     return -1
 
 
-def __get_score_from_detectingai(text_to_check: str)-> float:
+def __get_score_from_detectingai(text_to_check: str) -> float:
     """
     This function gets the score from Detecting-ai.com
 
@@ -104,6 +104,7 @@ def __get_score_from_detectingai(text_to_check: str)-> float:
         print("Detecting-ai.com is not available!")
         return -1
 
+
 def __get_score_from_gptzero(text_to_check: str) -> float:
     """
     This function gets the score from GPTzero.me
@@ -116,18 +117,22 @@ def __get_score_from_gptzero(text_to_check: str) -> float:
     try:
         driver.get("https://gptzero.me/")
         # Input text and click submit button
-        textbox = driver.find_element(by=By.XPATH, value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/textarea')
+        textbox = driver.find_element(by=By.XPATH,
+                                      value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/textarea')
         textbox.send_keys(text_to_check)
-        detect_button = driver.find_element(by=By.XPATH, value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/button')
+        detect_button = driver.find_element(by=By.XPATH,
+                                            value='//*[@id="__next"]/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/button')
         detect_button.click()
 
         # Get score
-        score = wait_element(driver, wait, '//*[@id="__next"]/div[1]/div[2]/div/div[2]/div/div[2]/div[1]/div[1]/div[2]/span[2]/b/text()[1]')
+        score = wait_element(driver, wait,
+                             '//*[@id="__next"]/div[1]/div[2]/div/div[2]/div/div[2]/div[1]/div[1]/div[2]/span[2]/b/text()[1]')
         print("GPTzero score: " + score + "% from AI written text!")
         return score
     except:
         print("GPTzero.me is not available!")
         return -1
+
 
 def __get_score_from_writer(text_to_check: str) -> float:
     """
@@ -141,31 +146,39 @@ def __get_score_from_writer(text_to_check: str) -> float:
     try:
         driver.get("https://writer.com/ai-content-detector/")
         # Input text and click submit button
-        textbox = driver.find_element(by=By.XPATH,value='/html/body/div[3]/div[2]/div[2]/div[1]/form/div[2]/textarea')
+        textbox = driver.find_element(by=By.XPATH, value='/html/body/div[3]/div[2]/div[2]/div[1]/form/div[2]/textarea')
         textbox.send_keys(text_to_check)
-        detect_button = driver.find_element(by=By.XPATH,value='/html/body/div[3]/div[2]/div[2]/div[1]/form/button')
+        detect_button = driver.find_element(by=By.XPATH, value='/html/body/div[3]/div[2]/div[2]/div[1]/form/button')
         detect_button.click()
 
         # Get score
         sleep(5)
-        score = int(wait_element(driver, wait,'//*[@id="ai-percentage"]').text)
-        print("Writer score: " + str((100-score)) + "% from AI written text!")
-        return 100-score
+        score = int(wait_element(driver, wait, '//*[@id="ai-percentage"]').text)
+        print("Writer score: " + str((100 - score)) + "% from AI written text!")
+        return 100 - score
     except:
         print("Writer.com is not available!")
         return -1
 
 
-def get_scores(text_to_check):
+def get_ai_text_scores(text_to_check: str) -> list[float]:
+    """
+    This function gets the scores from all available APIs
+
+    Parameters:
+        text_to_check (str): The text to check
+    Returns:
+        list[float]: The scores from all available APIs
+
+    """
     scores = []
     scores.append(__get_score_from_grammica(text_to_check))
-    #scores.append(__get_score_from_scribbr(text_to_check))
+    # scores.append(__get_score_from_scribbr(text_to_check))
     scores.append(-1)
     arr_help = __get_score_from_detectingai(text_to_check)
     scores.append(arr_help[0])
     scores.append(arr_help[1])
-    #scores.append(__get_score_from_gptzero(text_to_check))
-    #scores.append(__get_score_from_writer(text_to_check))
+    # scores.append(__get_score_from_gptzero(text_to_check))
+    # scores.append(__get_score_from_writer(text_to_check))
     driver.close()
     return scores
-
