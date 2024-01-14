@@ -76,7 +76,7 @@ Now you know how to use the project! Have fun!
 ## Adittional Extensions
 There is an extension for the Google Chrome and Chromium Browsers available for this project. It allows you to convert text and images while surfing the web.
 
-For more Information refer to the [AI-Fooler-Browser-Extension](https://gitlab.uni-hannover.de/informaticup-2024/gruppe-7/ai-fooler-browser-extension) project.
+For more Information refer to the [AI-Fooler-Browser-Extension](https://github.com/plex4451/AI-Fooler-Browser-Extension) project.
 ## Contributing
 We are open to contributors, and there are no specific prerequisites for contributing to this project. Whether you're interested in fixing bugs, implementing new features, or suggesting improvements, your contributions are welcome!
 
