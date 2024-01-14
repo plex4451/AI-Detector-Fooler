@@ -9,8 +9,7 @@ import time
 driver, wait = setup_selenium()
 
 # -------------------------------DEBUG------------------------------------------
-# Define test image url
-test_image_url = "/Users/loukielhorn/Downloads/8-4fqx1SIbpiFAChp.png"
+
 
 
 def __get_score_from_huggingface(image_path: str) -> float:
