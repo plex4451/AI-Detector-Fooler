@@ -65,8 +65,15 @@ def __get_score_from_scribbr(text_to_check: str) -> float:
     return -1
 
 
-def __get_score_from_detectingai(text_to_check):
-    # Gets score from Detecting-ai.com -> geman & english
+def __get_score_from_detectingai(text_to_check: str)-> float:
+    """
+    This function gets the score from Detecting-ai.com
+
+    Parameters:
+        text_to_check (str): The text to check
+    Returns:
+        float: The score from Detecting-ai.com
+    """
     try:
         driver.get("https://detecting-ai.com/de/detect_ai/")
         # Input text and click submit button
