@@ -230,7 +230,13 @@ def add_copyright_text(background_img: np.ndarray) -> np.ndarray:
 
 
 def print_image_metadata(path: str):
-    # Prints all available metadata
+    """
+    This function prints all available metadata of an image
+    Parameters:
+        path (str): The path to the image
+    Returns:
+        None
+    """
     image = Image.open(path)
 
     # Get all available image metadata
