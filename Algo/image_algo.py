@@ -140,8 +140,18 @@ def add_white_brush_with_alpha(image: Image) -> Image:
     return image
 
 
-def light_sharpening(image, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold=0):
-    """Return a sharpened version of the image, using an unsharp mask."""
+def light_sharpening(image: Image, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold=0) -> Image:
+    """
+    Return a sharpened version of the image, using an unsharp mask.
+    Parameters:
+        image (cv2 image): The image to modify
+        kernel_size (tuple): The kernel size
+        sigma (float): The sigma
+        amount (float): The amount
+        threshold (int): The threshold
+    Returns:
+        cv2 image: The modified image
+    """
     blurred = cv2.GaussianBlur(image, kernel_size, sigma)
     sharpened = float(amount + 1) * image - float(amount) * blurred
     sharpened = np.maximum(sharpened, np.zeros(sharpened.shape))
