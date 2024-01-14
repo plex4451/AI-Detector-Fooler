@@ -18,9 +18,6 @@ Welcome to the AI-Detector-Fooler! This Software allows users to modify images a
 
 - **Supported File extensions:**<br>
   This programm supports .jpg and .png image files and .txt text files.
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
 
 ## Installation
 This project requires Python 3.9.1 or higher to run.
@@ -73,7 +70,8 @@ To start the project, follow these steps:
       - Back to Menu Button: Returns to the Main Menu
 
 4. To close the program, click the X in the top right corner of the window or click the Exit Button in the Main Menu
-    
+
+Now you know how to use the project! Have fun!
    
 ## Adittional Extensions
 There is an extension for the Google Chrome and Chromium Browsers available for this project. It allows you to convert text and images while surfing the web.
