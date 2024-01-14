@@ -7,7 +7,16 @@ from PIL import Image, ExifTags
 from APIs.ai_image_detector import get_ai_image_scores
 
 
-def add_noise_to_image(image, mean=0, stddev=25):
+def add_noise_to_image(image: Image, mean=0, stddev=25) -> Image:
+    """
+    Adds noise to a cv2 image with the standard value 25
+    Parameters:
+        image (cv2 image): The image to modify
+        mean (int): The mean of the noise
+        stddev (int): The standard deviation of the noise
+    Returns:
+        cv2 image: The modified image
+    """
     # Adds noise to a cv2 image with the standard value 25
     # Load the image
     image = image.astype(np.float32)
